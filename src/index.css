@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* .dark 클래스가 붙으면 dark: 스타일 적용 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== 디자인 토큰 (DESIGN.md 2. Color System) ===== */
+:root {
+  --primary: #5267E8;
+  --on-primary: #FFFFFF; /* Primary 위 글자색 */
+  --secondary: #A5B4FC;
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --border: #E2E8F0;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  color-scheme: light;
+}
+.dark {
+  --primary: #8192FF;
+  --on-primary: #111827; /* 다크: 밝은 Primary 위에는 어두운 글자가 더 잘 보임 */
+  --secondary: #5969C9;
+  --background: #111827;
+  --surface: #1F2937;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --border: #374151;
+  --success: #4ADE80;
+  --warning: #FBBF24;
+  --error: #F87171;
+  color-scheme: dark;
+}
+
+/* 토큰을 Tailwind 클래스로 연결 → bg-primary, text-text-secondary 처럼 사용 */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  /* 영어·숫자는 Inter, 일본어는 Noto Sans JP 순서로 표시 */
+  --font-sans: "Inter", "Noto Sans JP", "Noto Sans KR", system-ui, sans-serif;
+  /* 한국어 학습 문장 전용 폰트 */
+  --font-ko: "Noto Sans KR", "Inter", sans-serif;
+
+  --radius-card: 16px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent; /* iPhone 탭 시 회색 박스 제거 */
+  transition: background-color 0.2s, color 0.2s;
+}
