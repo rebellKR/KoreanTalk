@@ -6,9 +6,10 @@ export type Settings = {
   showKana: boolean            // カタカナ発音 표시
   ttsRate: 0.7 | 1             // 読み上げ速度
   dailyGoal: 10 | 20 | 30      // 1日の単語目標
+  voiceURI: string             // 読み上げ音声 ('' = 自動で一番良い音声)
 }
 
-const DEFAULTS: Settings = { fontSize: 'md', showKana: true, ttsRate: 1, dailyGoal: 10 }
+const DEFAULTS: Settings = { fontSize: 'md', showKana: true, ttsRate: 1, dailyGoal: 10, voiceURI: '' }
 const STORAGE_KEY = 'kt-settings'
 
 type Ctx = { settings: Settings; update: <K extends keyof Settings>(key: K, value: Settings[K]) => void }
