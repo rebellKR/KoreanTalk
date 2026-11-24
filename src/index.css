@@ -74,3 +74,8 @@ body {
   70% { transform: scale(1.12); opacity: 1; }
   100% { transform: scale(1); }
 }
+
+/* 한국어 문장은 단어 중간에서 줄바꿈하지 않기 (예: "주/세요" 방지) */
+.font-ko {
+  word-break: keep-all;
+}

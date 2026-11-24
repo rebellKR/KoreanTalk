@@ -5,16 +5,16 @@ import Section from '../components/Section'
 import { useSettings } from '../context/SettingsContext'
 import { useProgress } from '../context/ProgressContext'
 
-// STAGE 2: 통계는 더미 숫자 (STAGE 6에서 실제 기록 연결)
-const stats = [
-  { icon: Flame, label: '連続学習', value: 3, unit: '日' },
-  { icon: BookCheck, label: '覚えた単語', value: 0, unit: '語' },
-  { icon: GraduationCap, label: '完了レッスン', value: 0, unit: '件' },
-]
 
 export default function MyPage() {
   const { settings } = useSettings()
-  const { todayCount } = useProgress()
+  const { todayCount, learnedCount, progress } = useProgress()
+  // 연속 학습일은 STAGE 6에서 연결 (지금은 임시 값)
+  const stats = [
+    { icon: Flame, label: '連続学習', value: 3, unit: '日' },
+    { icon: BookCheck, label: '覚えた単語', value: learnedCount, unit: '語' },
+    { icon: GraduationCap, label: '完了レッスン', value: progress.completed.length, unit: '件' },
+  ]
   const navigate = useNavigate()
   return (
     <div className="min-h-dvh bg-surface">

@@ -7,6 +7,7 @@ import Favorites from './pages/Favorites'
 import MyPage from './pages/MyPage'
 import Settings from './pages/Settings'
 import Study from './pages/Study'
+import Lesson from './pages/Lesson'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       </Route>
       {/* 카드 학습은 탭바 없이 전체 화면 */}
       <Route path="/vocabulary/study" element={<Study />} />
+      <Route path="/conversation/:sid" element={<Lesson />} />
     </Routes>
   )
 }

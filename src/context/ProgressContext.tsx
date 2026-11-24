@@ -7,13 +7,14 @@ export type CardState = { box: number; next: string; correct: number; wrong: num
 type Progress = {
   cards: Record<string, CardState>
   favorites: string[]
+  completed: string[]                    // 완료한 회화 레슨(상황) id
   daily: { date: string; count: number } // 오늘 학습한 카드 수
 }
 
 // 박스별 다음 복습까지의 일수 (박스 1 → 1일 뒤, 박스 5 → 14일 뒤)
 const INTERVALS = [0, 1, 2, 4, 7, 14]
 const STORAGE_KEY = 'kt-progress'
-const EMPTY: Progress = { cards: {}, favorites: [], daily: { date: '', count: 0 } }
+const EMPTY: Progress = { cards: {}, favorites: [], completed: [], daily: { date: '', count: 0 } }
 
 type Ctx = {
   progress: Progress
@@ -22,6 +23,8 @@ type Ctx = {
   answer: (id: string, known: boolean) => void // 「覚えた」=true /「まだ」=false
   isDue: (id: string) => boolean                // 오늘 복습할 카드인지 (처음 보는 카드 포함)
   todayCount: number
+  completeLesson: (id: string) => void
+  learnedCount: number                          // 한 번 이상 「覚えた」 한 단어 수
 }
 const ProgressContext = createContext<Ctx | null>(null)
 
@@ -64,6 +67,11 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       return { ...p, cards: { ...p.cards, [id]: card }, daily }
     })
 
+  const completeLesson = (id: string) =>
+    setProgress((p) => (p.completed.includes(id) ? p : { ...p, completed: [...p.completed, id] }))
+
+  const learnedCount = Object.values(progress.cards).filter((c) => c.box >= 1).length
+
   const isDue = (id: string) => {
     const c = progress.cards[id]
     return !c || c.next <= today
@@ -71,7 +79,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
   return (
     <ProgressContext.Provider
-      value={{ progress, isFavorite: (id) => progress.favorites.includes(id), toggleFavorite, answer, isDue, todayCount }}
+      value={{ progress, isFavorite: (id) => progress.favorites.includes(id), toggleFavorite, answer, isDue, todayCount, completeLesson, learnedCount }}
     >
       {children}
     </ProgressContext.Provider>
