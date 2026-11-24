@@ -8,10 +8,9 @@ import { useProgress } from '../context/ProgressContext'
 
 export default function MyPage() {
   const { settings } = useSettings()
-  const { todayCount, learnedCount, progress } = useProgress()
-  // 연속 학습일은 STAGE 6에서 연결 (지금은 임시 값)
+  const { todayCount, learnedCount, progress, streak } = useProgress()
   const stats = [
-    { icon: Flame, label: '連続学習', value: 3, unit: '日' },
+    { icon: Flame, label: '連続学習', value: streak, unit: '日' },
     { icon: BookCheck, label: '覚えた単語', value: learnedCount, unit: '語' },
     { icon: GraduationCap, label: '完了レッスン', value: progress.completed.length, unit: '件' },
   ]

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { X, Volume2, PartyPopper, RotateCcw } from 'lucide-react'
 import Button from '../components/Button'
@@ -15,7 +15,7 @@ export default function Study() {
   const navigate = useNavigate()
   const [params] = useSearchParams()
   const cat = params.get('cat') ?? 'all'
-  const { answer, isDue } = useProgress()
+  const { answer, isDue, logRecent } = useProgress()
   const { settings } = useSettings()
 
   // 처음 한 번만 카드 묶음 만들기: 오늘 복습할 카드 우선, 없으면 전체 연습
@@ -35,6 +35,9 @@ export default function Study() {
   const total = queue.length
   const word = queue[index]
   const done = index >= total
+  // 끝까지 학습하면 홈의 「最近の学習」에 기록
+  useEffect(() => { if (done && total > 0) logRecent('words', cat) }, [done]) // eslint-disable-line
+
   const catName = cat === 'all' ? 'すべて' : CATEGORIES.find((c) => c.id === cat)?.ja
 
   const next = (known: boolean) => {

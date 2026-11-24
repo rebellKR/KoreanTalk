@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { X, Volume2, Snail, Star, ChevronLeft, ChevronRight, Lightbulb, PartyPopper } from 'lucide-react'
 import Button from '../components/Button'
 import { SITUATIONS } from '../data/conversations'
@@ -14,7 +14,8 @@ export default function Lesson() {
   const navigate = useNavigate()
   const { sid } = useParams()
   const situation = SITUATIONS.find((s) => s.id === sid)
-  const [index, setIndex] = useState(0)
+  const [params] = useSearchParams()
+  const [index, setIndex] = useState(() => Number(params.get('i') ?? 0)) // ?i=3 → 4번째 표현부터
   const [finished, setFinished] = useState(false)
   const { isFavorite, toggleFavorite, completeLesson } = useProgress()
   const { settings } = useSettings()
@@ -36,7 +37,7 @@ export default function Lesson() {
       style={{ paddingTop: 'calc(env(safe-area-inset-top) + 8px)', paddingBottom: 'calc(env(safe-area-inset-bottom) + 16px)' }}>
       {/* 상단: 닫기 + 진행률 */}
       <header className="flex items-center gap-3 px-4">
-        <button onClick={() => navigate('/conversation')} aria-label="閉じる"
+        <button onClick={() => navigate(-1)} aria-label="閉じる"
           className="flex h-11 w-11 items-center justify-center rounded-full transition active:bg-background">
           <X size={24} />
         </button>
