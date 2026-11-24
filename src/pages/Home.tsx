@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Volume2, Star, MessagesSquare, BookText, Type, PenLine, GraduationCap, RotateCcw, Flame, Settings, ChevronRight,
-  CircleUser, Layers, Sparkles, type LucideIcon,
+  CircleUser, Layers, Sparkles, Gamepad2, type LucideIcon,
 } from 'lucide-react'
 import ProgressBar from '../components/ProgressBar'
 import Section from '../components/Section'
@@ -14,6 +14,7 @@ import { speakKorean } from '../utils/speak'
 import { todayJP } from '../utils/date'
 import { ALL_PHRASES, categoryName } from '../data/lookup'
 import { SITUATIONS, iconOf } from '../data/conversations'
+import { useAchievements } from '../hooks/useAchievements'
 
 // 일본 시간 기준 인사말
 function greeting() {
@@ -27,10 +28,20 @@ function greeting() {
 const dayNumber = Math.floor(new Date(todayJP()).getTime() / 86400000)
 const phrase = ALL_PHRASES[dayNumber % ALL_PHRASES.length]
 
+// 헤더 배경에 떠다니는 글자들
+const FLOATS = [
+  { ch: '가', x: '62%', y: '8%', size: 64, dur: 6, r: -12 },
+  { ch: 'ㅎ', x: '84%', y: '42%', size: 44, dur: 7, r: 10 },
+  { ch: '사랑', x: '50%', y: '58%', size: 38, dur: 8, r: -6 },
+  { ch: 'ㅋ', x: '88%', y: '4%', size: 30, dur: 5, r: 18 },
+  { ch: '♡', x: '72%', y: '70%', size: 28, dur: 6.5, r: 0 },
+]
+
 // 바로가기
 const actions: { label: string; icon: LucideIcon; to?: string }[] = [
   { label: '会話', icon: MessagesSquare, to: '/conversation' },
   { label: '単語', icon: BookText, to: '/vocabulary' },
+  { label: 'ゲーム', icon: Gamepad2, to: '/games' },
   { label: '復習', icon: RotateCcw, to: '/vocabulary/study?cat=all' },
   { label: 'ハングル', icon: Type, to: '/hangul' },
   { label: '文法', icon: PenLine, to: '/grammar' },
@@ -42,15 +53,23 @@ export default function Home() {
   const { todayCount, todayLessons, reviewCount, streak, progress, isFavorite, toggleFavorite } = useProgress()
   const navigate = useNavigate()
   const [toast, setToast] = useState<string | null>(null)
+  const { level, cur, need } = useAchievements()
   const fav = isFavorite(phrase.id)
   const isNew = Object.keys(progress.cards).length === 0 // 아직 카드 학습을 한 번도 안 함
 
   return (
     <div className="min-h-dvh bg-surface">
       {/* ===== 색 헤더: 다이내믹 아일랜드 뒤까지 Primary 색으로 채움 ===== */}
-      <header className="bg-primary px-6 pb-7 text-white dark:bg-secondary"
+      <header className="relative overflow-hidden bg-primary px-6 pb-7 text-white dark:bg-secondary"
         style={{ paddingTop: 'calc(env(safe-area-inset-top) + 16px)' }}>
-        <div className="flex items-center justify-between">
+        {/* 배경에 둥실둥실 떠다니는 한글 (장식) */}
+        {FLOATS.map((f, i) => (
+          <span key={i} aria-hidden className="pointer-events-none absolute font-ko font-bold text-white/10 animate-[float_ease-in-out_infinite]"
+            style={{ left: f.x, top: f.y, fontSize: f.size, animationDuration: `${f.dur}s`, animationDelay: `${i * -1.3}s`, ['--r' as string]: `${f.r}deg` }}>
+            {f.ch}
+          </span>
+        ))}
+        <div className="relative flex items-center justify-between">
           <button onClick={() => navigate('/mypage')} aria-label="マイページ"
             className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 transition active:scale-95">
             <CircleUser size={24} strokeWidth={1.7} />
@@ -66,10 +85,18 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <h1 className="mt-6 text-[26px] font-bold tracking-[-0.02em]">{greeting()}</h1>
-        <p className="mt-1 text-[14px] text-white/80">
+        <h1 className="relative mt-6 text-[26px] font-bold tracking-[-0.02em]">{greeting()}</h1>
+        <p className="relative mt-1 text-[14px] text-white/80">
           {streak > 0 ? `${streak}日連続で学習中！この調子で。` : '今日も少しずつ韓国語を。'}
         </p>
+        {/* 레벨 + 경험치 바 */}
+        <button onClick={() => navigate('/mypage')} className="relative mt-5 flex w-full items-center gap-3 text-left">
+          <span className="rounded-full bg-white/20 px-2.5 py-1 text-[12px] font-bold tabular-nums">Lv.{level}</span>
+          <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/20">
+            <span className="block h-full rounded-full bg-white transition-[width] duration-700" style={{ width: `${(cur / need) * 100}%` }} />
+          </span>
+          <span className="text-[11px] tabular-nums text-white/80">{cur}/{need} XP</span>
+        </button>
       </header>
 
       {/* ===== 오늘의 한마디 ===== */}

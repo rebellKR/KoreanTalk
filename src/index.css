@@ -102,3 +102,28 @@ body {
   from { transform: translateY(16px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+/* 위에서 통통 튀며 내려오는 알림 */
+@keyframes drop-in {
+  from { transform: translateY(-120%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* 천천히 회전 */
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+/* 화면 전환: 살짝 아래에서 나타남 */
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* 홈 헤더의 한글이 둥실둥실 떠다님 */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+}
+/* 시간 부족할 때 깜빡임 */
+@keyframes pulse-red { 50% { color: var(--error); transform: scale(1.1); } }
+
+/* 움직임 줄이기 설정(iPhone 손쉬운 사용)을 켠 사람에게는 애니메이션 최소화 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

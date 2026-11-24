@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { X, Volume2, Snail, Star, ChevronLeft, ChevronRight, Lightbulb, PartyPopper } from 'lucide-react'
 import Button from '../components/Button'
+import Confetti from '../components/Confetti'
 import { SITUATIONS } from '../data/conversations'
 import { useProgress } from '../context/ProgressContext'
 import { useSettings } from '../context/SettingsContext'
@@ -55,11 +56,13 @@ export default function Lesson() {
       {finished ? (
         // ===== 레슨 완료 =====
         <div className="flex flex-1 flex-col items-center justify-center px-8 text-center">
+          <Confetti />
           <div className="flex h-20 w-20 animate-[pop_0.5s_ease-out] items-center justify-center rounded-full bg-primary/10 text-primary">
             <PartyPopper size={38} strokeWidth={1.7} />
           </div>
           <h2 className="mt-6 text-[24px] font-bold">{CHEERS[Math.floor(Math.random() * CHEERS.length)]}</h2>
           <p className="mt-2 text-[14px] text-text-secondary">「{situation.ja}」の{total}フレーズを学習しました</p>
+          <p className="mt-3 animate-[pop_0.5s_ease-out] rounded-full bg-primary/10 px-4 py-1.5 text-[14px] font-bold text-primary">+50 XP</p>
           <div className="mt-10 flex w-full flex-col gap-2">
             <Button full onClick={() => navigate('/conversation')}>会話一覧へ</Button>
             <Button full variant="ghost" onClick={() => { setIndex(0); setFinished(false) }}>もう一度</Button>

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { X, Volume2, PartyPopper, RotateCcw } from 'lucide-react'
 import Button from '../components/Button'
+import Confetti from '../components/Confetti'
 import { WORDS, CATEGORIES } from '../data/words'
 import type { Word } from '../types'
 import { useProgress } from '../context/ProgressContext'
@@ -88,11 +89,13 @@ export default function Study() {
       {done ? (
         // ===== 완료 화면 =====
         <div className="flex flex-1 flex-col items-center justify-center px-8 text-center">
+          <Confetti />
           <div className="flex h-20 w-20 animate-[pop_0.5s_ease-out] items-center justify-center rounded-full bg-primary/10 text-primary">
             <PartyPopper size={38} strokeWidth={1.7} />
           </div>
           <h2 className="mt-6 text-[24px] font-bold">おつかれさま！</h2>
           <p className="mt-2 text-[14px] text-text-secondary">{catName}のカードを学習しました</p>
+          <p className="mt-3 animate-[pop_0.5s_ease-out] rounded-full bg-primary/10 px-4 py-1.5 text-[14px] font-bold text-primary">+{result.known * 10 + result.unknown * 3} XP</p>
           <div className="mt-8 grid w-full grid-cols-2 divide-x divide-border/70 rounded-card bg-background py-5 dark:bg-border/40">
             <div><p className="text-[28px] font-bold text-success tabular-nums">{result.known}</p><p className="text-[12px] text-text-secondary">覚えた</p></div>
             <div><p className="text-[28px] font-bold text-warning tabular-nums">{result.unknown}</p><p className="text-[12px] text-text-secondary">まだ</p></div>

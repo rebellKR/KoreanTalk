@@ -1,4 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
+import Celebrations from './components/Celebrations'
+import Games from './pages/Games'
+import SpeedGame from './pages/SpeedGame'
+import PairGame from './pages/PairGame'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Conversation from './pages/Conversation'
@@ -15,6 +19,7 @@ import TopikQuiz from './pages/TopikQuiz'
 
 export default function App() {
   return (
+    <>
     <Routes>
       {/* Layout 안에 각 탭 화면이 들어감 (하단 탭바는 항상 표시) */}
       <Route element={<Layout />}>
@@ -27,11 +32,17 @@ export default function App() {
         <Route path="/hangul" element={<Hangul />} />
         <Route path="/grammar" element={<Grammar />} />
         <Route path="/topik" element={<Topik />} />
+        <Route path="/games" element={<Games />} />
       </Route>
       {/* 카드 학습은 탭바 없이 전체 화면 */}
       <Route path="/vocabulary/study" element={<Study />} />
       <Route path="/conversation/:sid" element={<Lesson />} />
       <Route path="/topik/quiz" element={<TopikQuiz />} />
+      <Route path="/games/speed" element={<SpeedGame />} />
+      <Route path="/games/pair" element={<PairGame />} />
     </Routes>
+    {/* 레벨업·배지 축하 (모든 화면 공통) */}
+    <Celebrations />
+    </>
   )
 }

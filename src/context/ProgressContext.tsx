@@ -15,6 +15,11 @@ type Progress = {
   recent: Recent[]
   wrongNotes: string[]                                    // TOPIK 틀린 문제 id (間違いノート)
   topikBest: Record<string, number>                       // "I-vocab" → 최고 점수(%)
+  xp: number                                              // 경험치 (공부할수록 쌓임)
+  dayLog: Record<string, number>                          // 날짜별 학습 횟수 (잔디 캘린더용)
+  gameBest: Record<string, number>                        // 미니게임 최고 기록
+  badgesSeen: string[] | null                             // 이미 축하한 배지 (null = 아직 확인 전)
+  levelSeen: number                                       // 이미 축하한 레벨
 }
 
 // 박스별 다음 복습까지의 일수 (박스 1 → 1일 뒤, 박스 5 → 14일 뒤)
@@ -22,6 +27,7 @@ const INTERVALS = [0, 1, 2, 4, 7, 14]
 const STORAGE_KEY = 'kt-progress'
 const EMPTY: Progress = {
   cards: {}, favorites: [], completed: [], daily: { date: '', count: 0, lessons: 0 }, days: [], recent: [], wrongNotes: [], topikBest: {},
+  xp: 0, dayLog: {}, gameBest: {}, badgesSeen: null, levelSeen: 1,
 }
 
 type Ctx = {
@@ -34,6 +40,8 @@ type Ctx = {
   logRecent: (type: Recent['type'], id: string) => void
   recordTopik: (qid: string, correct: boolean) => void  // 문제 하나 채점 결과 기록
   saveTopikScore: (key: string, percent: number) => void
+  finishGame: (key: string, score: number, xp: number, lowerIsBetter?: boolean) => boolean // 최고 기록이면 true
+  markSeen: (badges: string[], level: number) => void
   todayCount: number                            // 오늘 학습한 카드 수
   todayLessons: number                          // 오늘 완료한 레슨 수
   learnedCount: number                          // 한 번 이상 「覚えた」 한 단어 수
@@ -45,20 +53,28 @@ const ProgressContext = createContext<Ctx | null>(null)
 function load(): Progress {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')
-    return { ...EMPTY, ...saved, daily: { ...EMPTY.daily, ...saved.daily } }
+    const p: Progress = { ...EMPTY, ...saved, daily: { ...EMPTY.daily, ...saved.daily } }
+    if (saved.xp === undefined) {
+      // 이전 버전 데이터: 지금까지의 학습 기록으로 경험치 계산
+      const cards = Object.values(p.cards)
+      p.xp = cards.reduce((sum, c) => sum + c.correct * 10 + c.wrong * 3, 0) + p.completed.length * 50
+    }
+    return p
   } catch {
     return EMPTY
   }
 }
 
 // 오늘 날짜를 학습일 목록에 추가하고, 오늘 기록(daily)을 갱신
-function markToday(p: Progress, add: { count?: number; lessons?: number }): Progress {
+function markToday(p: Progress, add: { count?: number; lessons?: number; xp?: number }): Progress {
   const today = todayJP()
   const base = p.daily.date === today ? p.daily : { date: today, count: 0, lessons: 0 }
   return {
     ...p,
     days: p.days.includes(today) ? p.days : [...p.days, today].slice(-400),
     daily: { ...base, count: base.count + (add.count ?? 0), lessons: base.lessons + (add.lessons ?? 0) },
+    dayLog: { ...p.dayLog, [today]: (p.dayLog[today] ?? 0) + 1 },
+    xp: p.xp + (add.xp ?? 0),
   }
 }
 
@@ -98,7 +114,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
         correct: prev.correct + (known ? 1 : 0),
         wrong: prev.wrong + (known ? 0 : 1),
       }
-      return markToday({ ...p, cards: { ...p.cards, [id]: card } }, { count: 1 })
+      return markToday({ ...p, cards: { ...p.cards, [id]: card } }, { count: 1, xp: known ? 10 : 3 })
     })
 
   const logRecent = (type: Recent['type'], id: string) =>
@@ -110,7 +126,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
 
   const completeLesson = (id: string) => {
     setProgress((p) =>
-      markToday({ ...p, completed: p.completed.includes(id) ? p.completed : [...p.completed, id] }, { lessons: 1 }),
+      markToday({ ...p, completed: p.completed.includes(id) ? p.completed : [...p.completed, id] }, { lessons: 1, xp: 50 }),
     )
     logRecent('lesson', id)
   }
@@ -119,11 +135,21 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     setProgress((p) => {
       // 틀리면 오답 노트에 추가, 맞히면 오답 노트에서 빼기
       const wrongNotes = correct ? p.wrongNotes.filter((w) => w !== qid) : p.wrongNotes.includes(qid) ? p.wrongNotes : [...p.wrongNotes, qid]
-      return markToday({ ...p, wrongNotes }, {})
+      return markToday({ ...p, wrongNotes }, { xp: correct ? 15 : 3 })
     })
 
   const saveTopikScore = (key: string, percent: number) =>
     setProgress((p) => ({ ...p, topikBest: { ...p.topikBest, [key]: Math.max(p.topikBest[key] ?? 0, percent) } }))
+
+  const finishGame = (key: string, score: number, xp: number, lowerIsBetter = false) => {
+    const prev = progress.gameBest[key]
+    const isBest = prev === undefined || (lowerIsBetter ? score < prev : score > prev)
+    setProgress((p) => markToday({ ...p, gameBest: isBest ? { ...p.gameBest, [key]: score } : p.gameBest }, { xp }))
+    return isBest
+  }
+
+  const markSeen = (badges: string[], level: number) =>
+    setProgress((p) => ({ ...p, badgesSeen: badges, levelSeen: level }))
 
   const isDue = (id: string) => {
     const c = progress.cards[id]
@@ -137,7 +163,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       value={{
         progress,
         isFavorite: (id) => progress.favorites.includes(id),
-        toggleFavorite, answer, isDue, completeLesson, logRecent, recordTopik, saveTopikScore,
+        toggleFavorite, answer, isDue, completeLesson, logRecent, recordTopik, saveTopikScore, finishGame, markSeen,
         todayCount: isToday ? progress.daily.count : 0,
         todayLessons: isToday ? progress.daily.lessons : 0,
         learnedCount: cards.filter((c) => c.box >= 1).length,
