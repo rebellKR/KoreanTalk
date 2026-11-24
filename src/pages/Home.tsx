@@ -27,14 +27,14 @@ function greeting() {
 const dayNumber = Math.floor(new Date(todayJP()).getTime() / 86400000)
 const phrase = ALL_PHRASES[dayNumber % ALL_PHRASES.length]
 
-// 바로가기 (to가 없는 것은 다음 단계에서 추가 예정)
+// 바로가기
 const actions: { label: string; icon: LucideIcon; to?: string }[] = [
   { label: '会話', icon: MessagesSquare, to: '/conversation' },
   { label: '単語', icon: BookText, to: '/vocabulary' },
   { label: '復習', icon: RotateCcw, to: '/vocabulary/study?cat=all' },
-  { label: 'ハングル', icon: Type },
-  { label: '文法', icon: PenLine },
-  { label: 'TOPIK', icon: GraduationCap },
+  { label: 'ハングル', icon: Type, to: '/hangul' },
+  { label: '文法', icon: PenLine, to: '/grammar' },
+  { label: 'TOPIK', icon: GraduationCap, to: '/topik' },
 ]
 
 export default function Home() {

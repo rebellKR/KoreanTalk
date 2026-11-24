@@ -79,3 +79,26 @@ body {
 .font-ko {
   word-break: keep-all;
 }
+
+/* 꽃가루가 빙글빙글 떨어지는 효과 */
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0.6; }
+}
+/* 오답일 때 좌우로 흔들리는 효과 */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+/* 정답일 때 살짝 커졌다 돌아오는 효과 */
+@keyframes bounce-in {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+/* 아래에서 스르륵 올라오는 효과 */
+@keyframes slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

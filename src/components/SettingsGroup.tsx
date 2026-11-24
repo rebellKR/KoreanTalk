@@ -7,7 +7,7 @@ export function SettingsGroup({ title, children }: { title: string; children: Re
   return (
     <section className="mb-7">
       <h2 className="mb-2 px-1 text-[12px] font-semibold tracking-[0.08em] text-text-secondary">{title}</h2>
-      <div className="divide-y divide-border/70 overflow-hidden rounded-card bg-surface shadow-[0_1px_3px_rgba(15,23,42,0.04)] dark:ring-1 dark:ring-border">
+      <div className="divide-y divide-border/70 overflow-hidden rounded-card bg-background ring-1 ring-border/50 dark:bg-border/30">
         {children}
       </div>
     </section>

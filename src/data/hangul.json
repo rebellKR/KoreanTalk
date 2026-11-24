@@ -1,0 +1,384 @@
+{
+  "consonants": [
+    {
+      "char": "ㄱ",
+      "roman": "k / g",
+      "sound": "カ行・ガ行",
+      "say": "가",
+      "exKo": "가방",
+      "exJa": "カバン"
+    },
+    {
+      "char": "ㄴ",
+      "roman": "n",
+      "sound": "ナ行",
+      "say": "나",
+      "exKo": "나라",
+      "exJa": "国"
+    },
+    {
+      "char": "ㄷ",
+      "roman": "t / d",
+      "sound": "タ行・ダ行",
+      "say": "다",
+      "exKo": "다리",
+      "exJa": "脚・橋"
+    },
+    {
+      "char": "ㄹ",
+      "roman": "r / l",
+      "sound": "ラ行",
+      "say": "라",
+      "exKo": "라면",
+      "exJa": "ラーメン"
+    },
+    {
+      "char": "ㅁ",
+      "roman": "m",
+      "sound": "マ行",
+      "say": "마",
+      "exKo": "마음",
+      "exJa": "心"
+    },
+    {
+      "char": "ㅂ",
+      "roman": "p / b",
+      "sound": "パ行・バ行",
+      "say": "바",
+      "exKo": "바다",
+      "exJa": "海"
+    },
+    {
+      "char": "ㅅ",
+      "roman": "s",
+      "sound": "サ行",
+      "say": "사",
+      "exKo": "사랑",
+      "exJa": "愛"
+    },
+    {
+      "char": "ㅇ",
+      "roman": "無音 / ng",
+      "sound": "最初は無音、パッチムは「ン」",
+      "say": "아",
+      "exKo": "아이",
+      "exJa": "子ども"
+    },
+    {
+      "char": "ㅈ",
+      "roman": "ch / j",
+      "sound": "チャ行・ジャ行",
+      "say": "자",
+      "exKo": "자리",
+      "exJa": "席"
+    },
+    {
+      "char": "ㅊ",
+      "roman": "ch（激音）",
+      "sound": "息を強く出すチャ行",
+      "say": "차",
+      "exKo": "차",
+      "exJa": "車・お茶"
+    },
+    {
+      "char": "ㅋ",
+      "roman": "k（激音）",
+      "sound": "息を強く出すカ行",
+      "say": "카",
+      "exKo": "카드",
+      "exJa": "カード"
+    },
+    {
+      "char": "ㅌ",
+      "roman": "t（激音）",
+      "sound": "息を強く出すタ行",
+      "say": "타",
+      "exKo": "타다",
+      "exJa": "乗る"
+    },
+    {
+      "char": "ㅍ",
+      "roman": "p（激音）",
+      "sound": "息を強く出すパ行",
+      "say": "파",
+      "exKo": "파티",
+      "exJa": "パーティー"
+    },
+    {
+      "char": "ㅎ",
+      "roman": "h",
+      "sound": "ハ行",
+      "say": "하",
+      "exKo": "하늘",
+      "exJa": "空"
+    },
+    {
+      "char": "ㄲ",
+      "roman": "kk（濃音）",
+      "sound": "詰まった「ッカ」",
+      "say": "까",
+      "exKo": "까치",
+      "exJa": "カササギ"
+    },
+    {
+      "char": "ㄸ",
+      "roman": "tt（濃音）",
+      "sound": "詰まった「ッタ」",
+      "say": "따",
+      "exKo": "딸기",
+      "exJa": "いちご"
+    },
+    {
+      "char": "ㅃ",
+      "roman": "pp（濃音）",
+      "sound": "詰まった「ッパ」",
+      "say": "빠",
+      "exKo": "빵",
+      "exJa": "パン"
+    },
+    {
+      "char": "ㅆ",
+      "roman": "ss（濃音）",
+      "sound": "詰まった「ッサ」",
+      "say": "싸",
+      "exKo": "싸다",
+      "exJa": "安い"
+    },
+    {
+      "char": "ㅉ",
+      "roman": "jj（濃音）",
+      "sound": "詰まった「ッチャ」",
+      "say": "짜",
+      "exKo": "짜다",
+      "exJa": "しょっぱい"
+    }
+  ],
+  "vowels": [
+    {
+      "char": "ㅏ",
+      "roman": "a",
+      "sound": "ア",
+      "say": "아",
+      "exKo": "아버지",
+      "exJa": "お父さん"
+    },
+    {
+      "char": "ㅑ",
+      "roman": "ya",
+      "sound": "ヤ",
+      "say": "야",
+      "exKo": "야구",
+      "exJa": "野球"
+    },
+    {
+      "char": "ㅓ",
+      "roman": "eo",
+      "sound": "口を大きく開けた「オ」",
+      "say": "어",
+      "exKo": "어머니",
+      "exJa": "お母さん"
+    },
+    {
+      "char": "ㅕ",
+      "roman": "yeo",
+      "sound": "口を大きく開けた「ヨ」",
+      "say": "여",
+      "exKo": "여름",
+      "exJa": "夏"
+    },
+    {
+      "char": "ㅗ",
+      "roman": "o",
+      "sound": "口をすぼめた「オ」",
+      "say": "오",
+      "exKo": "오늘",
+      "exJa": "今日"
+    },
+    {
+      "char": "ㅛ",
+      "roman": "yo",
+      "sound": "口をすぼめた「ヨ」",
+      "say": "요",
+      "exKo": "요리",
+      "exJa": "料理"
+    },
+    {
+      "char": "ㅜ",
+      "roman": "u",
+      "sound": "口をすぼめた「ウ」",
+      "say": "우",
+      "exKo": "우유",
+      "exJa": "牛乳"
+    },
+    {
+      "char": "ㅠ",
+      "roman": "yu",
+      "sound": "ユ",
+      "say": "유",
+      "exKo": "유리",
+      "exJa": "ガラス"
+    },
+    {
+      "char": "ㅡ",
+      "roman": "eu",
+      "sound": "口を横に引いた「ウ」",
+      "say": "으",
+      "exKo": "음악",
+      "exJa": "音楽"
+    },
+    {
+      "char": "ㅣ",
+      "roman": "i",
+      "sound": "イ",
+      "say": "이",
+      "exKo": "이름",
+      "exJa": "名前"
+    },
+    {
+      "char": "ㅐ",
+      "roman": "ae",
+      "sound": "エ",
+      "say": "애",
+      "exKo": "개",
+      "exJa": "犬"
+    },
+    {
+      "char": "ㅒ",
+      "roman": "yae",
+      "sound": "イェ",
+      "say": "얘",
+      "exKo": "얘기",
+      "exJa": "話"
+    },
+    {
+      "char": "ㅔ",
+      "roman": "e",
+      "sound": "エ",
+      "say": "에",
+      "exKo": "메뉴",
+      "exJa": "メニュー"
+    },
+    {
+      "char": "ㅖ",
+      "roman": "ye",
+      "sound": "イェ",
+      "say": "예",
+      "exKo": "예쁘다",
+      "exJa": "かわいい"
+    },
+    {
+      "char": "ㅘ",
+      "roman": "wa",
+      "sound": "ワ",
+      "say": "와",
+      "exKo": "사과",
+      "exJa": "りんご"
+    },
+    {
+      "char": "ㅙ",
+      "roman": "wae",
+      "sound": "ウェ",
+      "say": "왜",
+      "exKo": "왜",
+      "exJa": "なぜ"
+    },
+    {
+      "char": "ㅚ",
+      "roman": "oe",
+      "sound": "ウェ",
+      "say": "외",
+      "exKo": "회사",
+      "exJa": "会社"
+    },
+    {
+      "char": "ㅝ",
+      "roman": "wo",
+      "sound": "ウォ",
+      "say": "워",
+      "exKo": "뭐",
+      "exJa": "何"
+    },
+    {
+      "char": "ㅞ",
+      "roman": "we",
+      "sound": "ウェ",
+      "say": "웨",
+      "exKo": "웨딩",
+      "exJa": "ウェディング"
+    },
+    {
+      "char": "ㅟ",
+      "roman": "wi",
+      "sound": "ウィ",
+      "say": "위",
+      "exKo": "귀",
+      "exJa": "耳"
+    },
+    {
+      "char": "ㅢ",
+      "roman": "ui",
+      "sound": "ウィ",
+      "say": "의",
+      "exKo": "의사",
+      "exJa": "医者"
+    }
+  ],
+  "batchim": [
+    {
+      "sound": "ㄱ",
+      "letters": "ㄱ・ㅋ・ㄲ",
+      "roman": "k",
+      "how": "「ク」を口の中で止める",
+      "exKo": "국",
+      "exJa": "スープ"
+    },
+    {
+      "sound": "ㄴ",
+      "letters": "ㄴ",
+      "roman": "n",
+      "how": "舌先を上の歯の裏につける「ン」",
+      "exKo": "산",
+      "exJa": "山"
+    },
+    {
+      "sound": "ㄷ",
+      "letters": "ㄷ・ㅅ・ㅆ・ㅈ・ㅊ・ㅌ・ㅎ",
+      "roman": "t",
+      "how": "「ッ」で止める",
+      "exKo": "옷",
+      "exJa": "服"
+    },
+    {
+      "sound": "ㄹ",
+      "letters": "ㄹ",
+      "roman": "l",
+      "how": "舌先を上あごにつける「ル」",
+      "exKo": "물",
+      "exJa": "水"
+    },
+    {
+      "sound": "ㅁ",
+      "letters": "ㅁ",
+      "roman": "m",
+      "how": "口を閉じる「ム」",
+      "exKo": "밤",
+      "exJa": "夜"
+    },
+    {
+      "sound": "ㅂ",
+      "letters": "ㅂ・ㅍ",
+      "roman": "p",
+      "how": "口を閉じて止める「プ」",
+      "exKo": "밥",
+      "exJa": "ご飯"
+    },
+    {
+      "sound": "ㅇ",
+      "letters": "ㅇ",
+      "roman": "ng",
+      "how": "口を開けたままの「ン」",
+      "exKo": "방",
+      "exJa": "部屋"
+    }
+  ]
+}

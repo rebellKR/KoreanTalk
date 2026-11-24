@@ -13,13 +13,15 @@ type Progress = {
   daily: { date: string; count: number; lessons: number } // 오늘 학습한 카드 수 / 레슨 수
   days: string[]                                          // 학습한 날짜 목록 (연속 학습일 계산용)
   recent: Recent[]
+  wrongNotes: string[]                                    // TOPIK 틀린 문제 id (間違いノート)
+  topikBest: Record<string, number>                       // "I-vocab" → 최고 점수(%)
 }
 
 // 박스별 다음 복습까지의 일수 (박스 1 → 1일 뒤, 박스 5 → 14일 뒤)
 const INTERVALS = [0, 1, 2, 4, 7, 14]
 const STORAGE_KEY = 'kt-progress'
 const EMPTY: Progress = {
-  cards: {}, favorites: [], completed: [], daily: { date: '', count: 0, lessons: 0 }, days: [], recent: [],
+  cards: {}, favorites: [], completed: [], daily: { date: '', count: 0, lessons: 0 }, days: [], recent: [], wrongNotes: [], topikBest: {},
 }
 
 type Ctx = {
@@ -30,6 +32,8 @@ type Ctx = {
   isDue: (id: string) => boolean                // 오늘 복습할 카드인지 (처음 보는 카드 포함)
   completeLesson: (id: string) => void
   logRecent: (type: Recent['type'], id: string) => void
+  recordTopik: (qid: string, correct: boolean) => void  // 문제 하나 채점 결과 기록
+  saveTopikScore: (key: string, percent: number) => void
   todayCount: number                            // 오늘 학습한 카드 수
   todayLessons: number                          // 오늘 완료한 레슨 수
   learnedCount: number                          // 한 번 이상 「覚えた」 한 단어 수
@@ -111,6 +115,16 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     logRecent('lesson', id)
   }
 
+  const recordTopik = (qid: string, correct: boolean) =>
+    setProgress((p) => {
+      // 틀리면 오답 노트에 추가, 맞히면 오답 노트에서 빼기
+      const wrongNotes = correct ? p.wrongNotes.filter((w) => w !== qid) : p.wrongNotes.includes(qid) ? p.wrongNotes : [...p.wrongNotes, qid]
+      return markToday({ ...p, wrongNotes }, {})
+    })
+
+  const saveTopikScore = (key: string, percent: number) =>
+    setProgress((p) => ({ ...p, topikBest: { ...p.topikBest, [key]: Math.max(p.topikBest[key] ?? 0, percent) } }))
+
   const isDue = (id: string) => {
     const c = progress.cards[id]
     return !c || c.next <= today
@@ -123,7 +137,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       value={{
         progress,
         isFavorite: (id) => progress.favorites.includes(id),
-        toggleFavorite, answer, isDue, completeLesson, logRecent,
+        toggleFavorite, answer, isDue, completeLesson, logRecent, recordTopik, saveTopikScore,
         todayCount: isToday ? progress.daily.count : 0,
         todayLessons: isToday ? progress.daily.lessons : 0,
         learnedCount: cards.filter((c) => c.box >= 1).length,

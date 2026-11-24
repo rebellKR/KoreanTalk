@@ -30,3 +30,29 @@ export type Situation = {
   description: string
   phrases: Phrase[]
 }
+
+// 한글 자모
+export type Jamo = { char: string; roman: string; sound: string; say: string; exKo: string; exJa: string }
+export type Batchim = { sound: string; letters: string; roman: string; how: string; exKo: string; exJa: string }
+
+// 문법 카드
+export type GrammarItem = {
+  id: string
+  level: 1 | 2 | 3
+  pattern: string        // 예: "-고 싶다"
+  ja: string             // 일본어 의미
+  explanation: string    // 일본어 설명
+  examples: { ko: string; ja: string }[]
+}
+
+// TOPIK 연습 문제 (오리지널)
+export type TopikQuestion = {
+  id: string
+  level: 'I' | 'II'
+  section: 'vocab' | 'grammar' | 'reading'
+  question: string
+  passage?: string       // 읽기 지문
+  choices: string[]
+  answer: number         // 정답 index (0~3)
+  explanationJa: string
+}

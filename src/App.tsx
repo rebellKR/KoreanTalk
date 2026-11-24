@@ -8,6 +8,10 @@ import MyPage from './pages/MyPage'
 import Settings from './pages/Settings'
 import Study from './pages/Study'
 import Lesson from './pages/Lesson'
+import Hangul from './pages/Hangul'
+import Grammar from './pages/Grammar'
+import Topik from './pages/Topik'
+import TopikQuiz from './pages/TopikQuiz'
 
 export default function App() {
   return (
@@ -20,10 +24,14 @@ export default function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/mypage/settings" element={<Settings />} />
+        <Route path="/hangul" element={<Hangul />} />
+        <Route path="/grammar" element={<Grammar />} />
+        <Route path="/topik" element={<Topik />} />
       </Route>
       {/* 카드 학습은 탭바 없이 전체 화면 */}
       <Route path="/vocabulary/study" element={<Study />} />
       <Route path="/conversation/:sid" element={<Lesson />} />
+      <Route path="/topik/quiz" element={<TopikQuiz />} />
     </Routes>
   )
 }
