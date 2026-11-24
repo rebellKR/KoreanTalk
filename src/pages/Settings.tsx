@@ -11,7 +11,7 @@ import ConfirmDialog from '../components/ConfirmDialog'
 import Toast from '../components/Toast'
 import { useTheme, type ThemeMode } from '../context/ThemeContext'
 import { useSettings, type Settings as S } from '../context/SettingsContext'
-import { speakKorean, getKoreanVoices } from '../utils/speak'
+import { speakKorean, getKoreanVoices, voiceLabel } from '../utils/speak'
 import { exportBackup, importBackup, resetAll } from '../utils/backup'
 
 const APP_VERSION = '0.2.0'
@@ -87,10 +87,12 @@ export default function Settings() {
             <select value={settings.voiceURI} onChange={(e) => update('voiceURI', e.target.value)}
               className="h-11 w-full appearance-none rounded-xl bg-background px-4 pr-10 text-[16px] ring-1 ring-border/60 outline-none dark:bg-border">
               <option value="">自動（一番自然な音声）</option>
-              {voices.map((v) => <option key={v.voiceURI} value={v.voiceURI}>{v.name}</option>)}
+              {voices.map((v) => <option key={v.voiceURI} value={v.voiceURI}>{voiceLabel(v)}</option>)}
             </select>
             <ChevronDown size={18} className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-text-secondary" />
             </div>
+            {/* 고른 음성의 고유 주소 (같은 이름이 여러 개일 때 구분용) */}
+            {settings.voiceURI && <p className="mt-2 truncate text-[11px] text-text-secondary">{settings.voiceURI}</p>}
             {/* 고음질 음성 다운로드 안내 */}
             <p className="mt-3 text-[12px] leading-relaxed text-text-secondary">
               もっと自然な声にするには：iPhoneの「設定 → アクセシビリティ → 読み上げコンテンツ → 声 → 韓国語」で

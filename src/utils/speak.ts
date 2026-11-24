@@ -14,13 +14,23 @@ export function getKoreanVoices(): Promise<SpeechSynthesisVoice[]> {
   })
 }
 
-// 음질 점수: Premium(고음질) > Enhanced(향상) > Google 등 온라인 음성 > 기본
+// 음질 점수: Premium(고음질) > Enhanced(향상) > Google 등 온라인 음성 > 기본(compact)
+// iPhone은 이름이 둘 다 "Yuna"라서, 이름 대신 voiceURI(음성 고유 주소)에 적힌 등급으로 구분
+// 예) com.apple.voice.premium.ko-KR.Yuna / com.apple.voice.compact.ko-KR.Yuna
 function score(v: SpeechSynthesisVoice) {
-  const n = v.name.toLowerCase()
+  const n = (v.name + ' ' + v.voiceURI).toLowerCase()
   if (n.includes('premium') || n.includes('프리미엄')) return 3
   if (n.includes('enhanced') || n.includes('향상') || n.includes('고품질')) return 2
   if (n.includes('google') || n.includes('natural') || n.includes('online')) return 1
+  if (n.includes('compact')) return -1
   return 0
+}
+
+// 설정 화면에 보여줄 이름: "Yuna（プレミアム）" 처럼 등급을 붙임
+export function voiceLabel(v: SpeechSynthesisVoice) {
+  const q = score(v)
+  const tag = q === 3 ? 'プレミアム' : q === 2 ? '高音質' : q === -1 ? '標準' : ''
+  return tag ? `${v.name}（${tag}）` : v.name
 }
 const sortVoices = (list: SpeechSynthesisVoice[]) => [...list].sort((a, b) => score(b) - score(a))
 
