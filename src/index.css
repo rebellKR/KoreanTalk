@@ -67,3 +67,10 @@ body {
   -webkit-tap-highlight-color: transparent; /* iPhone 탭 시 회색 박스 제거 */
   transition: background-color 0.2s, color 0.2s;
 }
+
+/* 완료 화면 아이콘이 톡 튀어나오는 효과 */
+@keyframes pop {
+  0% { transform: scale(0.4); opacity: 0; }
+  70% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); }
+}

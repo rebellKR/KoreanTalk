@@ -3,6 +3,7 @@ import { Flame, BookCheck, GraduationCap, Settings as SettingsIcon, ChevronRight
 import ProgressBar from '../components/ProgressBar'
 import Section from '../components/Section'
 import { useSettings } from '../context/SettingsContext'
+import { useProgress } from '../context/ProgressContext'
 
 // STAGE 2: 통계는 더미 숫자 (STAGE 6에서 실제 기록 연결)
 const stats = [
@@ -13,6 +14,7 @@ const stats = [
 
 export default function MyPage() {
   const { settings } = useSettings()
+  const { todayCount } = useProgress()
   const navigate = useNavigate()
   return (
     <div className="min-h-dvh bg-surface">
@@ -43,7 +45,7 @@ export default function MyPage() {
           <div className="mb-4 flex items-center gap-2 text-[14px] font-semibold">
             <Target size={17} className="text-primary" /> 1日 {settings.dailyGoal}語
           </div>
-          <ProgressBar value={4} max={settings.dailyGoal} label="今日の単語" />
+          <ProgressBar value={Math.min(todayCount, settings.dailyGoal)} max={settings.dailyGoal} label="今日の単語" />
         </Section>
 
         {/* 메뉴 목록: 한 줄씩 구분선 */}

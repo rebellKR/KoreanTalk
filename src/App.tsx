@@ -6,6 +6,7 @@ import Vocabulary from './pages/Vocabulary'
 import Favorites from './pages/Favorites'
 import MyPage from './pages/MyPage'
 import Settings from './pages/Settings'
+import Study from './pages/Study'
 
 export default function App() {
   return (
@@ -19,6 +20,8 @@ export default function App() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/mypage/settings" element={<Settings />} />
       </Route>
+      {/* 카드 학습은 탭바 없이 전체 화면 */}
+      <Route path="/vocabulary/study" element={<Study />} />
     </Routes>
   )
 }

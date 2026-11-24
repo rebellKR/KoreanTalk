@@ -7,6 +7,7 @@ import ProgressBar from '../components/ProgressBar'
 import Section from '../components/Section'
 import QuickAction from '../components/QuickAction'
 import { useSettings } from '../context/SettingsContext'
+import { useProgress } from '../context/ProgressContext'
 import { speakKorean } from '../utils/speak'
 
 // 일본 시간 기준 인사말
@@ -31,6 +32,7 @@ const phrase = { ko: '오늘 날씨 좋다!', kana: 'オヌル ナルッシ チ�
 
 export default function Home() {
   const { settings } = useSettings()
+  const { todayCount } = useProgress()
   const navigate = useNavigate()
 
   return (
@@ -88,7 +90,7 @@ export default function Home() {
 
       {/* ===== 오늘의 목표 ===== */}
       <Section title="今日の目標" onMore={() => navigate('/mypage')}>
-        <ProgressBar value={4} max={settings.dailyGoal} label="単語" />
+        <ProgressBar value={Math.min(todayCount, settings.dailyGoal)} max={settings.dailyGoal} label="単語" />
         <div className="mt-5">
           <ProgressBar value={1} max={3} label="フレーズ" />
         </div>

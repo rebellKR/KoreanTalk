@@ -1,0 +1,2402 @@
+[
+  {
+    "id": "greeting-001",
+    "ko": "안녕하세요",
+    "ja": "こんにちは",
+    "kana": "アンニョンハセヨ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "안녕하세요, 처음 뵙겠습니다.",
+      "ja": "こんにちは、はじめまして。"
+    }
+  },
+  {
+    "id": "greeting-002",
+    "ko": "감사합니다",
+    "ja": "ありがとうございます",
+    "kana": "カムサハムニダ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "도와주셔서 감사합니다.",
+      "ja": "手伝ってくださってありがとうございます。"
+    }
+  },
+  {
+    "id": "greeting-003",
+    "ko": "고마워",
+    "ja": "ありがとう（タメ口）",
+    "kana": "コマウォ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "진짜 고마워!",
+      "ja": "本当にありがとう！"
+    }
+  },
+  {
+    "id": "greeting-004",
+    "ko": "미안해",
+    "ja": "ごめんね",
+    "kana": "ミアネ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "늦어서 미안해.",
+      "ja": "遅れてごめんね。"
+    }
+  },
+  {
+    "id": "greeting-005",
+    "ko": "죄송합니다",
+    "ja": "申し訳ありません",
+    "kana": "チェソンハムニダ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "정말 죄송합니다.",
+      "ja": "本当に申し訳ありません。"
+    }
+  },
+  {
+    "id": "greeting-006",
+    "ko": "괜찮아요",
+    "ja": "大丈夫です",
+    "kana": "ケンチャナヨ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "저는 괜찮아요.",
+      "ja": "私は大丈夫です。"
+    }
+  },
+  {
+    "id": "greeting-007",
+    "ko": "반가워요",
+    "ja": "会えてうれしいです",
+    "kana": "パンガウォヨ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "만나서 반가워요.",
+      "ja": "お会いできてうれしいです。"
+    }
+  },
+  {
+    "id": "greeting-008",
+    "ko": "잘 지냈어?",
+    "ja": "元気だった？",
+    "kana": "チャル チネッソ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "오랜만이야, 잘 지냈어?",
+      "ja": "久しぶり、元気だった？"
+    }
+  },
+  {
+    "id": "greeting-009",
+    "ko": "오랜만이에요",
+    "ja": "お久しぶりです",
+    "kana": "オレンマニエヨ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "정말 오랜만이에요.",
+      "ja": "本当にお久しぶりです。"
+    }
+  },
+  {
+    "id": "greeting-010",
+    "ko": "잘 자",
+    "ja": "おやすみ",
+    "kana": "チャル ジャ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "내일 봐, 잘 자!",
+      "ja": "また明日ね、おやすみ！"
+    }
+  },
+  {
+    "id": "greeting-011",
+    "ko": "안녕히 가세요",
+    "ja": "さようなら（見送る側）",
+    "kana": "アンニョンイ カセヨ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "조심히 안녕히 가세요.",
+      "ja": "お気をつけて、さようなら。"
+    }
+  },
+  {
+    "id": "greeting-012",
+    "ko": "안녕히 계세요",
+    "ja": "さようなら（去る側）",
+    "kana": "アンニョンイ ケセヨ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "그럼 안녕히 계세요.",
+      "ja": "それでは、さようなら。"
+    }
+  },
+  {
+    "id": "greeting-013",
+    "ko": "또 봐",
+    "ja": "またね",
+    "kana": "ット バ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "다음에 또 봐!",
+      "ja": "また今度ね！"
+    }
+  },
+  {
+    "id": "greeting-014",
+    "ko": "네",
+    "ja": "はい",
+    "kana": "ネ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "네, 알겠습니다.",
+      "ja": "はい、わかりました。"
+    }
+  },
+  {
+    "id": "greeting-015",
+    "ko": "아니요",
+    "ja": "いいえ",
+    "kana": "アニヨ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "아니요, 괜찮아요.",
+      "ja": "いいえ、大丈夫です。"
+    }
+  },
+  {
+    "id": "greeting-016",
+    "ko": "잘 먹겠습니다",
+    "ja": "いただきます",
+    "kana": "チャル モッケッスムニダ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "맛있게 잘 먹겠습니다!",
+      "ja": "おいしくいただきます！"
+    }
+  },
+  {
+    "id": "greeting-017",
+    "ko": "잘 먹었습니다",
+    "ja": "ごちそうさまでした",
+    "kana": "チャル モゴッスムニダ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "오늘도 잘 먹었습니다.",
+      "ja": "今日もごちそうさまでした。"
+    }
+  },
+  {
+    "id": "greeting-018",
+    "ko": "수고하셨습니다",
+    "ja": "お疲れさまでした",
+    "kana": "スゴハショッスムニダ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "오늘 하루 수고하셨습니다.",
+      "ja": "今日一日お疲れさまでした。"
+    }
+  },
+  {
+    "id": "greeting-019",
+    "ko": "축하해",
+    "ja": "おめでとう",
+    "kana": "チュカヘ",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "생일 축하해!",
+      "ja": "誕生日おめでとう！"
+    }
+  },
+  {
+    "id": "greeting-020",
+    "ko": "화이팅",
+    "ja": "がんばって",
+    "kana": "ファイティン",
+    "category": "greeting",
+    "level": 1,
+    "example": {
+      "ko": "시험 화이팅!",
+      "ja": "試験がんばって！"
+    }
+  },
+  {
+    "id": "food-001",
+    "ko": "밥",
+    "ja": "ご飯",
+    "kana": "パプ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "밥 먹었어?",
+      "ja": "ご飯食べた？"
+    }
+  },
+  {
+    "id": "food-002",
+    "ko": "물",
+    "ja": "水",
+    "kana": "ムル",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "물 좀 주세요.",
+      "ja": "お水ください。"
+    }
+  },
+  {
+    "id": "food-003",
+    "ko": "고기",
+    "ja": "肉",
+    "kana": "コギ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "오늘은 고기 먹자.",
+      "ja": "今日は肉を食べよう。"
+    }
+  },
+  {
+    "id": "food-004",
+    "ko": "김치",
+    "ja": "キムチ",
+    "kana": "キムチ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "김치가 너무 매워요.",
+      "ja": "キムチがとても辛いです。"
+    }
+  },
+  {
+    "id": "food-005",
+    "ko": "라면",
+    "ja": "ラーメン",
+    "kana": "ラミョン",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "밤에 라면 먹고 싶다.",
+      "ja": "夜にラーメン食べたい。"
+    }
+  },
+  {
+    "id": "food-006",
+    "ko": "떡볶이",
+    "ja": "トッポッキ",
+    "kana": "トッポッキ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "떡볶이 먹으러 가자.",
+      "ja": "トッポッキ食べに行こう。"
+    }
+  },
+  {
+    "id": "food-007",
+    "ko": "치킨",
+    "ja": "フライドチキン",
+    "kana": "チキン",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "치킨에는 맥주지!",
+      "ja": "チキンにはビールでしょ！"
+    }
+  },
+  {
+    "id": "food-008",
+    "ko": "과일",
+    "ja": "果物",
+    "kana": "クァイル",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "과일을 좋아해요.",
+      "ja": "果物が好きです。"
+    }
+  },
+  {
+    "id": "food-009",
+    "ko": "야채",
+    "ja": "野菜",
+    "kana": "ヤチェ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "야채도 먹어야 돼.",
+      "ja": "野菜も食べなきゃ。"
+    }
+  },
+  {
+    "id": "food-010",
+    "ko": "맛있다",
+    "ja": "おいしい",
+    "kana": "マシッタ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "이거 진짜 맛있다!",
+      "ja": "これ本当においしい！"
+    }
+  },
+  {
+    "id": "food-011",
+    "ko": "맛없다",
+    "ja": "まずい",
+    "kana": "マドプタ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "생각보다 맛없다.",
+      "ja": "思ったよりまずい。"
+    }
+  },
+  {
+    "id": "food-012",
+    "ko": "맵다",
+    "ja": "辛い",
+    "kana": "メプタ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "이 라면은 너무 맵다.",
+      "ja": "このラーメンは辛すぎる。"
+    }
+  },
+  {
+    "id": "food-013",
+    "ko": "달다",
+    "ja": "甘い",
+    "kana": "タルダ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "케이크가 너무 달다.",
+      "ja": "ケーキが甘すぎる。"
+    }
+  },
+  {
+    "id": "food-014",
+    "ko": "짜다",
+    "ja": "しょっぱい",
+    "kana": "ッチャダ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "국이 좀 짜요.",
+      "ja": "スープが少ししょっぱいです。"
+    }
+  },
+  {
+    "id": "food-015",
+    "ko": "배고프다",
+    "ja": "お腹がすいた",
+    "kana": "ペゴプダ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "아, 배고파.",
+      "ja": "あー、お腹すいた。"
+    }
+  },
+  {
+    "id": "food-016",
+    "ko": "배부르다",
+    "ja": "お腹いっぱい",
+    "kana": "ペブルダ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "너무 많이 먹어서 배불러.",
+      "ja": "食べすぎてお腹いっぱい。"
+    }
+  },
+  {
+    "id": "food-017",
+    "ko": "먹다",
+    "ja": "食べる",
+    "kana": "モクタ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "같이 저녁 먹을래?",
+      "ja": "一緒に夕飯食べる？"
+    }
+  },
+  {
+    "id": "food-018",
+    "ko": "마시다",
+    "ja": "飲む",
+    "kana": "マシダ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "물을 많이 마셔요.",
+      "ja": "水をたくさん飲みます。"
+    }
+  },
+  {
+    "id": "food-019",
+    "ko": "맥주",
+    "ja": "ビール",
+    "kana": "メクチュ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "맥주 한 잔 할까?",
+      "ja": "ビール一杯飲もうか？"
+    }
+  },
+  {
+    "id": "food-020",
+    "ko": "소주",
+    "ja": "焼酎",
+    "kana": "ソジュ",
+    "category": "food",
+    "level": 1,
+    "example": {
+      "ko": "소주 한 병 주세요.",
+      "ja": "焼酎一本ください。"
+    }
+  },
+  {
+    "id": "cafe-001",
+    "ko": "커피",
+    "ja": "コーヒー",
+    "kana": "コピ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "커피 마시러 갈래?",
+      "ja": "コーヒー飲みに行く？"
+    }
+  },
+  {
+    "id": "cafe-002",
+    "ko": "아이스 아메리카노",
+    "ja": "アイスアメリカーノ",
+    "kana": "アイス アメリカノ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "아이스 아메리카노 한 잔 주세요.",
+      "ja": "アイスアメリカーノを一杯ください。"
+    }
+  },
+  {
+    "id": "cafe-003",
+    "ko": "라떼",
+    "ja": "ラテ",
+    "kana": "ラッテ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "따뜻한 라떼로 할게요.",
+      "ja": "ホットのラテにします。"
+    }
+  },
+  {
+    "id": "cafe-004",
+    "ko": "녹차",
+    "ja": "緑茶",
+    "kana": "ノクチャ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "녹차 라떼 있어요?",
+      "ja": "抹茶ラテありますか？"
+    }
+  },
+  {
+    "id": "cafe-005",
+    "ko": "케이크",
+    "ja": "ケーキ",
+    "kana": "ケイク",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "이 케이크 맛있어 보여.",
+      "ja": "このケーキおいしそう。"
+    }
+  },
+  {
+    "id": "cafe-006",
+    "ko": "빵",
+    "ja": "パン",
+    "kana": "ッパン",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "빵도 같이 주세요.",
+      "ja": "パンも一緒にください。"
+    }
+  },
+  {
+    "id": "cafe-007",
+    "ko": "주문",
+    "ja": "注文",
+    "kana": "チュムン",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "주문하시겠어요?",
+      "ja": "ご注文はお決まりですか？"
+    }
+  },
+  {
+    "id": "cafe-008",
+    "ko": "메뉴",
+    "ja": "メニュー",
+    "kana": "メニュ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "메뉴 좀 보여 주세요.",
+      "ja": "メニューを見せてください。"
+    }
+  },
+  {
+    "id": "cafe-009",
+    "ko": "포장",
+    "ja": "持ち帰り",
+    "kana": "ポジャン",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "포장해 주세요.",
+      "ja": "持ち帰りでお願いします。"
+    }
+  },
+  {
+    "id": "cafe-010",
+    "ko": "매장",
+    "ja": "店内",
+    "kana": "メジャン",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "매장에서 먹을게요.",
+      "ja": "店内で食べます。"
+    }
+  },
+  {
+    "id": "cafe-011",
+    "ko": "뜨거운",
+    "ja": "温かい（ホット）",
+    "kana": "ットゥゴウン",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "뜨거운 걸로 주세요.",
+      "ja": "ホットでお願いします。"
+    }
+  },
+  {
+    "id": "cafe-012",
+    "ko": "차가운",
+    "ja": "冷たい",
+    "kana": "チャガウン",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "차가운 물 있어요?",
+      "ja": "冷たいお水ありますか？"
+    }
+  },
+  {
+    "id": "cafe-013",
+    "ko": "사이즈",
+    "ja": "サイズ",
+    "kana": "サイジュ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "사이즈는 뭘로 하시겠어요?",
+      "ja": "サイズはどうなさいますか？"
+    }
+  },
+  {
+    "id": "cafe-014",
+    "ko": "샷 추가",
+    "ja": "ショット追加",
+    "kana": "シャッ チュガ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "샷 추가해 주세요.",
+      "ja": "ショット追加でお願いします。"
+    }
+  },
+  {
+    "id": "cafe-015",
+    "ko": "진동벨",
+    "ja": "呼び出しベル",
+    "kana": "チンドンベル",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "진동벨이 울리면 오세요.",
+      "ja": "ベルが鳴ったらお越しください。"
+    }
+  },
+  {
+    "id": "cafe-016",
+    "ko": "영수증",
+    "ja": "レシート",
+    "kana": "ヨンスジュン",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "영수증 드릴까요?",
+      "ja": "レシートはご入用ですか？"
+    }
+  },
+  {
+    "id": "cafe-017",
+    "ko": "카드",
+    "ja": "カード",
+    "kana": "カドゥ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "카드로 할게요.",
+      "ja": "カードで払います。"
+    }
+  },
+  {
+    "id": "cafe-018",
+    "ko": "현금",
+    "ja": "現金",
+    "kana": "ヒョングム",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "현금도 되나요?",
+      "ja": "現金も使えますか？"
+    }
+  },
+  {
+    "id": "cafe-019",
+    "ko": "자리",
+    "ja": "席",
+    "kana": "チャリ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "여기 자리 있어요?",
+      "ja": "この席、空いてますか？"
+    }
+  },
+  {
+    "id": "cafe-020",
+    "ko": "와이파이",
+    "ja": "Wi-Fi",
+    "kana": "ワイパイ",
+    "category": "cafe",
+    "level": 1,
+    "example": {
+      "ko": "와이파이 비밀번호가 뭐예요?",
+      "ja": "Wi-Fiのパスワードは何ですか？"
+    }
+  },
+  {
+    "id": "shopping-001",
+    "ko": "얼마예요?",
+    "ja": "いくらですか？",
+    "kana": "オルマエヨ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "이거 얼마예요?",
+      "ja": "これいくらですか？"
+    }
+  },
+  {
+    "id": "shopping-002",
+    "ko": "비싸다",
+    "ja": "（値段が）高い",
+    "kana": "ピッサダ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "너무 비싸요.",
+      "ja": "高すぎます。"
+    }
+  },
+  {
+    "id": "shopping-003",
+    "ko": "싸다",
+    "ja": "安い",
+    "kana": "ッサダ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "여기 진짜 싸다!",
+      "ja": "ここ本当に安い！"
+    }
+  },
+  {
+    "id": "shopping-004",
+    "ko": "깎아 주세요",
+    "ja": "まけてください",
+    "kana": "ッカッカ ジュセヨ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "조금만 깎아 주세요.",
+      "ja": "少しだけまけてください。"
+    }
+  },
+  {
+    "id": "shopping-005",
+    "ko": "입어 봐도 돼요?",
+    "ja": "試着してもいいですか？",
+    "kana": "イボ バド トェヨ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "이거 입어 봐도 돼요?",
+      "ja": "これ試着してもいいですか？"
+    }
+  },
+  {
+    "id": "shopping-006",
+    "ko": "사다",
+    "ja": "買う",
+    "kana": "サダ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "친구 선물을 샀어요.",
+      "ja": "友達へのプレゼントを買いました。"
+    }
+  },
+  {
+    "id": "shopping-007",
+    "ko": "옷",
+    "ja": "服",
+    "kana": "オッ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "새 옷을 사고 싶어.",
+      "ja": "新しい服を買いたい。"
+    }
+  },
+  {
+    "id": "shopping-008",
+    "ko": "신발",
+    "ja": "靴",
+    "kana": "シンバル",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "신발 사이즈가 어떻게 되세요?",
+      "ja": "靴のサイズはおいくつですか？"
+    }
+  },
+  {
+    "id": "shopping-009",
+    "ko": "가방",
+    "ja": "カバン",
+    "kana": "カバン",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "이 가방 예쁘다.",
+      "ja": "このカバンかわいい。"
+    }
+  },
+  {
+    "id": "shopping-010",
+    "ko": "화장품",
+    "ja": "化粧品",
+    "kana": "ファジャンプム",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "화장품 사러 가자.",
+      "ja": "化粧品を買いに行こう。"
+    }
+  },
+  {
+    "id": "shopping-011",
+    "ko": "세일",
+    "ja": "セール",
+    "kana": "セイル",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "지금 세일 중이에요.",
+      "ja": "今セール中です。"
+    }
+  },
+  {
+    "id": "shopping-012",
+    "ko": "할인",
+    "ja": "割引",
+    "kana": "ハリン",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "할인돼요?",
+      "ja": "割引できますか？"
+    }
+  },
+  {
+    "id": "shopping-013",
+    "ko": "교환",
+    "ja": "交換",
+    "kana": "キョファン",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "교환할 수 있어요?",
+      "ja": "交換できますか？"
+    }
+  },
+  {
+    "id": "shopping-014",
+    "ko": "환불",
+    "ja": "返金",
+    "kana": "ファンブル",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "환불해 주세요.",
+      "ja": "返金してください。"
+    }
+  },
+  {
+    "id": "shopping-015",
+    "ko": "봉투",
+    "ja": "袋",
+    "kana": "ポントゥ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "봉투 필요하세요?",
+      "ja": "袋はご入用ですか？"
+    }
+  },
+  {
+    "id": "shopping-016",
+    "ko": "계산",
+    "ja": "会計",
+    "kana": "ケサン",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "계산해 주세요.",
+      "ja": "お会計お願いします。"
+    }
+  },
+  {
+    "id": "shopping-017",
+    "ko": "편의점",
+    "ja": "コンビニ",
+    "kana": "ピョニジョム",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "편의점 들렀다 가자.",
+      "ja": "コンビニ寄ってから行こう。"
+    }
+  },
+  {
+    "id": "shopping-018",
+    "ko": "마트",
+    "ja": "スーパー",
+    "kana": "マトゥ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "마트에서 장 봤어요.",
+      "ja": "スーパーで買い物しました。"
+    }
+  },
+  {
+    "id": "shopping-019",
+    "ko": "색깔",
+    "ja": "色",
+    "kana": "セッカル",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "다른 색깔 있어요?",
+      "ja": "ほかの色はありますか？"
+    }
+  },
+  {
+    "id": "shopping-020",
+    "ko": "예쁘다",
+    "ja": "かわいい・きれい",
+    "kana": "イェップダ",
+    "category": "shopping",
+    "level": 1,
+    "example": {
+      "ko": "이 옷 너무 예쁘다!",
+      "ja": "この服すごくかわいい！"
+    }
+  },
+  {
+    "id": "transport-001",
+    "ko": "지하철",
+    "ja": "地下鉄",
+    "kana": "チハチョル",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "지하철로 가요.",
+      "ja": "地下鉄で行きます。"
+    }
+  },
+  {
+    "id": "transport-002",
+    "ko": "버스",
+    "ja": "バス",
+    "kana": "ボス",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "버스가 안 와요.",
+      "ja": "バスが来ません。"
+    }
+  },
+  {
+    "id": "transport-003",
+    "ko": "택시",
+    "ja": "タクシー",
+    "kana": "テクシ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "택시 타고 가자.",
+      "ja": "タクシーで行こう。"
+    }
+  },
+  {
+    "id": "transport-004",
+    "ko": "역",
+    "ja": "駅",
+    "kana": "ヨク",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "역까지 얼마나 걸려요?",
+      "ja": "駅までどのくらいかかりますか？"
+    }
+  },
+  {
+    "id": "transport-005",
+    "ko": "정류장",
+    "ja": "停留所",
+    "kana": "チョンニュジャン",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "버스 정류장이 어디예요?",
+      "ja": "バス停はどこですか？"
+    }
+  },
+  {
+    "id": "transport-006",
+    "ko": "공항",
+    "ja": "空港",
+    "kana": "コンハン",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "공항에 가 주세요.",
+      "ja": "空港までお願いします。"
+    }
+  },
+  {
+    "id": "transport-007",
+    "ko": "타다",
+    "ja": "乗る",
+    "kana": "タダ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "버스를 타요.",
+      "ja": "バスに乗ります。"
+    }
+  },
+  {
+    "id": "transport-008",
+    "ko": "내리다",
+    "ja": "降りる",
+    "kana": "ネリダ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "다음 역에서 내려요.",
+      "ja": "次の駅で降ります。"
+    }
+  },
+  {
+    "id": "transport-009",
+    "ko": "갈아타다",
+    "ja": "乗り換える",
+    "kana": "カラタダ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "2호선으로 갈아타세요.",
+      "ja": "2号線に乗り換えてください。"
+    }
+  },
+  {
+    "id": "transport-010",
+    "ko": "출구",
+    "ja": "出口",
+    "kana": "チュルグ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "3번 출구로 나오세요.",
+      "ja": "3番出口から出てください。"
+    }
+  },
+  {
+    "id": "transport-011",
+    "ko": "입구",
+    "ja": "入口",
+    "kana": "イプク",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "입구에서 만나자.",
+      "ja": "入口で会おう。"
+    }
+  },
+  {
+    "id": "transport-012",
+    "ko": "교통카드",
+    "ja": "交通カード",
+    "kana": "キョトンカドゥ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "교통카드 충전해야 돼.",
+      "ja": "交通カードをチャージしなきゃ。"
+    }
+  },
+  {
+    "id": "transport-013",
+    "ko": "충전",
+    "ja": "チャージ・充電",
+    "kana": "チュンジョン",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "핸드폰 충전 좀 할게요.",
+      "ja": "スマホ充電させてください。"
+    }
+  },
+  {
+    "id": "transport-014",
+    "ko": "왼쪽",
+    "ja": "左",
+    "kana": "ウェンッチョク",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "왼쪽으로 가세요.",
+      "ja": "左に行ってください。"
+    }
+  },
+  {
+    "id": "transport-015",
+    "ko": "오른쪽",
+    "ja": "右",
+    "kana": "オルンッチョク",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "오른쪽에 있어요.",
+      "ja": "右側にあります。"
+    }
+  },
+  {
+    "id": "transport-016",
+    "ko": "똑바로",
+    "ja": "まっすぐ",
+    "kana": "ットクパロ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "똑바로 가세요.",
+      "ja": "まっすぐ行ってください。"
+    }
+  },
+  {
+    "id": "transport-017",
+    "ko": "여기",
+    "ja": "ここ",
+    "kana": "ヨギ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "여기서 세워 주세요.",
+      "ja": "ここで止めてください。"
+    }
+  },
+  {
+    "id": "transport-018",
+    "ko": "거기",
+    "ja": "そこ",
+    "kana": "コギ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "거기까지 걸어가요.",
+      "ja": "そこまで歩いて行きます。"
+    }
+  },
+  {
+    "id": "transport-019",
+    "ko": "가깝다",
+    "ja": "近い",
+    "kana": "カッカプタ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "역에서 가까워요.",
+      "ja": "駅から近いです。"
+    }
+  },
+  {
+    "id": "transport-020",
+    "ko": "멀다",
+    "ja": "遠い",
+    "kana": "モルダ",
+    "category": "transport",
+    "level": 1,
+    "example": {
+      "ko": "여기서 멀어요?",
+      "ja": "ここから遠いですか？"
+    }
+  },
+  {
+    "id": "feelings-001",
+    "ko": "기쁘다",
+    "ja": "うれしい",
+    "kana": "キップダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "합격해서 너무 기뻐!",
+      "ja": "合格してすごくうれしい！"
+    }
+  },
+  {
+    "id": "feelings-002",
+    "ko": "슬프다",
+    "ja": "悲しい",
+    "kana": "スルプダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "그 영화 너무 슬펐어.",
+      "ja": "あの映画すごく悲しかった。"
+    }
+  },
+  {
+    "id": "feelings-003",
+    "ko": "행복하다",
+    "ja": "幸せだ",
+    "kana": "ヘンボカダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "지금 너무 행복해.",
+      "ja": "今すごく幸せ。"
+    }
+  },
+  {
+    "id": "feelings-004",
+    "ko": "화나다",
+    "ja": "腹が立つ",
+    "kana": "ファナダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "진짜 화났어.",
+      "ja": "本当に怒ってるよ。"
+    }
+  },
+  {
+    "id": "feelings-005",
+    "ko": "짜증나다",
+    "ja": "イライラする",
+    "kana": "ッチャジュンナダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "아, 짜증나!",
+      "ja": "あー、イライラする！"
+    }
+  },
+  {
+    "id": "feelings-006",
+    "ko": "피곤하다",
+    "ja": "疲れている",
+    "kana": "ピゴナダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "오늘 너무 피곤해.",
+      "ja": "今日すごく疲れた。"
+    }
+  },
+  {
+    "id": "feelings-007",
+    "ko": "심심하다",
+    "ja": "退屈だ",
+    "kana": "シムシマダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "심심해, 뭐 하지?",
+      "ja": "ひまだな、何しよう？"
+    }
+  },
+  {
+    "id": "feelings-008",
+    "ko": "재미있다",
+    "ja": "面白い・楽しい",
+    "kana": "チェミイッタ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "이 드라마 재미있어!",
+      "ja": "このドラマ面白い！"
+    }
+  },
+  {
+    "id": "feelings-009",
+    "ko": "무섭다",
+    "ja": "怖い",
+    "kana": "ムソプタ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "공포 영화는 무서워.",
+      "ja": "ホラー映画は怖い。"
+    }
+  },
+  {
+    "id": "feelings-010",
+    "ko": "외롭다",
+    "ja": "寂しい",
+    "kana": "ウェロプタ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "혼자 있으니까 외로워.",
+      "ja": "一人でいると寂しい。"
+    }
+  },
+  {
+    "id": "feelings-011",
+    "ko": "설레다",
+    "ja": "ときめく・ワクワクする",
+    "kana": "ソルレダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "내일 데이트라서 설레.",
+      "ja": "明日デートだからドキドキする。"
+    }
+  },
+  {
+    "id": "feelings-012",
+    "ko": "걱정하다",
+    "ja": "心配する",
+    "kana": "コクチョンハダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "걱정하지 마.",
+      "ja": "心配しないで。"
+    }
+  },
+  {
+    "id": "feelings-013",
+    "ko": "놀라다",
+    "ja": "驚く",
+    "kana": "ノルラダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "깜짝 놀랐어!",
+      "ja": "びっくりした！"
+    }
+  },
+  {
+    "id": "feelings-014",
+    "ko": "부럽다",
+    "ja": "うらやましい",
+    "kana": "プロプタ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "와, 부럽다!",
+      "ja": "わあ、うらやましい！"
+    }
+  },
+  {
+    "id": "feelings-015",
+    "ko": "창피하다",
+    "ja": "恥ずかしい",
+    "kana": "チャンピハダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "너무 창피해.",
+      "ja": "すごく恥ずかしい。"
+    }
+  },
+  {
+    "id": "feelings-016",
+    "ko": "속상하다",
+    "ja": "悔しい・心が痛む",
+    "kana": "ソクサンハダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "시험 떨어져서 속상해.",
+      "ja": "試験に落ちて悔しい。"
+    }
+  },
+  {
+    "id": "feelings-017",
+    "ko": "좋다",
+    "ja": "いい・好きだ",
+    "kana": "チョタ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "날씨가 좋다.",
+      "ja": "天気がいい。"
+    }
+  },
+  {
+    "id": "feelings-018",
+    "ko": "싫다",
+    "ja": "嫌だ",
+    "kana": "シルタ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "그건 싫어.",
+      "ja": "それは嫌。"
+    }
+  },
+  {
+    "id": "feelings-019",
+    "ko": "감동하다",
+    "ja": "感動する",
+    "kana": "カムドンハダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "진짜 감동했어.",
+      "ja": "本当に感動した。"
+    }
+  },
+  {
+    "id": "feelings-020",
+    "ko": "긴장되다",
+    "ja": "緊張する",
+    "kana": "キンジャンドェダ",
+    "category": "feelings",
+    "level": 2,
+    "example": {
+      "ko": "면접이라서 긴장돼.",
+      "ja": "面接だから緊張する。"
+    }
+  },
+  {
+    "id": "love-001",
+    "ko": "사랑해",
+    "ja": "愛してる",
+    "kana": "サランヘ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "사랑해, 영원히.",
+      "ja": "ずっと愛してる。"
+    }
+  },
+  {
+    "id": "love-002",
+    "ko": "좋아해",
+    "ja": "好きだよ",
+    "kana": "チョアヘ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "너를 좋아해.",
+      "ja": "あなたが好き。"
+    }
+  },
+  {
+    "id": "love-003",
+    "ko": "보고 싶어",
+    "ja": "会いたい",
+    "kana": "ポゴ シポ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "벌써 보고 싶어.",
+      "ja": "もう会いたい。"
+    }
+  },
+  {
+    "id": "love-004",
+    "ko": "남자친구",
+    "ja": "彼氏",
+    "kana": "ナムジャチング",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "남자친구랑 영화 봤어.",
+      "ja": "彼氏と映画を見た。"
+    }
+  },
+  {
+    "id": "love-005",
+    "ko": "여자친구",
+    "ja": "彼女",
+    "kana": "ヨジャチング",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "여자친구가 생겼어.",
+      "ja": "彼女ができた。"
+    }
+  },
+  {
+    "id": "love-006",
+    "ko": "데이트",
+    "ja": "デート",
+    "kana": "デイトゥ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "주말에 데이트하자.",
+      "ja": "週末デートしよう。"
+    }
+  },
+  {
+    "id": "love-007",
+    "ko": "사귀다",
+    "ja": "付き合う",
+    "kana": "サグィダ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "우리 사귈래?",
+      "ja": "私たち付き合わない？"
+    }
+  },
+  {
+    "id": "love-008",
+    "ko": "고백",
+    "ja": "告白",
+    "kana": "コベク",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "고백했어?",
+      "ja": "告白したの？"
+    }
+  },
+  {
+    "id": "love-009",
+    "ko": "첫사랑",
+    "ja": "初恋",
+    "kana": "チョッサラン",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "첫사랑 기억나?",
+      "ja": "初恋覚えてる？"
+    }
+  },
+  {
+    "id": "love-010",
+    "ko": "기념일",
+    "ja": "記念日",
+    "kana": "キニョミル",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "오늘은 우리 100일 기념일이야.",
+      "ja": "今日は私たちの100日記念日だよ。"
+    }
+  },
+  {
+    "id": "love-011",
+    "ko": "선물",
+    "ja": "プレゼント",
+    "kana": "ソンムル",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "이거 선물이야.",
+      "ja": "これプレゼントだよ。"
+    }
+  },
+  {
+    "id": "love-012",
+    "ko": "손잡다",
+    "ja": "手をつなぐ",
+    "kana": "ソンジャプタ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "손잡고 걷자.",
+      "ja": "手をつないで歩こう。"
+    }
+  },
+  {
+    "id": "love-013",
+    "ko": "안아 줘",
+    "ja": "抱きしめて",
+    "kana": "アナ ジュォ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "꼭 안아 줘.",
+      "ja": "ぎゅっと抱きしめて。"
+    }
+  },
+  {
+    "id": "love-014",
+    "ko": "귀엽다",
+    "ja": "かわいい",
+    "kana": "クィヨプタ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "너 진짜 귀엽다.",
+      "ja": "あなた本当にかわいい。"
+    }
+  },
+  {
+    "id": "love-015",
+    "ko": "멋있다",
+    "ja": "かっこいい",
+    "kana": "モシッタ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "오늘 멋있다!",
+      "ja": "今日かっこいい！"
+    }
+  },
+  {
+    "id": "love-016",
+    "ko": "자기야",
+    "ja": "ねえ（恋人への呼びかけ）",
+    "kana": "チャギヤ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "자기야, 뭐 해?",
+      "ja": "ねえ、何してる？"
+    }
+  },
+  {
+    "id": "love-017",
+    "ko": "연락",
+    "ja": "連絡",
+    "kana": "ヨルラク",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "이따 연락할게.",
+      "ja": "あとで連絡するね。"
+    }
+  },
+  {
+    "id": "love-018",
+    "ko": "질투",
+    "ja": "嫉妬・やきもち",
+    "kana": "チルトゥ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "질투하는 거야?",
+      "ja": "やきもち焼いてるの？"
+    }
+  },
+  {
+    "id": "love-019",
+    "ko": "싸우다",
+    "ja": "けんかする",
+    "kana": "ッサウダ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "우리 싸우지 말자.",
+      "ja": "けんかするのやめよう。"
+    }
+  },
+  {
+    "id": "love-020",
+    "ko": "헤어지다",
+    "ja": "別れる・離れる",
+    "kana": "ヘオジダ",
+    "category": "love",
+    "level": 2,
+    "example": {
+      "ko": "아직 헤어지기 싫어.",
+      "ja": "まだ離れたくない。"
+    }
+  },
+  {
+    "id": "work-001",
+    "ko": "회사",
+    "ja": "会社",
+    "kana": "フェサ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "회사에 가요.",
+      "ja": "会社に行きます。"
+    }
+  },
+  {
+    "id": "work-002",
+    "ko": "일",
+    "ja": "仕事",
+    "kana": "イル",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "오늘 일이 많아요.",
+      "ja": "今日は仕事が多いです。"
+    }
+  },
+  {
+    "id": "work-003",
+    "ko": "출근",
+    "ja": "出勤",
+    "kana": "チュルグン",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "아침 8시에 출근해요.",
+      "ja": "朝8時に出勤します。"
+    }
+  },
+  {
+    "id": "work-004",
+    "ko": "퇴근",
+    "ja": "退勤",
+    "kana": "トェグン",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "퇴근하고 뭐 해?",
+      "ja": "仕事終わったら何する？"
+    }
+  },
+  {
+    "id": "work-005",
+    "ko": "야근",
+    "ja": "残業",
+    "kana": "ヤグン",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "오늘도 야근이야.",
+      "ja": "今日も残業だよ。"
+    }
+  },
+  {
+    "id": "work-006",
+    "ko": "회의",
+    "ja": "会議",
+    "kana": "フェイ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "오후에 회의가 있어요.",
+      "ja": "午後に会議があります。"
+    }
+  },
+  {
+    "id": "work-007",
+    "ko": "상사",
+    "ja": "上司",
+    "kana": "サンサ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "상사한테 보고했어요.",
+      "ja": "上司に報告しました。"
+    }
+  },
+  {
+    "id": "work-008",
+    "ko": "동료",
+    "ja": "同僚",
+    "kana": "トンニョ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "동료랑 점심 먹었어.",
+      "ja": "同僚とお昼を食べた。"
+    }
+  },
+  {
+    "id": "work-009",
+    "ko": "월급",
+    "ja": "給料",
+    "kana": "ウォルグプ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "월급날이다!",
+      "ja": "給料日だ！"
+    }
+  },
+  {
+    "id": "work-010",
+    "ko": "휴가",
+    "ja": "休暇",
+    "kana": "ヒュガ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "다음 주에 휴가예요.",
+      "ja": "来週は休暇です。"
+    }
+  },
+  {
+    "id": "work-011",
+    "ko": "메일",
+    "ja": "メール",
+    "kana": "メイル",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "메일 확인해 주세요.",
+      "ja": "メールを確認してください。"
+    }
+  },
+  {
+    "id": "work-012",
+    "ko": "전화",
+    "ja": "電話",
+    "kana": "チョヌァ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "이따가 전화할게요.",
+      "ja": "あとで電話します。"
+    }
+  },
+  {
+    "id": "work-013",
+    "ko": "바쁘다",
+    "ja": "忙しい",
+    "kana": "パップダ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "요즘 너무 바빠요.",
+      "ja": "最近すごく忙しいです。"
+    }
+  },
+  {
+    "id": "work-014",
+    "ko": "쉬다",
+    "ja": "休む",
+    "kana": "シュィダ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "좀 쉬세요.",
+      "ja": "少し休んでください。"
+    }
+  },
+  {
+    "id": "work-015",
+    "ko": "면접",
+    "ja": "面接",
+    "kana": "ミョンジョプ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "내일 면접이 있어요.",
+      "ja": "明日面接があります。"
+    }
+  },
+  {
+    "id": "work-016",
+    "ko": "알바",
+    "ja": "バイト",
+    "kana": "アルバ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "주말에 알바해요.",
+      "ja": "週末にバイトしています。"
+    }
+  },
+  {
+    "id": "work-017",
+    "ko": "서류",
+    "ja": "書類",
+    "kana": "ソリュ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "서류를 보내 드릴게요.",
+      "ja": "書類をお送りします。"
+    }
+  },
+  {
+    "id": "work-018",
+    "ko": "마감",
+    "ja": "締め切り",
+    "kana": "マガム",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "마감이 내일이에요.",
+      "ja": "締め切りは明日です。"
+    }
+  },
+  {
+    "id": "work-019",
+    "ko": "점심시간",
+    "ja": "昼休み",
+    "kana": "チョムシムシガン",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "점심시간에 뭐 먹을까?",
+      "ja": "昼休みに何食べようか？"
+    }
+  },
+  {
+    "id": "work-020",
+    "ko": "수고하세요",
+    "ja": "お疲れさまです（別れ際）",
+    "kana": "スゴハセヨ",
+    "category": "work",
+    "level": 2,
+    "example": {
+      "ko": "먼저 갈게요, 수고하세요.",
+      "ja": "お先に失礼します、お疲れさまです。"
+    }
+  },
+  {
+    "id": "sns-001",
+    "ko": "대박",
+    "ja": "すごい・やばい",
+    "kana": "テバク",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "대박! 진짜?",
+      "ja": "すごい！本当？"
+    }
+  },
+  {
+    "id": "sns-002",
+    "ko": "헐",
+    "ja": "えっ・うそ",
+    "kana": "ホル",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "헐, 말도 안 돼.",
+      "ja": "えっ、ありえない。"
+    }
+  },
+  {
+    "id": "sns-003",
+    "ko": "ㅋㅋㅋ",
+    "ja": "（笑）",
+    "kana": "ククク",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "진짜 웃기다 ㅋㅋㅋ",
+      "ja": "本当にウケる（笑）"
+    }
+  },
+  {
+    "id": "sns-004",
+    "ko": "ㅠㅠ",
+    "ja": "（泣）",
+    "kana": "ユユ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "시험 망했어 ㅠㅠ",
+      "ja": "試験やらかした（泣）"
+    }
+  },
+  {
+    "id": "sns-005",
+    "ko": "인싸",
+    "ja": "陽キャ・人気者",
+    "kana": "インッサ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "걔는 완전 인싸야.",
+      "ja": "あの子は完全に陽キャだよ。"
+    }
+  },
+  {
+    "id": "sns-006",
+    "ko": "아싸",
+    "ja": "陰キャ・ぼっち",
+    "kana": "アッサ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "나는 아싸라서 집이 좋아.",
+      "ja": "私は陰キャだから家が好き。"
+    }
+  },
+  {
+    "id": "sns-007",
+    "ko": "갑분싸",
+    "ja": "急に場がしらける",
+    "kana": "カプブンッサ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "그 농담 때문에 갑분싸 됐어.",
+      "ja": "その冗談で急に場がしらけた。"
+    }
+  },
+  {
+    "id": "sns-008",
+    "ko": "꿀잼",
+    "ja": "めっちゃ面白い",
+    "kana": "ックルジェム",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "이 영화 꿀잼이야!",
+      "ja": "この映画めっちゃ面白い！"
+    }
+  },
+  {
+    "id": "sns-009",
+    "ko": "노잼",
+    "ja": "つまらない",
+    "kana": "ノジェム",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "그 예능 노잼이었어.",
+      "ja": "あのバラエティつまらなかった。"
+    }
+  },
+  {
+    "id": "sns-010",
+    "ko": "맛집",
+    "ja": "おいしい店",
+    "kana": "マッチプ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "이 근처에 맛집 있어?",
+      "ja": "この近くにおいしい店ある？"
+    }
+  },
+  {
+    "id": "sns-011",
+    "ko": "인생샷",
+    "ja": "人生最高の一枚",
+    "kana": "インセンシャッ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "여기서 인생샷 찍자!",
+      "ja": "ここで最高の一枚撮ろう！"
+    }
+  },
+  {
+    "id": "sns-012",
+    "ko": "셀카",
+    "ja": "自撮り",
+    "kana": "セルカ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "같이 셀카 찍자.",
+      "ja": "一緒に自撮りしよう。"
+    }
+  },
+  {
+    "id": "sns-013",
+    "ko": "좋아요",
+    "ja": "いいね",
+    "kana": "チョアヨ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "내 사진에 좋아요 눌러 줘.",
+      "ja": "私の写真にいいね押して。"
+    }
+  },
+  {
+    "id": "sns-014",
+    "ko": "댓글",
+    "ja": "コメント",
+    "kana": "テックル",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "댓글 달아 줘.",
+      "ja": "コメントして。"
+    }
+  },
+  {
+    "id": "sns-015",
+    "ko": "팔로우",
+    "ja": "フォロー",
+    "kana": "パルロウ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "나 팔로우해 줘.",
+      "ja": "私をフォローして。"
+    }
+  },
+  {
+    "id": "sns-016",
+    "ko": "카톡",
+    "ja": "カカオトーク",
+    "kana": "カトク",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "카톡 보내 줘.",
+      "ja": "カトク送って。"
+    }
+  },
+  {
+    "id": "sns-017",
+    "ko": "불금",
+    "ja": "花金",
+    "kana": "プルグム",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "오늘 불금이다!",
+      "ja": "今日は花金だ！"
+    }
+  },
+  {
+    "id": "sns-018",
+    "ko": "남친",
+    "ja": "彼氏（略）",
+    "kana": "ナムチン",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "남친이랑 데이트해.",
+      "ja": "彼氏とデートする。"
+    }
+  },
+  {
+    "id": "sns-019",
+    "ko": "소확행",
+    "ja": "小さくて確かな幸せ",
+    "kana": "ソファケン",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "커피 한 잔이 나의 소확행.",
+      "ja": "コーヒー一杯が私の小さな幸せ。"
+    }
+  },
+  {
+    "id": "sns-020",
+    "ko": "TMI",
+    "ja": "どうでもいい情報",
+    "kana": "ティエムアイ",
+    "category": "sns",
+    "level": 2,
+    "example": {
+      "ko": "TMI인데, 나 오늘 머리 잘랐어.",
+      "ja": "どうでもいいけど、今日髪切った。"
+    }
+  },
+  {
+    "id": "numbers-001",
+    "ko": "하나",
+    "ja": "1つ（固有語）",
+    "kana": "ハナ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "하나 주세요.",
+      "ja": "1つください。"
+    }
+  },
+  {
+    "id": "numbers-002",
+    "ko": "둘",
+    "ja": "2つ",
+    "kana": "トゥル",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "둘이서 가자.",
+      "ja": "二人で行こう。"
+    }
+  },
+  {
+    "id": "numbers-003",
+    "ko": "셋",
+    "ja": "3つ",
+    "kana": "セッ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "하나, 둘, 셋!",
+      "ja": "いち、に、さん！"
+    }
+  },
+  {
+    "id": "numbers-004",
+    "ko": "넷",
+    "ja": "4つ",
+    "kana": "ネッ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "우리는 넷이에요.",
+      "ja": "私たちは4人です。"
+    }
+  },
+  {
+    "id": "numbers-005",
+    "ko": "다섯",
+    "ja": "5つ",
+    "kana": "タソッ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "다섯 시에 만나요.",
+      "ja": "5時に会いましょう。"
+    }
+  },
+  {
+    "id": "numbers-006",
+    "ko": "일",
+    "ja": "1（漢数詞）",
+    "kana": "イル",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "일 층에 있어요.",
+      "ja": "1階にあります。"
+    }
+  },
+  {
+    "id": "numbers-007",
+    "ko": "이",
+    "ja": "2",
+    "kana": "イ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "이 번 출구로 오세요.",
+      "ja": "2番出口に来てください。"
+    }
+  },
+  {
+    "id": "numbers-008",
+    "ko": "삼",
+    "ja": "3",
+    "kana": "サム",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "삼 일 동안 여행해요.",
+      "ja": "3日間旅行します。"
+    }
+  },
+  {
+    "id": "numbers-009",
+    "ko": "사",
+    "ja": "4",
+    "kana": "サ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "사 월에 벚꽃이 펴요.",
+      "ja": "4月に桜が咲きます。"
+    }
+  },
+  {
+    "id": "numbers-010",
+    "ko": "오",
+    "ja": "5",
+    "kana": "オ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "오 분만 기다려 주세요.",
+      "ja": "5分だけ待ってください。"
+    }
+  },
+  {
+    "id": "numbers-011",
+    "ko": "십",
+    "ja": "10",
+    "kana": "シプ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "십 분 걸려요.",
+      "ja": "10分かかります。"
+    }
+  },
+  {
+    "id": "numbers-012",
+    "ko": "백",
+    "ja": "100",
+    "kana": "ペク",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "백 원짜리 있어요?",
+      "ja": "100ウォン玉ありますか？"
+    }
+  },
+  {
+    "id": "numbers-013",
+    "ko": "천",
+    "ja": "1000",
+    "kana": "チョン",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "천 원이에요.",
+      "ja": "1000ウォンです。"
+    }
+  },
+  {
+    "id": "numbers-014",
+    "ko": "만",
+    "ja": "1万",
+    "kana": "マン",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "만 원 주세요.",
+      "ja": "1万ウォンください。"
+    }
+  },
+  {
+    "id": "numbers-015",
+    "ko": "몇",
+    "ja": "いくつ・何〜",
+    "kana": "ミョッ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "몇 살이에요?",
+      "ja": "何歳ですか？"
+    }
+  },
+  {
+    "id": "numbers-016",
+    "ko": "개",
+    "ja": "〜個",
+    "kana": "ケ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "사과 두 개 주세요.",
+      "ja": "りんご2個ください。"
+    }
+  },
+  {
+    "id": "numbers-017",
+    "ko": "명",
+    "ja": "〜人",
+    "kana": "ミョン",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "두 명이에요.",
+      "ja": "2人です。"
+    }
+  },
+  {
+    "id": "numbers-018",
+    "ko": "시",
+    "ja": "〜時",
+    "kana": "シ",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "지금 몇 시예요?",
+      "ja": "今何時ですか？"
+    }
+  },
+  {
+    "id": "numbers-019",
+    "ko": "분",
+    "ja": "〜分",
+    "kana": "プン",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "십 분 후에 도착해요.",
+      "ja": "10分後に着きます。"
+    }
+  },
+  {
+    "id": "numbers-020",
+    "ko": "원",
+    "ja": "ウォン",
+    "kana": "ウォン",
+    "category": "numbers",
+    "level": 1,
+    "example": {
+      "ko": "이거 오천 원이에요.",
+      "ja": "これ5000ウォンです。"
+    }
+  }
+]
