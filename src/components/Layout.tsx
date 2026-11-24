@@ -9,8 +9,8 @@ export default function Layout() {
       <main
         className="flex-1 overflow-y-auto px-5"
         style={{
-          paddingTop: 'calc(env(safe-area-inset-top) + 16px)',
-          paddingBottom: 'calc(env(safe-area-inset-bottom) + 88px)',
+          paddingTop: 'calc(env(safe-area-inset-top) + 20px)',
+          paddingBottom: 'calc(env(safe-area-inset-bottom) + 104px)',
         }}
       >
         <Outlet />

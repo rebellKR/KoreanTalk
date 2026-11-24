@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { House, MessagesSquare, BookOpen, Star, User, type LucideIcon } from 'lucide-react'
 
-// 탭 정의 (DESIGN.md 4. Navigation)
 const tabs: { to: string; label: string; icon: LucideIcon }[] = [
   { to: '/', label: 'ホーム', icon: House },
   { to: '/conversation', label: '会話', icon: MessagesSquare },
@@ -10,27 +9,29 @@ const tabs: { to: string; label: string; icon: LucideIcon }[] = [
   { to: '/mypage', label: 'マイページ', icon: User },
 ]
 
+// 화면 아래에 떠 있는 캡슐형 탭바 (반투명 유리 효과)
 export default function TabBar() {
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-10 mx-auto max-w-md border-t border-border bg-surface/90 backdrop-blur-md"
-      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} // 홈 바에 가리지 않게
+      className="fixed inset-x-0 bottom-0 z-10 mx-auto max-w-md px-4"
+      style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 8px)' }} // 홈 바 위로 띄움
     >
-      <ul className="flex">
+      <ul className="flex rounded-[28px] bg-surface/80 p-1.5 shadow-[0_8px_32px_-8px_rgba(15,23,42,0.18)] ring-1 ring-border/70 backdrop-blur-xl dark:bg-surface/75 dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.6)]">
         {tabs.map(({ to, label, icon: Icon }) => (
           <li key={to} className="flex-1">
             <NavLink
               to={to}
-              end={to === '/'} // '/'는 정확히 일치할 때만 활성화
+              end={to === '/'}
               className={({ isActive }) =>
-                `flex min-h-14 flex-col items-center justify-center gap-1 pt-2 pb-1 text-[11px] font-medium transition-colors ${
-                  isActive ? 'text-primary' : 'text-text-secondary'
+                // 선택된 탭은 옅은 Primary 배경의 알약 모양
+                `flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-[22px] text-[10px] font-semibold transition-colors ${
+                  isActive ? 'bg-primary/10 text-primary' : 'text-text-secondary'
                 }`
               }
             >
               {({ isActive }) => (
                 <>
-                  <Icon size={22} strokeWidth={isActive ? 2.2 : 1.8} />
+                  <Icon size={21} strokeWidth={isActive ? 2.2 : 1.7} />
                   <span>{label}</span>
                 </>
               )}
