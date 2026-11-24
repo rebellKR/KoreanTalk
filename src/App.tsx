@@ -5,6 +5,7 @@ import Conversation from './pages/Conversation'
 import Vocabulary from './pages/Vocabulary'
 import Favorites from './pages/Favorites'
 import MyPage from './pages/MyPage'
+import Settings from './pages/Settings'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/vocabulary" element={<Vocabulary />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/mypage" element={<MyPage />} />
+        <Route path="/mypage/settings" element={<Settings />} />
       </Route>
     </Routes>
   )

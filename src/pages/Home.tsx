@@ -5,6 +5,8 @@ import ProgressBar from '../components/ProgressBar'
 import Button from '../components/Button'
 import IconButton from '../components/IconButton'
 import SectionTitle from '../components/SectionTitle'
+import { useSettings } from '../context/SettingsContext'
+import { speakKorean } from '../utils/speak'
 
 // 오늘 날짜를 일본 형식으로 (예: 11月24日 火曜日)
 const today = new Intl.DateTimeFormat('ja-JP', {
@@ -21,6 +23,7 @@ const categories: { title: string; ko: string; icon: LucideIcon }[] = [
 
 // STAGE 1: 디자인 확인용 샘플 화면 (본격 구현은 STAGE 5)
 export default function Home() {
+  const { settings } = useSettings()
   return (
     <>
       <PageHeader
@@ -39,20 +42,20 @@ export default function Home() {
       <Card tone="accent" className="p-6">
         <p className="text-[12px] font-semibold tracking-[0.08em] text-primary">今日のひとこと</p>
         <p className="mt-4 font-ko text-[30px] leading-[1.3] font-bold tracking-[-0.02em]">오늘 날씨 좋다!</p>
-        <p className="mt-1.5 text-[13px] text-text-secondary">オヌル ナルッシ チョタ</p>
+        {settings.showKana && <p className="mt-1.5 text-[13px] text-text-secondary">オヌル ナルッシ チョタ</p>}
         <div className="my-5 h-px bg-primary/10" />
         <div className="flex items-center justify-between">
           <p className="text-[15px]">今日いい天気だね！</p>
           <div className="flex gap-2">
             <IconButton icon={Star} label="お気に入り" />
-            <IconButton icon={Volume2} label="聞く" variant="solid" />
+            <IconButton icon={Volume2} label="聞く" variant="solid" onClick={() => speakKorean('오늘 날씨 좋다!', settings.ttsRate)} />
           </div>
         </div>
       </Card>
 
       <SectionTitle title="今日の目標" />
       <Card>
-        <ProgressBar value={4} max={10} label="単語" />
+        <ProgressBar value={4} max={settings.dailyGoal} label="単語" />
         <div className="mt-5">
           <ProgressBar value={1} max={3} label="フレーズ" />
         </div>
