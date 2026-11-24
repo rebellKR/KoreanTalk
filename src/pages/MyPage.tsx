@@ -1,68 +1,64 @@
-import { Link } from 'react-router-dom'
-import { Flame, BookCheck, GraduationCap, Settings as SettingsIcon, ChevronRight, Target } from 'lucide-react'
-import PageHeader from '../components/PageHeader'
-import Card from '../components/Card'
+import { useNavigate } from 'react-router-dom'
+import { Flame, BookCheck, GraduationCap, Settings as SettingsIcon, ChevronRight, Target, CircleUser } from 'lucide-react'
 import ProgressBar from '../components/ProgressBar'
-import SectionTitle from '../components/SectionTitle'
+import Section from '../components/Section'
 import { useSettings } from '../context/SettingsContext'
 
 // STAGE 2: 통계는 더미 숫자 (STAGE 6에서 실제 기록 연결)
 const stats = [
-  { icon: Flame, label: '連続学習', value: 3, unit: '日', color: 'text-warning' },
-  { icon: BookCheck, label: '覚えた単語', value: 0, unit: '語', color: 'text-primary' },
-  { icon: GraduationCap, label: '完了レッスン', value: 0, unit: '件', color: 'text-success' },
+  { icon: Flame, label: '連続学習', value: 3, unit: '日' },
+  { icon: BookCheck, label: '覚えた単語', value: 0, unit: '語' },
+  { icon: GraduationCap, label: '完了レッスン', value: 0, unit: '件' },
 ]
 
 export default function MyPage() {
   const { settings } = useSettings()
+  const navigate = useNavigate()
   return (
-    <>
-      <PageHeader
-        title="マイページ"
-        subtitle="学習の記録"
-        right={
-          // 오른쪽 위 설정 버튼
-          <Link to="/mypage/settings" aria-label="設定"
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-surface ring-1 ring-border transition active:scale-95">
-            <SettingsIcon size={20} strokeWidth={1.9} />
-          </Link>
-        }
-      />
-
-      {/* 통계 3칸 */}
-      <div className="grid grid-cols-3 gap-3">
-        {stats.map(({ icon: Icon, label, value, unit, color }) => (
-          <Card key={label} className="p-4">
-            <Icon size={18} className={color} />
-            <p className="mt-3 text-[24px] font-bold tabular-nums tracking-tight">
-              {value}<span className="ml-0.5 text-[13px] font-medium text-text-secondary">{unit}</span>
-            </p>
-            <p className="mt-0.5 text-[11px] text-text-secondary">{label}</p>
-          </Card>
-        ))}
-      </div>
-
-      <SectionTitle title="学習目標" />
-      <Card>
-        <div className="mb-4 flex items-center gap-2 text-[14px] font-semibold">
-          <Target size={17} className="text-primary" /> 1日 {settings.dailyGoal}語
+    <div className="min-h-dvh bg-surface">
+      {/* 상단: 큰 프로필 아이콘 + 제목 (Nu 프로필 화면 스타일) */}
+      <header className="px-6 pb-6" style={{ paddingTop: 'calc(env(safe-area-inset-top) + 20px)' }}>
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+          <CircleUser size={34} strokeWidth={1.6} />
         </div>
-        <ProgressBar value={4} max={settings.dailyGoal} label="今日の単語" />
-      </Card>
+        <h1 className="mt-4 text-[26px] font-bold tracking-[-0.02em]">マイページ</h1>
+        <p className="mt-1 text-[14px] text-text-secondary">学習の記録</p>
+      </header>
 
-      <SectionTitle title="その他" />
-      <Link to="/mypage/settings">
-        <Card className="flex items-center gap-3 p-4 transition active:scale-[0.99]">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-            <SettingsIcon size={18} />
+      {/* 통계: 구분선으로 나눈 3칸 */}
+      <section className="mx-6 grid grid-cols-3 divide-x divide-border/70 rounded-card bg-background py-4 dark:bg-border/40">
+        {stats.map(({ icon: Icon, label, value, unit }) => (
+          <div key={label} className="flex flex-col items-center gap-1">
+            <Icon size={18} className="text-primary" />
+            <p className="text-[22px] font-bold tabular-nums">
+              {value}<span className="ml-0.5 text-[12px] font-medium text-text-secondary">{unit}</span>
+            </p>
+            <p className="text-[11px] text-text-secondary">{label}</p>
           </div>
-          <div className="flex-1">
-            <p className="text-[15px] font-semibold">設定</p>
-            <p className="text-[12px] text-text-secondary">テーマ・文字サイズ・音声・データ</p>
+        ))}
+      </section>
+
+      <div className="mt-2">
+        <Section title="学習目標">
+          <div className="mb-4 flex items-center gap-2 text-[14px] font-semibold">
+            <Target size={17} className="text-primary" /> 1日 {settings.dailyGoal}語
           </div>
+          <ProgressBar value={4} max={settings.dailyGoal} label="今日の単語" />
+        </Section>
+
+        {/* 메뉴 목록: 한 줄씩 구분선 */}
+        <button onClick={() => navigate('/mypage/settings')}
+          className="flex w-full items-center gap-4 px-6 py-5 text-left transition active:bg-background">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background ring-1 ring-border/60 dark:bg-border/60">
+            <SettingsIcon size={19} />
+          </span>
+          <span className="flex-1">
+            <span className="block text-[16px] font-semibold">設定</span>
+            <span className="block text-[13px] text-text-secondary">テーマ・文字サイズ・音声・データ</span>
+          </span>
           <ChevronRight size={18} className="text-text-secondary" />
-        </Card>
-      </Link>
-    </>
+        </button>
+      </div>
+    </div>
   )
 }

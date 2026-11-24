@@ -1,87 +1,113 @@
-import { Volume2, Star, ChevronRight, MessagesSquare, Type, BookText, GraduationCap, Flame, type LucideIcon } from 'lucide-react'
-import PageHeader from '../components/PageHeader'
-import Card from '../components/Card'
+import { useNavigate } from 'react-router-dom'
+import {
+  Volume2, Star, MessagesSquare, BookText, Type, PenLine, GraduationCap, RotateCcw, Flame, Settings, ChevronRight, CircleUser,
+  type LucideIcon,
+} from 'lucide-react'
 import ProgressBar from '../components/ProgressBar'
-import Button from '../components/Button'
-import IconButton from '../components/IconButton'
-import SectionTitle from '../components/SectionTitle'
+import Section from '../components/Section'
+import QuickAction from '../components/QuickAction'
 import { useSettings } from '../context/SettingsContext'
 import { speakKorean } from '../utils/speak'
 
-// 오늘 날짜를 일본 형식으로 (예: 11月24日 火曜日)
-const today = new Intl.DateTimeFormat('ja-JP', {
-  timeZone: 'Asia/Tokyo', month: 'long', day: 'numeric', weekday: 'long',
-}).format(new Date())
+// 일본 시간 기준 인사말
+function greeting() {
+  const h = Number(new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', hour: 'numeric', hour12: false }).format(new Date()).replace(/\D/g, ''))
+  if (h < 11) return 'おはよう'
+  if (h < 18) return 'こんにちは'
+  return 'こんばんは'
+}
 
-// 카테고리 카드 데이터 (STAGE 1은 표시만)
-const categories: { title: string; ko: string; icon: LucideIcon }[] = [
-  { title: '会話', ko: '회화', icon: MessagesSquare },
-  { title: '単語', ko: '단어', icon: BookText },
-  { title: 'ハングル', ko: '한글', icon: Type },
-  { title: 'TOPIK', ko: '토픽', icon: GraduationCap },
+// 바로가기 (가로 스크롤)
+const actions: { label: string; icon: LucideIcon; to: string }[] = [
+  { label: '会話', icon: MessagesSquare, to: '/conversation' },
+  { label: '単語', icon: BookText, to: '/vocabulary' },
+  { label: 'ハングル', icon: Type, to: '/' },
+  { label: '文法', icon: PenLine, to: '/' },
+  { label: 'TOPIK', icon: GraduationCap, to: '/' },
+  { label: '復習', icon: RotateCcw, to: '/vocabulary' },
 ]
 
-// STAGE 1: 디자인 확인용 샘플 화면 (본격 구현은 STAGE 5)
+const phrase = { ko: '오늘 날씨 좋다!', kana: 'オヌル ナルッシ チョタ', ja: '今日いい天気だね！' }
+
 export default function Home() {
   const { settings } = useSettings()
-  return (
-    <>
-      <PageHeader
-        caption={today}
-        title="こんにちは"
-        right={
-          // 연속 학습일 배지
-          <div className="flex items-center gap-1 rounded-full bg-surface px-3 py-1.5 text-[13px] font-semibold ring-1 ring-border">
-            <Flame size={15} className="text-warning" />
-            <span className="tabular-nums">3</span>
-          </div>
-        }
-      />
+  const navigate = useNavigate()
 
-      {/* 오늘의 한마디: 가장 중요한 학습 문장 → 강조 카드 */}
-      <Card tone="accent" className="p-6">
-        <p className="text-[12px] font-semibold tracking-[0.08em] text-primary">今日のひとこと</p>
-        <p className="mt-4 font-ko text-[30px] leading-[1.3] font-bold tracking-[-0.02em]">오늘 날씨 좋다!</p>
-        {settings.showKana && <p className="mt-1.5 text-[13px] text-text-secondary">オヌル ナルッシ チョタ</p>}
-        <div className="my-5 h-px bg-primary/10" />
+  return (
+    <div className="min-h-dvh bg-surface">
+      {/* ===== 색 헤더: 다이내믹 아일랜드 뒤까지 Primary 색으로 채움 ===== */}
+      <header
+        className="bg-primary px-6 pb-7 text-white dark:bg-secondary"
+        style={{ paddingTop: 'calc(env(safe-area-inset-top) + 16px)' }}
+      >
         <div className="flex items-center justify-between">
-          <p className="text-[15px]">今日いい天気だね！</p>
-          <div className="flex gap-2">
-            <IconButton icon={Star} label="お気に入り" />
-            <IconButton icon={Volume2} label="聞く" variant="solid" onClick={() => speakKorean('오늘 날씨 좋다!', settings.ttsRate)} />
+          <button onClick={() => navigate('/mypage')} aria-label="マイページ"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 transition active:scale-95">
+            <CircleUser size={24} strokeWidth={1.7} />
+          </button>
+          <div className="flex items-center gap-2">
+            {/* 연속 학습일 */}
+            <span className="flex h-9 items-center gap-1 rounded-full bg-white/15 px-3 text-[13px] font-semibold tabular-nums">
+              <Flame size={15} /> 3日
+            </span>
+            <button onClick={() => navigate('/mypage/settings')} aria-label="設定"
+              className="flex h-11 w-11 items-center justify-center rounded-full transition active:bg-white/15">
+              <Settings size={22} strokeWidth={1.8} />
+            </button>
           </div>
         </div>
-      </Card>
+        <h1 className="mt-6 text-[26px] font-bold tracking-[-0.02em]">{greeting()}</h1>
+        <p className="mt-1 text-[14px] text-white/80">今日も少しずつ韓国語を。</p>
+      </header>
 
-      <SectionTitle title="今日の目標" />
-      <Card>
+      {/* ===== 오늘의 한마디 ===== */}
+      <Section title="今日のひとこと">
+        <p className="font-ko text-[30px] leading-[1.3] font-bold tracking-[-0.02em]">{phrase.ko}</p>
+        {settings.showKana && <p className="mt-1 text-[13px] text-text-secondary">{phrase.kana}</p>}
+        <p className="mt-3 text-[16px]">{phrase.ja}</p>
+        <div className="mt-5 flex gap-2">
+          <button onClick={() => speakKorean(phrase.ko, settings.ttsRate)}
+            className="flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-[14px] font-semibold text-on-primary transition active:scale-95">
+            <Volume2 size={18} /> 聞く
+          </button>
+          <button aria-label="お気に入り"
+            className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-border transition active:scale-95">
+            <Star size={19} />
+          </button>
+        </div>
+      </Section>
+
+      {/* ===== 바로가기: 가로로 밀어서 보기 ===== */}
+      <section className="border-b border-border/70 py-6">
+        <div className="flex gap-3 overflow-x-auto px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {actions.map((a) => (
+            <QuickAction key={a.label} icon={a.icon} label={a.label} onClick={() => navigate(a.to)} />
+          ))}
+        </div>
+      </section>
+
+      {/* ===== 오늘의 목표 ===== */}
+      <Section title="今日の目標" onMore={() => navigate('/mypage')}>
         <ProgressBar value={4} max={settings.dailyGoal} label="単語" />
         <div className="mt-5">
           <ProgressBar value={1} max={3} label="フレーズ" />
         </div>
-      </Card>
+      </Section>
 
-      <SectionTitle title="カテゴリ" action="すべて見る" />
-      <div className="grid grid-cols-2 gap-3">
-        {categories.map(({ title, ko, icon: Icon }) => (
-          <Card key={title} className="p-4 transition active:scale-[0.98]">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-              <Icon size={20} strokeWidth={1.9} />
-            </div>
-            <div className="flex items-end justify-between">
-              <div>
-                <p className="text-[15px] font-bold">{title}</p>
-                <p className="font-ko text-[12px] text-text-secondary">{ko}</p>
-              </div>
-              <ChevronRight size={18} className="text-text-secondary" />
-            </div>
-          </Card>
-        ))}
-      </div>
-
-      <div className="mt-8">
-        <Button full>学習をはじめる</Button>
-      </div>
-    </>
+      {/* ===== 안내 배너: 옅은 Primary 배경 ===== */}
+      <Section>
+        <button onClick={() => navigate('/vocabulary')}
+          className="flex w-full items-center gap-4 rounded-card bg-primary/[0.07] p-4 text-left transition active:scale-[0.99] dark:bg-primary/15">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+            <RotateCcw size={20} />
+          </span>
+          <span className="flex-1">
+            <span className="block text-[15px] font-semibold">復習する単語があります</span>
+            <span className="block text-[13px] text-text-secondary">5語 · 約2分</span>
+          </span>
+          <ChevronRight size={18} className="text-text-secondary" />
+        </button>
+      </Section>
+    </div>
   )
 }

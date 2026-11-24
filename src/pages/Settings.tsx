@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, Palette, Type, Languages, Gauge, Volume2, Target, Download, Upload, Trash2, Info, Heart,
 } from 'lucide-react'
+import PageContainer from '../components/PageContainer'
 import Segmented from '../components/Segmented'
 import Toggle from '../components/Toggle'
 import { SettingsGroup, SettingsRow } from '../components/SettingsGroup'
@@ -47,7 +48,7 @@ export default function Settings() {
   }
 
   return (
-    <>
+    <PageContainer>
       {/* 상단: 뒤로가기 + 제목 */}
       <header className="mb-6 flex items-center gap-1">
         <button onClick={() => navigate(-1)} aria-label="戻る"
@@ -110,6 +111,6 @@ export default function Settings() {
         title="復元しますか？" message="現在の学習記録と設定は、バックアップの内容で上書きされます。"
         confirmLabel="復元する" onConfirm={doRestore} onCancel={() => setConfirm(null)} />
       <Toast message={toast} onClose={() => setToast(null)} />
-    </>
+    </PageContainer>
   )
 }

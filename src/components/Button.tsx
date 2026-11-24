@@ -15,7 +15,7 @@ export default function Button({ variant = 'primary', full, className = '', ...r
   return (
     <button
       // min-h-[52px] = 44px: iPhone 권장 최소 터치 영역 / active:scale = 눌렀을 때 살짝 작아지는 효과
-      className={`inline-flex min-h-[52px] items-center justify-center gap-2 rounded-2xl px-6 text-[15px] font-semibold transition active:scale-[0.97] active:opacity-90 disabled:opacity-40 ${styles[variant]} ${full ? 'w-full' : ''} ${className}`}
+      className={`inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold transition active:scale-[0.97] active:opacity-90 disabled:opacity-40 ${styles[variant]} ${full ? 'w-full' : ''} ${className}`}
       {...rest}
     />
   )
