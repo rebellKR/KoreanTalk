@@ -71,6 +71,7 @@ def parse_item(item):
         'word': item.findtext('word', ''),
         'sup_no': item.findtext('sup_no', '0'),
         'pronunciation': item.findtext('pronunciation', ''),
+        'origin': item.findtext('origin', ''),
         'word_grade': item.findtext('word_grade', ''),
         'pos': item.findtext('pos', ''),
         'senses': senses,
@@ -95,7 +96,7 @@ def fetch_one(key, row):
         'advanced': 'y', 'method': 'exact', 'num': '10',
     })
     items = [parse_item(i) for i in root.findall('item')]
-    examples = fetch_examples(key, pick(items, pos)['target_code']) if items else []
+    examples = fetch_examples(key, pick(items, pos, row.get('gloss', ''))['target_code']) if items else []
     return {'input': row, 'items': items, 'examples': examples}
 
 
@@ -103,10 +104,11 @@ POS_MAP = {'명': '명사', '동': '동사', '형': '형용사', '부': '부사'
            '감': '감탄사', '의': '의존 명사', '보': '보조'}
 
 
-def pick(items, pos):
+def pick(items, pos, gloss=''):
     """같은 철자 단어가 여러 개면: 품사 일치 → 등급 있음 → 번호 작은 순"""
     want = POS_MAP.get(pos, '')
     return sorted(items, key=lambda i: (
+        0 if gloss and gloss in i.get('origin', '') else 1,  # 한자가 같으면 같은 단어
         0 if want and i['pos'].startswith(want) else 1,
         0 if i['word_grade'] else 1,
         int(i['sup_no'] or 0),

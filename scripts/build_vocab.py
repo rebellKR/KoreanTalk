@@ -21,9 +21,10 @@ POS_KEY = {'명': '명사', '동': '동사', '형': '형용사', '부': '부사'
            '감': '감탄사', '의': '의존 명사', '보': '보조'}
 
 
-def pick(items, pos):
+def pick(items, pos, gloss=''):
     want = POS_KEY.get(pos, '')
-    return sorted(items, key=lambda i: (0 if want and i['pos'].startswith(want) else 1,
+    return sorted(items, key=lambda i: (0 if gloss and gloss in i.get('origin', '') else 1,
+                                        0 if want and i['pos'].startswith(want) else 1,
                                         0 if i['word_grade'] else 1, int(i['sup_no'] or 0)))[0]
 
 
@@ -36,7 +37,7 @@ def short_ja(trans_word):
 def main():
     if not os.path.exists(CACHE):
         sys.exit('❌ data-src/krdict_cache.jsonl 이 없습니다. 먼저 fetch_krdict.py 를 실행하세요.')
-    words, missing = {1: [], 2: [], 3: []}, 0
+    words, missing, seen = {1: [], 2: [], 3: []}, 0, set()
     with open(CACHE, encoding='utf-8') as f:
         for line in f:
             d = json.loads(line)
@@ -44,11 +45,14 @@ def main():
             if not items:
                 missing += 1
                 continue
-            it = pick(items, row['pos'])
+            it = pick(items, row['pos'], row.get('gloss', ''))
             sense = next((s for s in it['senses'] if s['trans_word'] or s['trans_dfn']), None)
             if not sense:
                 missing += 1
                 continue
+            if it['target_code'] in seen:  # 같은 사전 항목이 두 번 나오면 하나만
+                continue
+            seen.add(it['target_code'])
             pron = re.split(r'[/,]', it['pronunciation'])[0].replace('ː', '').strip() or it['word']
             level = GRADE.get(row['grade'], 3)
             words[level].append({

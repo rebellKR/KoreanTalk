@@ -2,7 +2,7 @@
 
 사용법: 내려받은 파일(엑셀 .xlsx / 텍스트 .txt / .csv)을 data-src/ 폴더에 넣고
   python3 scripts/prepare_wordlist.py
-출력: data-src/wordlist.tsv  (id, word, pos, grade)
+출력: data-src/wordlist.tsv  (id, word, pos, grade, gloss)
 """
 import csv
 import glob
@@ -71,6 +71,7 @@ def main():
     col = lambda name: next(i for i, c in enumerate(head) if name in c)
     wi, gi = col('단어'), col('등급')
     pi = next((i for i, c in enumerate(head) if '품사' in c), None)
+    xi = next((i for i, c in enumerate(head) if '풀이' in c), None)  # 한자 등 원어 (동음이의어 구분용)
 
     out, seen = [], set()
     for r in rows[head_i + 1:]:
@@ -79,15 +80,16 @@ def main():
         word = re.sub(r'\d+$', '', r[wi].strip())  # '가다01' → '가다' (동음이의어 번호 제거)
         grade = r[gi].strip().upper()
         pos = r[pi].strip() if pi is not None and pi < len(r) else ''
+        gloss = r[xi].strip() if xi is not None and xi < len(r) else ''
         if not word or grade not in ('A', 'B', 'C'):
             continue
-        if (word, pos) in seen:
+        if (word, pos, gloss) in seen:  # 가구(家口)와 가구(家具)는 다른 단어로 유지
             continue
-        seen.add((word, pos))
-        out.append((f'w{len(out) + 1:05d}', word, pos, grade))
+        seen.add((word, pos, gloss))
+        out.append((f'w{len(out) + 1:05d}', word, pos, grade, gloss))
 
     with open(OUT, 'w', encoding='utf-8') as f:
-        f.write('id\tword\tpos\tgrade\n')
+        f.write('id\tword\tpos\tgrade\tgloss\n')
         for row in out:
             f.write('\t'.join(row) + '\n')
     by = {g: sum(1 for o in out if o[3] == g) for g in 'ABC'}
