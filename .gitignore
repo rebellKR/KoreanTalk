@@ -3,3 +3,8 @@ dist
 .DS_Store
 *.log
 *.tsbuildinfo
+
+# 데이터 스크립트
+scripts/.krdict_key
+data-src/krdict_cache.jsonl
+__pycache__
