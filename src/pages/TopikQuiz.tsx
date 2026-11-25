@@ -27,7 +27,7 @@ function ScoreRing({ percent }: { percent: number }) {
 
 // 문제 문장 표시: <...> 부분은 밑줄로, "밑줄 친 부분…:" 머리말은 숨김
 function QuestionText({ text }: { text: string }) {
-  const body = text.replace(/^밑줄 친 부분과 의미가 비슷한 것:\s*/, '')
+  const body = text.replace(/^밑줄 친 부분과 의미가 비슷한 것:\s*/, '').replace(/^밑줄 친 부분의 반대말을 고르십시오\.\s*/, '')
   return (
     <p className="mt-4 font-ko text-[19px] leading-snug font-bold">
       {body.split(/<(.+?)>/).map((part, i) =>
@@ -154,7 +154,9 @@ export default function TopikQuiz() {
             <QuestionText text={q.question} />
             {!q.passage && (
               <p className="mt-1 text-[12px] text-text-secondary">
-                {q.question.includes('밑줄') ? '下線部と意味が最も近いものを選んでください。' : '（ ）に入る最も適切なものを選んでください。'}
+                {q.question.includes('반대말') ? '下線部と反対の意味のものを選んでください。'
+                  : q.question.includes('밑줄') ? '下線部と意味が最も近いものを選んでください。'
+                  : '（ ）に入る最も適切なものを選んでください。'}
               </p>
             )}
 
