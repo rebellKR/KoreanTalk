@@ -19,6 +19,7 @@ const TopikQuiz = lazy(() => import('./pages/TopikQuiz'))
 const Games = lazy(() => import('./pages/Games'))
 const SpeedGame = lazy(() => import('./pages/SpeedGame'))
 const PairGame = lazy(() => import('./pages/PairGame'))
+const Install = lazy(() => import('./pages/Install'))
 
 // 주소의 조건(레벨·영역)이 바뀌면 퀴즈를 처음부터 새로 시작
 function TopikQuizRoute() {
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/mypage/settings" element={<Settings />} />
+        <Route path="/mypage/install" element={<Install />} />
         <Route path="/hangul" element={<Hangul />} />
         <Route path="/grammar" element={<Grammar />} />
         <Route path="/topik" element={<Topik />} />

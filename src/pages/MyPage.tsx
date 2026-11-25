@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Flame, BookCheck, GraduationCap, Settings as SettingsIcon, ChevronRight, Target, Lock, Gamepad2 } from 'lucide-react'
+import { Flame, BookCheck, GraduationCap, Settings as SettingsIcon, ChevronRight, Target, Lock, Gamepad2, Smartphone } from 'lucide-react'
 import ProgressBar from '../components/ProgressBar'
 import Section from '../components/Section'
 import GrassCalendar from '../components/GrassCalendar'
@@ -97,6 +97,7 @@ export default function MyPage() {
         {/* 메뉴 */}
         {[
           { to: '/games', icon: Gamepad2, title: 'ゲーム', desc: 'スピードクイズ・ペアマッチ' },
+          { to: '/mypage/install', icon: Smartphone, title: 'ホーム画面に追加', desc: 'アプリのように使う・URLを共有' },
           { to: '/mypage/settings', icon: SettingsIcon, title: '設定', desc: 'テーマ・文字サイズ・音声・データ' },
         ].map(({ to, icon: Icon, title, desc }) => (
           <button key={to} onClick={() => navigate(to)}

@@ -14,7 +14,7 @@ import { useSettings, type Settings as S } from '../context/SettingsContext'
 import { speakKorean, getKoreanVoices, voiceLabel } from '../utils/speak'
 import { exportBackup, importBackup, resetAll } from '../utils/backup'
 
-const APP_VERSION = '0.2.0'
+const APP_VERSION = '1.0.0'
 
 export default function Settings() {
   const navigate = useNavigate()
