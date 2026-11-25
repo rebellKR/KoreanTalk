@@ -1,0 +1,2012 @@
+[
+ {
+  "id": "t7I-reading-001",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "운동",
+   "음식",
+   "가족",
+   "날씨"
+  ],
+  "answer": 1,
+  "explanationJa": "キムチ・プルコギ→「음식（料理）」。",
+  "passage": "저는 김치를 좋아합니다. 불고기도 좋아합니다."
+ },
+ {
+  "id": "t7I-reading-002",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "공부",
+   "건강",
+   "여행",
+   "직업"
+  ],
+  "answer": 2,
+  "explanationJa": "休みに済州島→「여행」。",
+  "passage": "이번 방학에 제주도에 갑니다. 바다를 보고 싶습니다."
+ },
+ {
+  "id": "t7I-reading-003",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "취미",
+   "장소",
+   "직업",
+   "계절"
+  ],
+  "answer": 2,
+  "explanationJa": "会社員→「직업」。",
+  "passage": "저는 회사원입니다. 매일 아침 회사에 갑니다."
+ },
+ {
+  "id": "t7I-reading-004",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "시간",
+   "쇼핑",
+   "교통",
+   "날씨"
+  ],
+  "answer": 3,
+  "explanationJa": "雨・傘→「날씨」。",
+  "passage": "내일은 비가 옵니다. 우산이 필요합니다."
+ },
+ {
+  "id": "t7I-reading-005",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "공부",
+   "여행",
+   "요리",
+   "운동"
+  ],
+  "answer": 3,
+  "explanationJa": "歩く・水泳→「운동」。",
+  "passage": "저는 매일 한 시간씩 걷습니다. 주말에는 수영을 합니다."
+ },
+ {
+  "id": "t7I-reading-006",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "크기",
+   "값",
+   "색깔",
+   "계절"
+  ],
+  "answer": 2,
+  "explanationJa": "赤・黄色→「색깔」。",
+  "passage": "이 옷은 빨간색입니다. 저 옷은 노란색입니다."
+ },
+ {
+  "id": "t7I-reading-007",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "이웃",
+   "선생님",
+   "가족",
+   "친구"
+  ],
+  "answer": 2,
+  "explanationJa": "父・母に似ている→「가족」。",
+  "passage": "저는 아버지를 닮았습니다. 동생은 어머니를 닮았습니다."
+ },
+ {
+  "id": "t7I-reading-008",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "음식",
+   "시간",
+   "나라",
+   "계절"
+  ],
+  "answer": 3,
+  "explanationJa": "秋→「계절」。",
+  "passage": "가을에는 단풍이 예쁩니다. 날씨도 시원합니다."
+ },
+ {
+  "id": "t7I-reading-009",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "시간",
+   "가격",
+   "날짜",
+   "장소"
+  ],
+  "answer": 0,
+  "explanationJa": "開店・閉店時刻→「시간」。",
+  "passage": "이 가게는 아침 9시에 문을 엽니다. 저녁 8시에 닫습니다."
+ },
+ {
+  "id": "t7I-reading-010",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "운동",
+   "여행",
+   "독서",
+   "음악"
+  ],
+  "answer": 2,
+  "explanationJa": "本を読む→「독서」。",
+  "passage": "저는 책을 좋아합니다. 한 달에 다섯 권을 읽습니다."
+ },
+ {
+  "id": "t7I-reading-011",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "직업",
+   "약속",
+   "가족",
+   "날씨"
+  ],
+  "answer": 1,
+  "explanationJa": "友達と会う予定→「약속」。",
+  "passage": "저는 두 시에 친구를 만납니다. 같이 영화를 봅니다."
+ },
+ {
+  "id": "t7I-reading-012",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "회사",
+   "공원",
+   "집",
+   "학교"
+  ],
+  "answer": 2,
+  "explanationJa": "住まいの説明→「집」。",
+  "passage": "우리 집은 3층입니다. 엘리베이터가 있습니다."
+ },
+ {
+  "id": "t7I-reading-013",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "직업",
+   "학교",
+   "취미",
+   "나이"
+  ],
+  "answer": 1,
+  "explanationJa": "小学生・大学生→「학교」。",
+  "passage": "동생은 초등학생입니다. 저는 대학생입니다."
+ },
+ {
+  "id": "t7I-reading-014",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "날씨",
+   "맛",
+   "색깔",
+   "값"
+  ],
+  "answer": 1,
+  "explanationJa": "辛い・甘い→「맛」。",
+  "passage": "저는 매운 음식을 못 먹습니다. 단 음식을 좋아합니다."
+ },
+ {
+  "id": "t7I-reading-015",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "날씨",
+   "옷",
+   "방",
+   "음식"
+  ],
+  "answer": 2,
+  "explanationJa": "部屋の様子→「방」。",
+  "passage": "이 방은 조용합니다. 공부하기 좋습니다."
+ },
+ {
+  "id": "t7I-reading-016",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "여행",
+   "쇼핑",
+   "운동",
+   "시험"
+  ],
+  "answer": 3,
+  "explanationJa": "試験→「시험」。",
+  "passage": "오늘 시험을 봤습니다. 문제가 어려웠습니다."
+ },
+ {
+  "id": "t7I-reading-017",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "친구",
+   "음식",
+   "동물",
+   "가족"
+  ],
+  "answer": 2,
+  "explanationJa": "犬→「동물」。",
+  "passage": "저는 강아지를 키웁니다. 이름은 초코입니다."
+ },
+ {
+  "id": "t7I-reading-018",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "동네",
+   "회사",
+   "학교",
+   "나라"
+  ],
+  "answer": 0,
+  "explanationJa": "近所の施設→「동네（町）」。",
+  "passage": "우리 동네에는 공원이 있습니다. 시장도 있습니다."
+ },
+ {
+  "id": "t7I-reading-019",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "날씨",
+   "계절",
+   "생활",
+   "교통"
+  ],
+  "answer": 2,
+  "explanationJa": "日課→「생활（生活）」。",
+  "passage": "저는 매일 저녁 9시에 일기를 씁니다. 그리고 10시에 잡니다."
+ },
+ {
+  "id": "t7I-reading-020",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 내용입니까?",
+  "choices": [
+   "옷",
+   "과일",
+   "날씨",
+   "교통"
+  ],
+  "answer": 1,
+  "explanationJa": "りんご→「과일」。",
+  "passage": "이 사과는 달고 맛있습니다. 값도 쌉니다."
+ },
+ {
+  "id": "t7I-vocab-001",
+  "level": "I",
+  "section": "vocab",
+  "question": "저는 아침마다 이를 ( ).",
+  "choices": [
+   "닦아요",
+   "신어요",
+   "입어요",
+   "씻어요"
+  ],
+  "answer": 0,
+  "explanationJa": "歯を「닦다（磨く）」。"
+ },
+ {
+  "id": "t7I-vocab-002",
+  "level": "I",
+  "section": "vocab",
+  "question": "머리를 ( ) 짧아졌어요.",
+  "choices": [
+   "잘라서",
+   "감아서",
+   "씻어서",
+   "빗어서"
+  ],
+  "answer": 0,
+  "explanationJa": "短くなった→髪を「자르다（切る）」。"
+ },
+ {
+  "id": "t7I-vocab-003",
+  "level": "I",
+  "section": "vocab",
+  "question": "샤워를 하고 머리를 ( ).",
+  "choices": [
+   "닦았어요",
+   "잘랐어요",
+   "말렸어요",
+   "입었어요"
+  ],
+  "answer": 2,
+  "explanationJa": "シャワー後に髪を「말리다（乾かす）」。"
+ },
+ {
+  "id": "t7I-vocab-004",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 식당은 자리가 없어서 30분 동안 ( ).",
+  "choices": [
+   "먹었어요",
+   "앉았어요",
+   "주문했어요",
+   "기다렸어요"
+  ],
+  "answer": 3,
+  "explanationJa": "席がない→「기다리다（待つ）」。"
+ },
+ {
+  "id": "t7I-vocab-005",
+  "level": "I",
+  "section": "vocab",
+  "question": "저는 이 노래를 ( ). 가사를 다 알아요.",
+  "choices": [
+   "외워요",
+   "몰라요",
+   "싫어해요",
+   "잊어요"
+  ],
+  "answer": 0,
+  "explanationJa": "歌詞を全部→「외우다（覚える）」。"
+ },
+ {
+  "id": "t7I-vocab-006",
+  "level": "I",
+  "section": "vocab",
+  "question": "시험 결과를 보고 너무 ( ). 점수가 좋았어요.",
+  "choices": [
+   "무서웠어요",
+   "슬펐어요",
+   "기뻤어요",
+   "화났어요"
+  ],
+  "answer": 2,
+  "explanationJa": "点数が良い→「기쁘다」。"
+ },
+ {
+  "id": "t7I-vocab-007",
+  "level": "I",
+  "section": "vocab",
+  "question": "밤에 혼자 걸으면 ( ).",
+  "choices": [
+   "배고파요",
+   "시원해요",
+   "무서워요",
+   "즐거워요"
+  ],
+  "answer": 2,
+  "explanationJa": "夜一人→「무섭다（怖い）」。"
+ },
+ {
+  "id": "t7I-vocab-008",
+  "level": "I",
+  "section": "vocab",
+  "question": "친구가 약속에 안 와서 ( ).",
+  "choices": [
+   "기뻤어요",
+   "배불렀어요",
+   "화가 났어요",
+   "반가웠어요"
+  ],
+  "answer": 2,
+  "explanationJa": "約束に来ない→「화가 나다」。"
+ },
+ {
+  "id": "t7I-vocab-009",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 소파는 아주 ( ). 앉으면 편해요.",
+  "choices": [
+   "차가워요",
+   "딱딱해요",
+   "무거워요",
+   "부드러워요"
+  ],
+  "answer": 3,
+  "explanationJa": "座ると楽→「부드럽다（柔らかい）」。"
+ },
+ {
+  "id": "t7I-vocab-010",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 빵은 오래돼서 아주 ( ).",
+  "choices": [
+   "딱딱해요",
+   "신선해요",
+   "부드러워요",
+   "따뜻해요"
+  ],
+  "answer": 0,
+  "explanationJa": "古くなって→「딱딱하다（硬い）」。"
+ },
+ {
+  "id": "t7I-vocab-011",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 생선은 오늘 아침에 잡아서 아주 ( ).",
+  "choices": [
+   "신선해요",
+   "더러워요",
+   "오래됐어요",
+   "딱딱해요"
+  ],
+  "answer": 0,
+  "explanationJa": "今朝獲れた→「신선하다（新鮮）」。"
+ },
+ {
+  "id": "t7I-vocab-012",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 지갑은 가죽으로 ( ).",
+  "choices": [
+   "만들었어요",
+   "먹었어요",
+   "배웠어요",
+   "보냈어요"
+  ],
+  "answer": 0,
+  "explanationJa": "革で「만들다（作る）」。"
+ },
+ {
+  "id": "t7I-vocab-013",
+  "level": "I",
+  "section": "vocab",
+  "question": "저는 고향이 ( ). 가족이 보고 싶어요.",
+  "choices": [
+   "무서워요",
+   "싫어요",
+   "그리워요",
+   "시끄러워요"
+  ],
+  "answer": 2,
+  "explanationJa": "家族に会いたい→故郷が「그립다（恋しい）」。"
+ },
+ {
+  "id": "t7I-vocab-014",
+  "level": "I",
+  "section": "vocab",
+  "question": "친구가 결혼해서 ( ) 선물을 줬어요.",
+  "choices": [
+   "축하",
+   "사과",
+   "인사",
+   "감사"
+  ],
+  "answer": 0,
+  "explanationJa": "結婚→「축하（お祝い）」。"
+ },
+ {
+  "id": "t7I-vocab-015",
+  "level": "I",
+  "section": "vocab",
+  "question": "늦어서 친구에게 ( )를 했어요.",
+  "choices": [
+   "축하",
+   "사과",
+   "소개",
+   "감사"
+  ],
+  "answer": 1,
+  "explanationJa": "遅れて「사과（謝罪）」。"
+ },
+ {
+  "id": "t7I-vocab-016",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 길은 ( )가 많아서 운전하기 어려워요.",
+  "choices": [
+   "책",
+   "꽃",
+   "눈",
+   "차"
+  ],
+  "answer": 3,
+  "explanationJa": "運転しにくい→「차（車）」が多い。"
+ },
+ {
+  "id": "t7I-vocab-017",
+  "level": "I",
+  "section": "vocab",
+  "question": "저는 버스 ( )에서 친구를 기다렸어요.",
+  "choices": [
+   "항구",
+   "우체국",
+   "공항",
+   "정류장"
+  ],
+  "answer": 3,
+  "explanationJa": "バスを待つ→「정류장（停留所）」。"
+ },
+ {
+  "id": "t7I-vocab-018",
+  "level": "I",
+  "section": "vocab",
+  "question": "비행기 표를 ( )했어요.",
+  "choices": [
+   "약속",
+   "예약",
+   "질문",
+   "대답"
+  ],
+  "answer": 1,
+  "explanationJa": "チケットを「예약（予約）」。"
+ },
+ {
+  "id": "t7I-vocab-019",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 영화는 ( ) 길어서 지루했어요.",
+  "choices": [
+   "시간이",
+   "가격이",
+   "날씨가",
+   "사람이"
+  ],
+  "answer": 0,
+  "explanationJa": "長くて退屈→上映「시간」が長い。"
+ },
+ {
+  "id": "t7I-vocab-020",
+  "level": "I",
+  "section": "vocab",
+  "question": "한국어 ( )을 받으러 학원에 다녀요.",
+  "choices": [
+   "편지",
+   "선물",
+   "수업",
+   "전화"
+  ],
+  "answer": 2,
+  "explanationJa": "学院で「수업」を受ける。"
+ },
+ {
+  "id": "t7I-vocab-021",
+  "level": "I",
+  "section": "vocab",
+  "question": "감기에 걸려서 ( )가 나요.",
+  "choices": [
+   "노래",
+   "웃음",
+   "기침",
+   "땀띠"
+  ],
+  "answer": 2,
+  "explanationJa": "風邪で「기침（咳）」。"
+ },
+ {
+  "id": "t7I-vocab-022",
+  "level": "I",
+  "section": "vocab",
+  "question": "화장실에서 손을 ( ).",
+  "choices": [
+   "씻어요",
+   "입어요",
+   "신어요",
+   "써요"
+  ],
+  "answer": 0,
+  "explanationJa": "手を「씻다（洗う）」。"
+ },
+ {
+  "id": "t7I-vocab-023",
+  "level": "I",
+  "section": "vocab",
+  "question": "이 상자는 무거우니까 같이 ( ).",
+  "choices": [
+   "불러요",
+   "읽어요",
+   "먹어요",
+   "들어요"
+  ],
+  "answer": 3,
+  "explanationJa": "箱を「들다（持つ）」。"
+ },
+ {
+  "id": "t7I-vocab-024",
+  "level": "I",
+  "section": "vocab",
+  "question": "친구에게 문자를 ( ).",
+  "choices": [
+   "보냈어요",
+   "샀어요",
+   "받았어요",
+   "썼어요"
+  ],
+  "answer": 0,
+  "explanationJa": "メッセージを「보내다（送る）」。"
+ },
+ {
+  "id": "t7I-grammar-001",
+  "level": "I",
+  "section": "grammar",
+  "question": "어제 친구와 같이 저녁을 먹( ).",
+  "choices": [
+   "을 거예요",
+   "었어요",
+   "을래요",
+   "으세요"
+  ],
+  "answer": 1,
+  "explanationJa": "「어제」→過去。"
+ },
+ {
+  "id": "t7I-grammar-002",
+  "level": "I",
+  "section": "grammar",
+  "question": "내일 친구와 같이 저녁을 먹( ).",
+  "choices": [
+   "을 거예요",
+   "었어요",
+   "었었어요",
+   "은"
+  ],
+  "answer": 0,
+  "explanationJa": "「내일」→未来。"
+ },
+ {
+  "id": "t7I-grammar-003",
+  "level": "I",
+  "section": "grammar",
+  "question": "지금 뭐 하( ) 있어요?",
+  "choices": [
+   "지",
+   "면",
+   "서",
+   "고"
+  ],
+  "answer": 3,
+  "explanationJa": "進行「-고 있다」。"
+ },
+ {
+  "id": "t7I-grammar-004",
+  "level": "I",
+  "section": "grammar",
+  "question": "이 음식은 맵( ) 맛있어요.",
+  "choices": [
+   "으면",
+   "어서",
+   "지만",
+   "으러"
+  ],
+  "answer": 2,
+  "explanationJa": "逆接「-지만」。"
+ },
+ {
+  "id": "t7I-grammar-005",
+  "level": "I",
+  "section": "grammar",
+  "question": "배가 아프( ) 병원에 가세요.",
+  "choices": [
+   "거나",
+   "면",
+   "지만",
+   "는데도"
+  ],
+  "answer": 1,
+  "explanationJa": "条件＋指示「-면」。"
+ },
+ {
+  "id": "t7I-grammar-006",
+  "level": "I",
+  "section": "grammar",
+  "question": "저는 한국에 가( ) 한국어를 배워요.",
+  "choices": [
+   "려고",
+   "러",
+   "면서",
+   "지만"
+  ],
+  "answer": 0,
+  "explanationJa": "目的「-려고」。"
+ },
+ {
+  "id": "t7I-grammar-007",
+  "level": "I",
+  "section": "grammar",
+  "question": "친구를 만나( ) 카페에 가요.",
+  "choices": [
+   "면",
+   "지만",
+   "러",
+   "고 싶어서"
+  ],
+  "answer": 2,
+  "explanationJa": "目的＋移動「-러 가다」。"
+ },
+ {
+  "id": "t7I-grammar-008",
+  "level": "I",
+  "section": "grammar",
+  "question": "저는 운전을 할 수 ( ).",
+  "choices": [
+   "있어서",
+   "되고",
+   "하고",
+   "없어요"
+  ],
+  "answer": 3,
+  "explanationJa": "文末→「할 수 없어요」。"
+ },
+ {
+  "id": "t7I-grammar-009",
+  "level": "I",
+  "section": "grammar",
+  "question": "이 책은 너무 어려워( ) 이해할 수 없어요.",
+  "choices": [
+   "도",
+   "면",
+   "서",
+   "지만"
+  ],
+  "answer": 2,
+  "explanationJa": "理由「-어서」。"
+ },
+ {
+  "id": "t7I-grammar-010",
+  "level": "I",
+  "section": "grammar",
+  "question": "주말에 집에서 쉬( ) 싶어요.",
+  "choices": [
+   "면",
+   "지",
+   "고",
+   "게"
+  ],
+  "answer": 2,
+  "explanationJa": "希望「-고 싶다」。"
+ },
+ {
+  "id": "t7I-grammar-011",
+  "level": "I",
+  "section": "grammar",
+  "question": "오늘 너무 피곤해( ) 일찍 잘 거예요.",
+  "choices": [
+   "도",
+   "면서",
+   "지만",
+   "서"
+  ],
+  "answer": 3,
+  "explanationJa": "理由「-서」。"
+ },
+ {
+  "id": "t7I-grammar-012",
+  "level": "I",
+  "section": "grammar",
+  "question": "시간이 없으( ) 택시를 탑시다.",
+  "choices": [
+   "거나",
+   "는데도",
+   "지만",
+   "니까"
+  ],
+  "answer": 3,
+  "explanationJa": "理由＋勧誘「-니까」。"
+ },
+ {
+  "id": "t7I-grammar-013",
+  "level": "I",
+  "section": "grammar",
+  "question": "이 바지는 좀 작( ) 다른 걸로 주세요.",
+  "choices": [
+   "으면서",
+   "으니까",
+   "거나",
+   "지만"
+  ],
+  "answer": 1,
+  "explanationJa": "理由＋依頼「-으니까」。"
+ },
+ {
+  "id": "t7I-grammar-014",
+  "level": "I",
+  "section": "grammar",
+  "question": "동생은 지금 방에서 공부하( ) 있어요.",
+  "choices": [
+   "서",
+   "지",
+   "면",
+   "고"
+  ],
+  "answer": 3,
+  "explanationJa": "進行「-고 있다」。"
+ },
+ {
+  "id": "t7I-grammar-015",
+  "level": "I",
+  "section": "grammar",
+  "question": "저는 내일 아침 일찍 일어나( ) 해요.",
+  "choices": [
+   "면",
+   "도",
+   "고",
+   "야"
+  ],
+  "answer": 3,
+  "explanationJa": "義務「-아야 하다」。"
+ },
+ {
+  "id": "t7I-grammar-016",
+  "level": "I",
+  "section": "grammar",
+  "question": "숙제를 다 하( ) 텔레비전을 봐도 돼요.",
+  "choices": [
+   "거나",
+   "지만",
+   "면",
+   "는데도"
+  ],
+  "answer": 2,
+  "explanationJa": "条件「-면」。"
+ },
+ {
+  "id": "t7I-grammar-017",
+  "level": "I",
+  "section": "grammar",
+  "question": "이 사진은 제가 찍( ) 사진이에요.",
+  "choices": [
+   "은",
+   "는",
+   "던가",
+   "을"
+  ],
+  "answer": 0,
+  "explanationJa": "過去連体形「찍은」。"
+ },
+ {
+  "id": "t7I-grammar-018",
+  "level": "I",
+  "section": "grammar",
+  "question": "저기 서 ( ) 사람이 우리 선생님이에요.",
+  "choices": [
+   "있지만",
+   "있던가",
+   "있을까",
+   "있는"
+  ],
+  "answer": 3,
+  "explanationJa": "現在連体形「서 있는」。"
+ },
+ {
+  "id": "t7I-grammar-019",
+  "level": "I",
+  "section": "grammar",
+  "question": "내일 입( ) 옷을 준비했어요.",
+  "choices": [
+   "던",
+   "을",
+   "은",
+   "는"
+  ],
+  "answer": 1,
+  "explanationJa": "未来連体形「입을」。"
+ },
+ {
+  "id": "t7I-grammar-020",
+  "level": "I",
+  "section": "grammar",
+  "question": "저는 여행하( ) 것을 좋아해요.",
+  "choices": [
+   "을",
+   "는",
+   "은",
+   "던"
+  ],
+  "answer": 1,
+  "explanationJa": "「旅行すること」→「-는 것」。"
+ },
+ {
+  "id": "t7I-grammar-021",
+  "level": "I",
+  "section": "grammar",
+  "question": "어제 비가 와( ) 집에 있었어요.",
+  "choices": [
+   "지만",
+   "면",
+   "도",
+   "서"
+  ],
+  "answer": 3,
+  "explanationJa": "理由「-아서」。"
+ },
+ {
+  "id": "t7I-grammar-022",
+  "level": "I",
+  "section": "grammar",
+  "question": "이 식당은 음식이 맛있( ) 값도 싸요.",
+  "choices": [
+   "지만",
+   "고",
+   "으면",
+   "어서"
+  ],
+  "answer": 1,
+  "explanationJa": "並列「-고」。"
+ },
+ {
+  "id": "t7I-grammar-023",
+  "level": "I",
+  "section": "grammar",
+  "question": "친구가 선물을 줘( ) 고마웠어요.",
+  "choices": [
+   "도",
+   "서",
+   "지만",
+   "면"
+  ],
+  "answer": 1,
+  "explanationJa": "理由「-서」。"
+ },
+ {
+  "id": "t7I-grammar-024",
+  "level": "I",
+  "section": "grammar",
+  "question": "한국 노래를 들( ) 한국어를 공부해요.",
+  "choices": [
+   "으면서",
+   "으면",
+   "으러",
+   "지만"
+  ],
+  "answer": 0,
+  "explanationJa": "同時「-으면서」。"
+ },
+ {
+  "id": "t7I-reading-021",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "저는 차를 좋아합니다.",
+   "저는 매일 아침 커피를 마십니다.",
+   "저는 커피를 안 마십니다.",
+   "저는 저녁에만 커피를 마십니다."
+  ],
+  "answer": 1,
+  "explanationJa": "毎朝コーヒーを飲みます。",
+  "passage": "저는 아침마다 커피를 한 잔 마십니다. 커피를 마시면 잠이 깹니다."
+ },
+ {
+  "id": "t7I-reading-022",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "오빠는 요리를 잘합니다.",
+   "오빠는 요리를 못합니다.",
+   "오빠는 식당을 싫어합니다.",
+   "저는 요리사입니다."
+  ],
+  "answer": 0,
+  "explanationJa": "兄は料理が上手です。",
+  "passage": "우리 오빠는 요리를 잘합니다. 주말마다 가족을 위해 맛있는 음식을 만들어 줍니다."
+ },
+ {
+  "id": "t7I-reading-023",
+  "level": "I",
+  "section": "reading",
+  "question": "왜 병원에 갔습니까?",
+  "choices": [
+   "이가 아파서",
+   "눈이 나빠서",
+   "감기에 걸려서",
+   "다리를 다쳐서"
+  ],
+  "answer": 3,
+  "explanationJa": "足をけがしたと書かれています。",
+  "passage": "어제 축구를 하다가 다리를 다쳤습니다. 그래서 오늘 아침에 병원에 갔습니다."
+ },
+ {
+  "id": "t7I-reading-024",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "친구가 결혼합니다.",
+   "저는 작년에 결혼했습니다.",
+   "저는 다음 달에 결혼합니다.",
+   "저는 결혼하지 않습니다."
+  ],
+  "answer": 2,
+  "explanationJa": "来月結婚します。",
+  "passage": "저는 다음 달에 결혼합니다. 요즘 결혼 준비 때문에 아주 바쁩니다."
+ },
+ {
+  "id": "t7I-reading-025",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "이 가게는 밤늦게까지 합니다.",
+   "이 가게는 오늘 쉽니다.",
+   "이 가게는 오늘 문을 일찍 닫습니다.",
+   "이 가게는 내일 문을 닫습니다."
+  ],
+  "answer": 2,
+  "explanationJa": "本日は午後5時閉店。",
+  "passage": "[알림]\n오늘은 가게 사정으로 오후 5시에 문을 닫습니다. 내일은 정상 영업합니다."
+ },
+ {
+  "id": "t7I-reading-026",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇을 샀습니까?",
+  "choices": [
+   "모자",
+   "신발",
+   "가방",
+   "시계"
+  ],
+  "answer": 0,
+  "explanationJa": "帽子を買いました。",
+  "passage": "날씨가 더워서 어제 시장에서 모자를 하나 샀습니다. 값도 싸고 예쁩니다."
+ },
+ {
+  "id": "t7I-reading-027",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "저는 한국 친구에게 일본어를 가르칩니다.",
+   "저는 일본어를 배웁니다.",
+   "한국 친구는 일본어를 잘합니다.",
+   "저는 한국어를 가르칩니다."
+  ],
+  "answer": 0,
+  "explanationJa": "韓国人の友達に日本語を教えています。",
+  "passage": "저는 일주일에 한 번 한국 친구에게 일본어를 가르쳐 줍니다. 친구는 저에게 한국어를 가르쳐 줍니다."
+ },
+ {
+  "id": "t7I-reading-028",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "오늘은 덥습니다.",
+   "오늘은 눈이 많이 왔습니다.",
+   "오늘은 날씨가 맑습니다.",
+   "눈 때문에 학교에 갔습니다."
+  ],
+  "answer": 1,
+  "explanationJa": "雪がたくさん降りました。",
+  "passage": "오늘 아침에 눈이 많이 왔습니다. 길이 미끄러워서 학교에 늦게 도착했습니다."
+ },
+ {
+  "id": "t7I-reading-029",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "유진 씨는 지금 도서관에 있습니다.",
+   "유진 씨는 공부를 다 했습니다.",
+   "유진 씨는 카페에 있습니다.",
+   "유진 씨는 집에 있습니다."
+  ],
+  "answer": 0,
+  "explanationJa": "図書館で勉強中です。",
+  "passage": "수지 씨, 저는 지금 도서관에서 공부하고 있어요. 6시쯤 끝나요. 끝나고 만나요. - 유진"
+ },
+ {
+  "id": "t7I-reading-030",
+  "level": "I",
+  "section": "reading",
+  "question": "무엇에 대한 이야기입니까?",
+  "choices": [
+   "직업",
+   "가족",
+   "날씨",
+   "취미"
+  ],
+  "answer": 3,
+  "explanationJa": "写真を撮るのが趣味という話。",
+  "passage": "저는 사진 찍는 것을 좋아합니다. 주말마다 카메라를 들고 공원에 가서 꽃과 사람들을 찍습니다."
+ },
+ {
+  "id": "t7I-reading-031",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "저는 퇴근 후에 운동합니다.",
+   "저는 운동을 하지 않습니다.",
+   "저는 주말에만 운동합니다.",
+   "저는 아침에 운동을 하고 출근합니다."
+  ],
+  "answer": 3,
+  "explanationJa": "朝運動してから出勤します。",
+  "passage": "저는 매일 아침 6시에 일어나서 운동을 합니다. 그리고 샤워를 하고 회사에 갑니다."
+ },
+ {
+  "id": "t7I-reading-032",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "이 빵집은 비쌉니다.",
+   "이 빵집은 빵이 맛있어서 유명합니다.",
+   "이 빵집은 밤에만 엽니다.",
+   "이 빵집에는 손님이 적습니다."
+  ],
+  "answer": 1,
+  "explanationJa": "パンがおいしくて有名です。",
+  "passage": "우리 동네 빵집은 빵이 맛있어서 유명합니다. 아침마다 사람들이 줄을 서서 빵을 삽니다."
+ },
+ {
+  "id": "t7I-reading-033",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "친구는 음식을 안 먹었습니다.",
+   "저는 일본 음식을 한국 친구에게 만들어 줬습니다.",
+   "저는 한국 음식을 만들었습니다.",
+   "한국 친구가 요리를 했습니다."
+  ],
+  "answer": 1,
+  "explanationJa": "私が日本料理を作ってあげました。",
+  "passage": "지난 주말에 한국 친구들을 집에 초대했습니다. 저는 일본 음식을 만들어 줬고 친구들은 맛있게 먹었습니다."
+ },
+ {
+  "id": "t7I-reading-034",
+  "level": "I",
+  "section": "reading",
+  "question": "왜 늦게 잤습니까?",
+  "choices": [
+   "친구가 와서",
+   "배가 아파서",
+   "드라마를 봐서",
+   "숙제가 많아서"
+  ],
+  "answer": 2,
+  "explanationJa": "ドラマを見ていたから。",
+  "passage": "어제 재미있는 드라마를 보느라고 새벽 2시에 잤습니다. 그래서 오늘 아주 피곤합니다."
+ },
+ {
+  "id": "t7I-reading-035",
+  "level": "I",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "수업은 오후에 합니다.",
+   "수업은 이번 주에 끝났습니다.",
+   "수업은 온라인으로만 합니다.",
+   "다음 주 월요일부터 수업이 시작됩니다."
+  ],
+  "answer": 3,
+  "explanationJa": "来週月曜から授業開始、毎朝9時。",
+  "passage": "[한국어 초급반]\n개강: 다음 주 월요일\n시간: 월~금 오전 9시~12시\n장소: 3층 301호"
+ },
+ {
+  "id": "t7II-vocab-001",
+  "level": "II",
+  "section": "vocab",
+  "question": "그는 다른 사람의 이야기에 귀를 잘 ( ).",
+  "choices": [
+   "돌린다",
+   "닫는다",
+   "기울인다",
+   "막는다"
+  ],
+  "answer": 2,
+  "explanationJa": "話に耳を「기울이다（傾ける）」。"
+ },
+ {
+  "id": "t7II-vocab-002",
+  "level": "II",
+  "section": "vocab",
+  "question": "이번 실수는 내 ( )이니 내가 책임지겠다.",
+  "choices": [
+   "장점",
+   "노력",
+   "실력",
+   "잘못"
+  ],
+  "answer": 3,
+  "explanationJa": "自分の「잘못（過ち）」。"
+ },
+ {
+  "id": "t7II-vocab-003",
+  "level": "II",
+  "section": "vocab",
+  "question": "그는 갑작스러운 질문에 ( )했다.",
+  "choices": [
+   "만족",
+   "안심",
+   "당황",
+   "감동"
+  ],
+  "answer": 2,
+  "explanationJa": "突然の質問に「당황（慌てる）」。"
+ },
+ {
+  "id": "t7II-vocab-004",
+  "level": "II",
+  "section": "vocab",
+  "question": "이 공원은 시민들의 ( ) 공간으로 사랑받고 있다.",
+  "choices": [
+   "경쟁",
+   "업무",
+   "휴식",
+   "교통"
+  ],
+  "answer": 2,
+  "explanationJa": "市民の「휴식（休息）」空間。"
+ },
+ {
+  "id": "t7II-vocab-005",
+  "level": "II",
+  "section": "vocab",
+  "question": "그는 시험에 떨어졌지만 ( )하지 않고 다시 준비했다.",
+  "choices": [
+   "준비",
+   "노력",
+   "좌절",
+   "도전"
+  ],
+  "answer": 2,
+  "explanationJa": "落ちても「좌절（挫折）」せず。"
+ },
+ {
+  "id": "t7II-vocab-006",
+  "level": "II",
+  "section": "vocab",
+  "question": "이 제품은 가격에 비해 성능이 ( ).",
+  "choices": [
+   "뛰어나다",
+   "떨어진다",
+   "부족하다",
+   "형편없다"
+  ],
+  "answer": 0,
+  "explanationJa": "価格の割に性能が「뛰어나다（優れる）」。"
+ },
+ {
+  "id": "t7II-vocab-007",
+  "level": "II",
+  "section": "vocab",
+  "question": "교통사고를 ( )하기 위해 안전 운전을 해야 한다.",
+  "choices": [
+   "예약",
+   "예상",
+   "예정",
+   "예방"
+  ],
+  "answer": 3,
+  "explanationJa": "事故を「예방（予防）」。"
+ },
+ {
+  "id": "t7II-vocab-008",
+  "level": "II",
+  "section": "vocab",
+  "question": "그는 자신의 의견을 분명하게 ( )했다.",
+  "choices": [
+   "표준",
+   "표현",
+   "표정",
+   "표시"
+  ],
+  "answer": 1,
+  "explanationJa": "意見を「표현（表現）」。"
+ },
+ {
+  "id": "t7II-vocab-009",
+  "level": "II",
+  "section": "vocab",
+  "question": "이 지역은 산과 바다가 ( )어 경치가 아름답다.",
+  "choices": [
+   "사라져",
+   "어우러져",
+   "부서져",
+   "떨어져"
+  ],
+  "answer": 1,
+  "explanationJa": "山と海が「어우러지다（調和する）」。"
+ },
+ {
+  "id": "t7II-vocab-010",
+  "level": "II",
+  "section": "vocab",
+  "question": "그 소식은 사람들에게 큰 ( )을 주었다.",
+  "choices": [
+   "평화",
+   "휴식",
+   "충격",
+   "여유"
+  ],
+  "answer": 2,
+  "explanationJa": "大きな「충격（衝撃）」。"
+ },
+ {
+  "id": "t7II-vocab-011",
+  "level": "II",
+  "section": "vocab",
+  "question": "이번 행사의 ( )은 많은 시민들의 참여였다.",
+  "choices": [
+   "성공 요인",
+   "부족한 점",
+   "실패 원인",
+   "걱정거리"
+  ],
+  "answer": 0,
+  "explanationJa": "成功の要因。"
+ },
+ {
+  "id": "t7II-vocab-012",
+  "level": "II",
+  "section": "vocab",
+  "question": "요즘은 온라인으로 물건을 ( )하는 사람이 많다.",
+  "choices": [
+   "구경",
+   "구별",
+   "구매",
+   "구성"
+  ],
+  "answer": 2,
+  "explanationJa": "物を「구매（購入）」。"
+ },
+ {
+  "id": "t7II-vocab-013",
+  "level": "II",
+  "section": "vocab",
+  "question": "그는 바쁜 일정 속에서도 가족과의 시간을 ( )했다.",
+  "choices": [
+   "대충",
+   "억지로",
+   "소중히",
+   "함부로"
+  ],
+  "answer": 2,
+  "explanationJa": "家族の時間を「소중히（大切に）」。"
+ },
+ {
+  "id": "t7II-vocab-014",
+  "level": "II",
+  "section": "vocab",
+  "question": "이 문제는 여러 가지 ( )이 복잡하게 얽혀 있다.",
+  "choices": [
+   "원인",
+   "결론",
+   "장점",
+   "목표"
+  ],
+  "answer": 0,
+  "explanationJa": "原因が絡み合う。"
+ },
+ {
+  "id": "t7II-vocab-015",
+  "level": "II",
+  "section": "vocab",
+  "question": "기술이 발전하면서 생활이 더욱 ( )해졌다.",
+  "choices": [
+   "편리",
+   "불편",
+   "위험",
+   "복잡"
+  ],
+  "answer": 0,
+  "explanationJa": "技術の発展で生活が「편리（便利）」。"
+ },
+ {
+  "id": "t7II-vocab-016",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 그는 그 제안을 <받아들였다>.",
+  "choices": [
+   "거절했다",
+   "인정했다",
+   "허락했다",
+   "수락했다"
+  ],
+  "answer": 0,
+  "explanationJa": "受け入れた↔「거절하다（断る）」。"
+ },
+ {
+  "id": "t7II-vocab-017",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 이 길은 <복잡하다>.",
+  "choices": [
+   "시끄럽다",
+   "붐빈다",
+   "혼잡하다",
+   "한산하다"
+  ],
+  "answer": 3,
+  "explanationJa": "混雑↔「한산하다（閑散）」。"
+ },
+ {
+  "id": "t7II-vocab-018",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 그 회사는 직원을 <고용>했다.",
+  "choices": [
+   "승진",
+   "모집",
+   "채용",
+   "해고"
+  ],
+  "answer": 3,
+  "explanationJa": "雇用↔「해고（解雇）」。"
+ },
+ {
+  "id": "t7II-vocab-019",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 나는 그 의견에 <동의>한다.",
+  "choices": [
+   "지지",
+   "인정",
+   "찬성",
+   "반대"
+  ],
+  "answer": 3,
+  "explanationJa": "同意↔「반대」。"
+ },
+ {
+  "id": "t7II-vocab-020",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 그 사람은 <겸손하다>.",
+  "choices": [
+   "성실하다",
+   "거만하다",
+   "조용하다",
+   "친절하다"
+  ],
+  "answer": 1,
+  "explanationJa": "謙虚↔「거만하다（傲慢）」。"
+ },
+ {
+  "id": "t7II-vocab-021",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 도시 인구가 <늘었다>.",
+  "choices": [
+   "커졌다",
+   "높아졌다",
+   "많아졌다",
+   "줄었다"
+  ],
+  "answer": 3,
+  "explanationJa": "増えた↔「줄다（減る）」。"
+ },
+ {
+  "id": "t7II-vocab-022",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 그는 항상 <느긋하다>.",
+  "choices": [
+   "침착하다",
+   "편안하다",
+   "여유롭다",
+   "급하다"
+  ],
+  "answer": 3,
+  "explanationJa": "のんびり↔「급하다（せっかち）」。"
+ },
+ {
+  "id": "t7II-vocab-023",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 이 상자는 <비어> 있다.",
+  "choices": [
+   "열려",
+   "차",
+   "닫혀",
+   "놓여"
+  ],
+  "answer": 1,
+  "explanationJa": "空いている↔「차 있다（満ちている）」。"
+ },
+ {
+  "id": "t7II-vocab-024",
+  "level": "II",
+  "section": "vocab",
+  "question": "밑줄 친 부분의 반대말을 고르십시오. 그는 <출발>했다.",
+  "choices": [
+   "도착",
+   "시작",
+   "이동",
+   "출근"
+  ],
+  "answer": 0,
+  "explanationJa": "出発↔「도착（到着）」。"
+ },
+ {
+  "id": "t7II-grammar-001",
+  "level": "II",
+  "section": "grammar",
+  "question": "친구가 오( ) 같이 밥을 먹자.",
+  "choices": [
+   "느라고",
+   "다가",
+   "거든",
+   "더니"
+  ],
+  "answer": 2,
+  "explanationJa": "「来たら」→「-거든」。"
+ },
+ {
+  "id": "t7II-grammar-002",
+  "level": "II",
+  "section": "grammar",
+  "question": "그 영화는 생각했( ) 재미있었다.",
+  "choices": [
+   "던 대로도",
+   "던 것보다",
+   "을 뻔",
+   "을수록"
+  ],
+  "answer": 1,
+  "explanationJa": "「思っていたより」→「-던 것보다」。"
+ },
+ {
+  "id": "t7II-grammar-003",
+  "level": "II",
+  "section": "grammar",
+  "question": "아무리 바쁘( ) 식사는 꼭 하세요.",
+  "choices": [
+   "느라고",
+   "자마자",
+   "더라도",
+   "더니"
+  ],
+  "answer": 2,
+  "explanationJa": "「아무리〜더라도」。"
+ },
+ {
+  "id": "t7II-grammar-004",
+  "level": "II",
+  "section": "grammar",
+  "question": "내가 도와줄 ( )니까 걱정하지 마.",
+  "choices": [
+   "뻔",
+   "척",
+   "리",
+   "테"
+  ],
+  "answer": 3,
+  "explanationJa": "意志「-ㄹ 테니까」。"
+ },
+ {
+  "id": "t7II-grammar-005",
+  "level": "II",
+  "section": "grammar",
+  "question": "그는 한 시간 동안 아무 말도 하지 않( ) 앉아 있었다.",
+  "choices": [
+   "는 김에",
+   "는 대신",
+   "는 바람에",
+   "은 채"
+  ],
+  "answer": 3,
+  "explanationJa": "「〜したまま」→「-은 채」。"
+ },
+ {
+  "id": "t7II-grammar-006",
+  "level": "II",
+  "section": "grammar",
+  "question": "문을 연 ( ) 나가 버렸다.",
+  "choices": [
+   "채",
+   "척",
+   "탓",
+   "김"
+  ],
+  "answer": 0,
+  "explanationJa": "「開けたまま」→「-ㄴ 채」。"
+ },
+ {
+  "id": "t7II-grammar-007",
+  "level": "II",
+  "section": "grammar",
+  "question": "결혼하( ) 전에 여행을 많이 다니고 싶다.",
+  "choices": [
+   "ㄴ",
+   "ㄹ",
+   "기",
+   "는"
+  ],
+  "answer": 2,
+  "explanationJa": "「結婚する前に」→「-기 전에」。"
+ },
+ {
+  "id": "t7II-grammar-008",
+  "level": "II",
+  "section": "grammar",
+  "question": "그는 늘 바쁘다( ) 얼굴을 보기 힘들다.",
+  "choices": [
+   "느라고",
+   "다가",
+   "더니",
+   "면서"
+  ],
+  "answer": 3,
+  "explanationJa": "「忙しいと言って」→「-다면서」。"
+ },
+ {
+  "id": "t7II-grammar-009",
+  "level": "II",
+  "section": "grammar",
+  "question": "한국어를 잘하( ) 매일 한국 드라마를 본다.",
+  "choices": [
+   "다가",
+   "더니",
+   "기 위해",
+   "느라고"
+  ],
+  "answer": 2,
+  "explanationJa": "目的「-기 위해」。"
+ },
+ {
+  "id": "t7II-grammar-010",
+  "level": "II",
+  "section": "grammar",
+  "question": "비가 그치( ) 출발합시다.",
+  "choices": [
+   "면",
+   "더니",
+   "다가",
+   "느라고"
+  ],
+  "answer": 0,
+  "explanationJa": "条件「-면」。"
+ },
+ {
+  "id": "t7II-grammar-011",
+  "level": "II",
+  "section": "grammar",
+  "question": "이 책은 어린이( ) 읽기 쉽다.",
+  "choices": [
+   "부터",
+   "까지도",
+   "도",
+   "만도"
+  ],
+  "answer": 2,
+  "explanationJa": "「子どもでも」→「도」。"
+ },
+ {
+  "id": "t7II-grammar-012",
+  "level": "II",
+  "section": "grammar",
+  "question": "주말에는 늦게까지 자( ) 한다.",
+  "choices": [
+   "뻔",
+   "듯",
+   "곤",
+   "척"
+  ],
+  "answer": 2,
+  "explanationJa": "習慣「-곤 하다」。"
+ },
+ {
+  "id": "t7II-grammar-013",
+  "level": "II",
+  "section": "grammar",
+  "question": "그는 그 소식을 듣( ) 깜짝 놀랐다.",
+  "choices": [
+   "느라고",
+   "도록",
+   "려면",
+   "고는"
+  ],
+  "answer": 3,
+  "explanationJa": "「聞いて」→「-고는」。"
+ },
+ {
+  "id": "t7II-grammar-014",
+  "level": "II",
+  "section": "grammar",
+  "question": "이렇게 비싼 줄 알았( ) 안 샀을 거예요.",
+  "choices": [
+   "어서",
+   "는데도",
+   "으니까",
+   "더라면"
+  ],
+  "answer": 3,
+  "explanationJa": "反実仮想「-았더라면」。"
+ },
+ {
+  "id": "t7II-grammar-015",
+  "level": "II",
+  "section": "grammar",
+  "question": "그 일을 맡( ) 이상 끝까지 책임져야 한다.",
+  "choices": [
+   "은",
+   "을",
+   "던",
+   "는"
+  ],
+  "answer": 0,
+  "explanationJa": "「引き受けた以上」→「-은 이상」。"
+ },
+ {
+  "id": "t7II-grammar-016",
+  "level": "II",
+  "section": "grammar",
+  "question": "그 사람은 키가 클 ( )더러 운동도 잘한다.",
+  "choices": [
+   "만",
+   "뿐",
+   "김",
+   "대로"
+  ],
+  "answer": 1,
+  "explanationJa": "「〜だけでなく」→「-ㄹ 뿐더러」。"
+ },
+ {
+  "id": "t7II-grammar-017",
+  "level": "II",
+  "section": "grammar",
+  "question": "늦게 일어나는 ( )에 버스를 놓쳤다.",
+  "choices": [
+   "대신",
+   "덕분",
+   "바람",
+   "김"
+  ],
+  "answer": 2,
+  "explanationJa": "悪い結果の原因「-는 바람에」。"
+ },
+ {
+  "id": "t7II-grammar-018",
+  "level": "II",
+  "section": "grammar",
+  "question": "한국 문화를 알( ) 알수록 더 흥미롭다.",
+  "choices": [
+   "고",
+   "지만",
+   "면",
+   "어서"
+  ],
+  "answer": 2,
+  "explanationJa": "「知れば知るほど」→「알면 알수록」。"
+ },
+ {
+  "id": "t7II-reading-001",
+  "level": "II",
+  "section": "reading",
+  "question": "( )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+  "choices": [
+   "밤늦게 공부하는 것이",
+   "커피를 많이 마시는 것이",
+   "식사를 거르는 것이",
+   "충분한 수면을 취하는 것이"
+  ],
+  "answer": 3,
+  "explanationJa": "記憶力→「十分な睡眠をとること」。",
+  "passage": "공부한 내용을 오래 기억하려면 ( ) 중요하다. 잠을 자는 동안 뇌가 낮에 배운 내용을 정리하기 때문이다."
+ },
+ {
+  "id": "t7II-reading-002",
+  "level": "II",
+  "section": "reading",
+  "question": "이 글의 중심 내용을 고르십시오.",
+  "choices": [
+   "봉사 활동은 시간 낭비이다.",
+   "봉사 활동은 학생만 해야 한다.",
+   "봉사 활동은 다른 사람과 자신 모두에게 도움이 된다.",
+   "봉사 활동은 돈을 받고 해야 한다."
+  ],
+  "answer": 2,
+  "explanationJa": "ボランティアは他者と自分の両方に役立つ、が中心。",
+  "passage": "봉사 활동은 도움이 필요한 사람에게 힘이 될 뿐만 아니라 봉사하는 사람에게도 보람과 행복을 준다. 그래서 많은 사람들이 꾸준히 봉사 활동에 참여한다."
+ },
+ {
+  "id": "t7II-reading-003",
+  "level": "II",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "이 공원은 24시간 열려 있다.",
+   "공원에서 불을 피워도 된다.",
+   "반려동물은 들어갈 수 없다.",
+   "이 공원은 밤 10시 이후에 이용할 수 없다."
+  ],
+  "answer": 3,
+  "explanationJa": "22時以降利用不可、火気厳禁、ペットはリード着用。",
+  "passage": "[공원 이용 규칙]\n이용 시간: 06:00~22:00\n불을 피우지 마십시오.\n반려동물은 반드시 목줄을 하십시오."
+ },
+ {
+  "id": "t7II-reading-004",
+  "level": "II",
+  "section": "reading",
+  "question": "( )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+  "choices": [
+   "남에게 맡기는",
+   "작은 일부터 실천하는",
+   "결과만 생각하는",
+   "큰 계획만 세우는"
+  ],
+  "answer": 1,
+  "explanationJa": "変化→「小さなことから実践する」。",
+  "passage": "환경을 지키는 일은 어렵게 느껴지지만 장바구니를 쓰거나 개인 컵을 사용하는 것처럼 ( ) 것에서 시작할 수 있다."
+ },
+ {
+  "id": "t7II-reading-005",
+  "level": "II",
+  "section": "reading",
+  "question": "이 글의 중심 내용을 고르십시오.",
+  "choices": [
+   "다양한 경험이 진로를 정하는 데 도움이 된다.",
+   "진로는 일찍 정할수록 좋다.",
+   "진로는 부모가 정해야 한다.",
+   "경험은 필요 없다."
+  ],
+  "answer": 0,
+  "explanationJa": "多様な経験が進路決定に役立つ、が中心。",
+  "passage": "자신에게 맞는 일을 찾기 위해서는 여러 가지 경험을 해 보는 것이 좋다. 직접 해 보면서 무엇을 좋아하고 잘하는지 알게 되기 때문이다."
+ },
+ {
+  "id": "t7II-reading-006",
+  "level": "II",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "식물은 공기를 나쁘게 한다.",
+   "식물을 키우는 사람이 줄었다.",
+   "최근 집에서 식물을 키우는 사람이 늘었다.",
+   "식물은 키우기 어렵다."
+  ],
+  "answer": 2,
+  "explanationJa": "室内で植物を育てる人が増えた。",
+  "passage": "최근 집에서 식물을 키우는 사람이 많아졌다. 식물은 공기를 깨끗하게 해 줄 뿐만 아니라 보는 것만으로도 마음을 편안하게 해 준다."
+ },
+ {
+  "id": "t7II-reading-007",
+  "level": "II",
+  "section": "reading",
+  "question": "( )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+  "choices": [
+   "상대방의 눈을 보며",
+   "다른 곳을 보며",
+   "빠르게",
+   "휴대폰을 보면서"
+  ],
+  "answer": 0,
+  "explanationJa": "良い聞き方→「相手の目を見て」。",
+  "passage": "대화할 때 ( ) 이야기를 들으면 상대방은 존중받는다고 느낀다. 작은 태도의 차이가 좋은 관계를 만든다."
+ },
+ {
+  "id": "t7II-reading-008",
+  "level": "II",
+  "section": "reading",
+  "question": "이 글의 중심 내용을 고르십시오.",
+  "choices": [
+   "운동은 아침에만 해야 한다.",
+   "규칙적인 운동이 스트레스 해소에 효과적이다.",
+   "스트레스는 해소할 필요가 없다.",
+   "운동하면 스트레스가 늘어난다."
+  ],
+  "answer": 1,
+  "explanationJa": "規則的な運動がストレス解消に効果的、が中心。",
+  "passage": "운동을 하면 기분을 좋게 하는 호르몬이 나와 스트레스가 줄어든다. 특히 규칙적으로 운동하는 사람들은 그렇지 않은 사람들보다 스트레스를 덜 느낀다고 한다."
+ },
+ {
+  "id": "t7II-reading-009",
+  "level": "II",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "이 과정은 한 달 동안 진행된다.",
+   "이 과정은 온라인으로 들을 수 있다.",
+   "이 과정은 유료이다.",
+   "이 과정은 한국인만 들을 수 있다."
+  ],
+  "answer": 1,
+  "explanationJa": "オンライン受講可・無料・8週間・外国人対象。",
+  "passage": "[외국인을 위한 무료 한국어 온라인 강좌]\n기간: 8주\n대상: 한국어를 배우고 싶은 외국인\n신청: 홈페이지에서 가능"
+ },
+ {
+  "id": "t7II-reading-010",
+  "level": "II",
+  "section": "reading",
+  "question": "( )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+  "choices": [
+   "메모해 두는",
+   "잊어버리는",
+   "미루는",
+   "무시하는"
+  ],
+  "answer": 0,
+  "explanationJa": "アイデアを逃さない→「メモしておく」。",
+  "passage": "좋은 아이디어는 갑자기 떠올랐다가 금방 사라진다. 그래서 생각이 날 때마다 바로 ( ) 습관이 필요하다."
+ },
+ {
+  "id": "t7II-reading-011",
+  "level": "II",
+  "section": "reading",
+  "question": "이 글의 중심 내용을 고르십시오.",
+  "choices": [
+   "음식은 많이 먹을수록 좋다.",
+   "빨리 먹는 것이 건강에 좋다.",
+   "식사는 하루 한 번이면 충분하다.",
+   "건강한 식습관은 천천히 먹는 것에서 시작된다."
+  ],
+  "answer": 3,
+  "explanationJa": "ゆっくり食べることが健康的な食習慣の始まり、が中心。",
+  "passage": "음식을 천천히 씹어 먹으면 소화가 잘 되고 적은 양으로도 배가 부르다. 건강한 식습관은 천천히 먹는 것에서부터 시작된다."
+ },
+ {
+  "id": "t7II-reading-012",
+  "level": "II",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "주민 센터에서 무료로 법률 상담을 받을 수 있다.",
+   "상담은 예약 없이 할 수 없다.",
+   "법률 상담은 유료이다.",
+   "상담은 주말에만 가능하다."
+  ],
+  "answer": 0,
+  "explanationJa": "毎月第2水曜日、無料、予約制。",
+  "passage": "[무료 법률 상담]\n일시: 매월 둘째 주 수요일 오후 2시~5시\n장소: 주민 센터 2층\n※ 전화로 미리 예약해 주십시오."
+ },
+ {
+  "id": "t7II-reading-013",
+  "level": "II",
+  "section": "reading",
+  "question": "이 글의 중심 내용을 고르십시오.",
+  "choices": [
+   "사진은 많이 찍지 않는 것이 좋다.",
+   "여행은 기록할 필요가 없다.",
+   "여행은 혼자 가야 한다.",
+   "여행 후 기록을 남기면 추억을 오래 간직할 수 있다."
+  ],
+  "answer": 3,
+  "explanationJa": "記録を残すと思い出が長く残る、が中心。",
+  "passage": "여행이 끝난 뒤 사진과 함께 짧은 글을 남겨 두면 시간이 지나도 그때의 감정을 생생하게 떠올릴 수 있다."
+ },
+ {
+  "id": "t7II-reading-014",
+  "level": "II",
+  "section": "reading",
+  "question": "( )에 들어갈 내용으로 가장 알맞은 것을 고르십시오.",
+  "choices": [
+   "쉬지",
+   "자기 자신을 다른 사람과 비교하지",
+   "목표를 세우지",
+   "노력하지"
+  ],
+  "answer": 1,
+  "explanationJa": "自信のために→「他人と比較しない」。",
+  "passage": "자신감을 가지려면 ( ) 않는 것이 좋다. 어제의 나보다 조금씩 나아지는 것에 집중하면 자신감이 생긴다."
+ },
+ {
+  "id": "t7II-reading-015",
+  "level": "II",
+  "section": "reading",
+  "question": "내용과 같은 것을 고르십시오.",
+  "choices": [
+   "이 식당은 주말에 쉰다.",
+   "이 식당은 예약해야 이용할 수 있다.",
+   "이 식당은 예약할 수 없다.",
+   "이 식당은 점심만 한다."
+  ],
+  "answer": 1,
+  "explanationJa": "完全予約制と書かれています。",
+  "passage": "[안내] 저희 식당은 100% 예약제로 운영합니다. 점심과 저녁 모두 전화나 홈페이지로 예약해 주세요. 매주 월요일은 쉽니다."
+ }
+]

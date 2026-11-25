@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Celebrations from './components/Celebrations'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -19,6 +19,12 @@ const TopikQuiz = lazy(() => import('./pages/TopikQuiz'))
 const Games = lazy(() => import('./pages/Games'))
 const SpeedGame = lazy(() => import('./pages/SpeedGame'))
 const PairGame = lazy(() => import('./pages/PairGame'))
+
+// 주소의 조건(레벨·영역)이 바뀌면 퀴즈를 처음부터 새로 시작
+function TopikQuizRoute() {
+  const { search } = useLocation()
+  return <TopikQuiz key={search} />
+}
 
 export default function App() {
   return (
@@ -41,7 +47,7 @@ export default function App() {
       {/* 카드 학습은 탭바 없이 전체 화면 */}
       <Route path="/vocabulary/study" element={<Study />} />
       <Route path="/conversation/:sid" element={<Lesson />} />
-      <Route path="/topik/quiz" element={<TopikQuiz />} />
+      <Route path="/topik/quiz" element={<TopikQuizRoute />} />
       <Route path="/games/speed" element={<SpeedGame />} />
       <Route path="/games/pair" element={<PairGame />} />
     </Routes>

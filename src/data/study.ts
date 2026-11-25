@@ -7,11 +7,12 @@ import topik3Raw from './topik3.json'
 import topik4Raw from './topik4.json'
 import topik5Raw from './topik5.json'
 import topik6Raw from './topik6.json'
+import topik7Raw from './topik7.json'
 
 // 학습 데이터 (각 json 파일에 추가하면 자동으로 늘어남)
 export const HANGUL = hangulRaw as { consonants: Jamo[]; vowels: Jamo[]; batchim: Batchim[] }
 export const GRAMMAR = grammarRaw as GrammarItem[]
 // 문제는 여러 파일로 나눠 관리 (topik.json + topik2.json …) → 하나로 합침
-export const TOPIK = [...topikRaw, ...topik2Raw, ...topik3Raw, ...topik4Raw, ...topik5Raw, ...topik6Raw] as TopikQuestion[]
+export const TOPIK = [...topikRaw, ...topik2Raw, ...topik3Raw, ...topik4Raw, ...topik5Raw, ...topik6Raw, ...topik7Raw] as TopikQuestion[]
 
 export const SECTION_LABEL = { vocab: '語彙', grammar: '文法', reading: '読解' } as const
