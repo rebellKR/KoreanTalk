@@ -7,6 +7,7 @@ import Button from '../components/Button'
 import { useProgress } from '../context/ProgressContext'
 import { useSettings } from '../context/SettingsContext'
 import { findPhrase, findWord } from '../data/lookup'
+import { LEVELS, useLevelWords } from '../data/vocabLevels'
 import { speakKorean } from '../utils/speak'
 
 export default function Favorites() {
@@ -17,7 +18,11 @@ export default function Favorites() {
 
   // 즐겨찾기 id → 실제 데이터 (최근 추가한 순서)
   const phrases = progress.favorites.map(findPhrase).filter((p) => p !== undefined)
-  const words = progress.favorites.map(findWord).filter((w) => w !== undefined)
+  const hasDict = progress.favorites.some((id) => id.startsWith('kr-')) // 사전 단어가 즐겨찾기에 있으면 불러오기
+  const dict = useLevelWords(LEVELS, hasDict)
+  const words = progress.favorites
+    .map((id) => findWord(id) ?? dict?.find((w) => w.id === id))
+    .filter((w) => w !== undefined)
   const empty = tab === 'phrase' ? phrases.length === 0 : words.length === 0
 
   return (

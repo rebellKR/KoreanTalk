@@ -4,6 +4,7 @@ import { X, Volume2, PartyPopper, RotateCcw } from 'lucide-react'
 import Button from '../components/Button'
 import Confetti from '../components/Confetti'
 import { WORDS, CATEGORIES } from '../data/words'
+import { loadLevel, levelOfCat, LEVEL_JA } from '../data/vocabLevels'
 import type { Word } from '../types'
 import { useProgress } from '../context/ProgressContext'
 import { useSettings } from '../context/SettingsContext'
@@ -16,15 +17,23 @@ export default function Study() {
   const navigate = useNavigate()
   const [params] = useSearchParams()
   const cat = params.get('cat') ?? 'all'
-  const { answer, isDue, logRecent } = useProgress()
+  const { answer, isDue, logRecent, progress } = useProgress()
   const { settings } = useSettings()
 
-  // 처음 한 번만 카드 묶음 만들기: 오늘 복습할 카드 우선, 없으면 전체 연습
-  const [queue, setQueue] = useState<Word[]>(() => {
-    const pool = WORDS.filter((w) => cat === 'all' || w.category === cat)
-    const due = pool.filter((w) => isDue(w.id))
-    return shuffle(due.length > 0 ? due : pool).slice(0, 20) // 한 번에 최대 20장
-  })
+  const level = levelOfCat(cat)
+  // 카드 묶음 만들기: 복습할 카드 → 새 카드 순서, 한 번에 최대 20장
+  const makeDeck = (pool: Word[]) => {
+    const reviewed = pool.filter((w) => progress.cards[w.id] && isDue(w.id)) // 복습 차례인 카드
+    const fresh = pool.filter((w) => !progress.cards[w.id])                   // 처음 보는 카드
+    const deck = [...shuffle(reviewed), ...(level ? fresh : shuffle(fresh))]  // 級別은 사전 순서대로 새 단어
+    return (deck.length ? deck : shuffle(pool)).slice(0, 20)
+  }
+  const [queue, setQueue] = useState<Word[] | null>(() =>
+    level ? null : makeDeck(WORDS.filter((w) => cat === 'all' || w.category === cat)))
+  // 級別 단어는 파일을 불러온 뒤에 묶음 만들기
+  useEffect(() => {
+    if (level) loadLevel(level).then((ws) => setQueue(makeDeck(ws)))
+  }, [level]) // eslint-disable-line
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
   const [result, setResult] = useState({ known: 0, unknown: 0 })
@@ -33,13 +42,13 @@ export default function Study() {
   const moved = useRef(false)                 // 스와이프 중에는 탭(뒤집기)으로 인식하지 않기
   const retried = useRef(new Set<string>())   // 「まだ」 카드는 한 번만 뒤에 다시 출제
 
-  const total = queue.length
-  const word = queue[index]
-  const done = index >= total
+  const total = queue?.length ?? 0
+  const word = queue?.[index]
+  const done = queue !== null && index >= total
   // 끝까지 학습하면 홈의 「最近の学習」에 기록
-  useEffect(() => { if (done && total > 0) logRecent('words', cat) }, [done]) // eslint-disable-line
+  useEffect(() => { if (queue && done && total > 0) logRecent('words', cat) }, [done]) // eslint-disable-line
 
-  const catName = cat === 'all' ? 'すべて' : CATEGORIES.find((c) => c.id === cat)?.ja
+  const catName = cat === 'all' ? 'すべて' : level ? LEVEL_JA[level] : CATEGORIES.find((c) => c.id === cat)?.ja
 
   const next = (known: boolean) => {
     if (!word) return
@@ -47,7 +56,7 @@ export default function Study() {
     setResult((r) => (known ? { ...r, known: r.known + 1 } : { ...r, unknown: r.unknown + 1 }))
     if (!known && !retried.current.has(word.id)) {
       retried.current.add(word.id)
-      setQueue((q) => [...q, word]) // 못 외운 카드는 맨 뒤에 한 번 더
+      setQueue((q) => (q ? [...q, word] : q)) // 못 외운 카드는 맨 뒤에 한 번 더
     }
     setFlipped(false)
     setDrag(0)
@@ -86,7 +95,9 @@ export default function Study() {
         </span>
       </header>
 
-      {done ? (
+      {queue === null ? (
+        <div className="flex flex-1 items-center justify-center text-[14px] text-text-secondary">読み込み中…</div>
+      ) : done || !word ? (
         // ===== 완료 화면 =====
         <div className="flex flex-1 flex-col items-center justify-center px-8 text-center">
           <Confetti />
@@ -138,11 +149,13 @@ export default function Study() {
               {/* 뒷면: 일본어 + 예문 */}
               <div className="absolute inset-0 flex flex-col items-center justify-center rounded-[24px] bg-primary/[0.06] p-6 text-center ring-1 ring-primary/15 [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [transform:rotateY(180deg)] dark:bg-[#252f52]">
                 <p className="text-[30px] leading-tight font-bold">{word.ja}</p>
-                <p className="mt-2 font-ko text-[16px] text-text-secondary">{word.ko}</p>
+                {word.jaRead && <p className="mt-1 text-[13px] text-text-secondary">{word.jaRead}</p>}
+                <p className="mt-2 font-ko text-[16px] text-text-secondary">{word.ko}{word.pos && ` · ${word.pos}`}</p>
+                {word.jaDef && <p className="mt-3 text-[13px] leading-relaxed text-text-secondary">{word.jaDef}</p>}
                 {word.example && (
                   <div className="mt-8 w-full rounded-card bg-surface/80 p-4 text-left dark:bg-surface/60">
                     <p className="font-ko text-[16px] font-semibold">{word.example.ko}</p>
-                    <p className="mt-1 text-[13px] text-text-secondary">{word.example.ja}</p>
+                    {word.example.ja && <p className="mt-1 text-[13px] text-text-secondary">{word.example.ja}</p>}
                   </div>
                 )}
               </div>

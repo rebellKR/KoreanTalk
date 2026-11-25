@@ -12,7 +12,10 @@ export default function WordRow({ word }: { word: Word }) {
   return (
     <li className="flex items-center gap-3 border-b border-border/70 px-6 py-4 last:border-b-0">
       <div className="min-w-0 flex-1">
-        <p className="font-ko text-[18px] font-bold">{word.ko}</p>
+        <p className="flex items-center gap-2">
+          <span className="font-ko text-[18px] font-bold">{word.ko}</span>
+          {word.pos && <span className="rounded-md bg-background px-1.5 py-0.5 text-[10px] font-semibold text-text-secondary dark:bg-border/60">{word.pos}</span>}
+        </p>
         {settings.showKana && word.kana && <p className="text-[12px] text-text-secondary">{word.kana}</p>}
         <p className="mt-0.5 text-[14px]">{word.ja}</p>
       </div>

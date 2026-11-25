@@ -29,9 +29,23 @@ def pick(items, pos, gloss=''):
 
 
 def short_ja(trans_word):
-    """'食べる; 食う' → '食べる・食う' (최대 2개)"""
-    parts = [p.strip() for p in re.split(r'[;,；、]', trans_word) if p.strip()]
-    return '・'.join(parts[:2])
+    """'みせ【店】。しょうてん【商店】' → '店・商店' (한자가 있으면 한자, 최대 2개)"""
+    out = []
+    for p in re.split(r'[;,；、。\n]', trans_word):
+        p = p.strip()
+        if not p:
+            continue
+        m = re.search(r'【(.+?)】', p)
+        word = m.group(1).split('・')[0] if m else p
+        if word not in out:
+            out.append(word)
+    return '・'.join(out[:2])
+
+
+def reading_ja(trans_word):
+    """첫 번째 뜻의 읽는 법: 'みせ【店】…' → 'みせ' (한자가 없으면 빈 문자열)"""
+    first = re.split(r'[;,；、。\n]', trans_word.strip())[0].strip()
+    return first.split('【')[0].strip() if '【' in first else ''
 
 
 def main():
@@ -59,7 +73,8 @@ def main():
                 'id': f"kr-{it['target_code']}",
                 'ko': it['word'],
                 'ja': short_ja(sense['trans_word']) or sense['trans_dfn'][:30],
-                'jaDef': sense['trans_dfn'],
+                **({'jaRead': reading_ja(sense['trans_word'])} if reading_ja(sense['trans_word']) else {}),
+                'jaDef': sense['trans_dfn'].strip(),
                 'kana': to_kana(pron),
                 'pos': POS_JA.get(it['pos'], it['pos']),
                 'category': f'level{level}',

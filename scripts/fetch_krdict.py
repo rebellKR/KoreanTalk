@@ -92,13 +92,14 @@ def fetch_examples(key, target_code):
 
 
 def fetch_one(key, row):
-    time.sleep(0.15)  # 서버에 부담 주지 않게 잠깐 쉬기
+    time.sleep(0.8)  # 서버에 부담 주지 않게 쉬기 (너무 빠르면 접속이 차단됨)
     word, pos, grade = row['word'], row['pos'], row['grade']
     root = get_xml(SEARCH_URL, {
         'key': key, 'q': word, 'part': 'word', 'translated': 'y', 'trans_lang': JAPANESE,
         'advanced': 'y', 'method': 'exact', 'num': '10',
     })
     items = [parse_item(i) for i in root.findall('item')]
+    time.sleep(0.5)
     examples = fetch_examples(key, pick(items, pos, row.get('gloss', ''))['target_code']) if items else []
     return {'input': row, 'items': items, 'examples': examples}
 
@@ -146,7 +147,7 @@ def main():
         todo = todo[:args.limit]
     print(f'📚 전체 {len(rows)}개 / 이미 받음 {len(done)}개 / 이번에 받을 것 {len(todo)}개')
 
-    start, ok, fail = time.time(), 0, 0
+    start, ok, fail, streak = time.time(), 0, 0, 0  # streak = 연속 실패 수
     with open(CACHE, 'a', encoding='utf-8') as out, ThreadPoolExecutor(max_workers=args.workers) as ex:
         futures = {ex.submit(fetch_one, key, r): r for r in todo}
         for n, fu in enumerate(as_completed(futures), 1):
@@ -157,8 +158,14 @@ def main():
                     out.write(json.dumps(res, ensure_ascii=False) + '\n')
                     out.flush()
                 ok += 1
+                streak = 0
             except RuntimeError as e:
                 fail += 1
+                streak += 1
+                if streak >= 2:  # 연속으로 실패 → 서버가 막은 것 같으니 쉬었다가 계속
+                    print(f'\n⏸  연속 실패 → 5분 쉬고 다시 시도합니다 ({time.strftime("%H:%M")} 기준)', flush=True)
+                    time.sleep(300)
+                    streak = 0
                 if 'API 오류' in str(e):
                     print(f'\n❌ {e}\n   (인증키가 맞는지, 하루 한도를 넘지 않았는지 확인하세요)')
                     ex.shutdown(cancel_futures=True)

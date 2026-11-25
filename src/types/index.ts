@@ -3,10 +3,13 @@ export type Word = {
   id: string            // "food-001"
   ko: string            // 한국어
   ja: string            // 일본어 뜻
+  jaRead?: string       // 일본어 뜻의 읽는 법 (예: みせ)
+  jaDef?: string        // 일본어 뜻풀이 (사전)
+  pos?: string          // 품사 (名詞・動詞 …)
   kana?: string         // 카타카나 발음
   category: string      // 카테고리 id
   level: number         // 난이도 (TOPIK 기준)
-  example?: { ko: string; ja: string }
+  example?: { ko: string; ja?: string }
 }
 
 // 회화 표현 하나

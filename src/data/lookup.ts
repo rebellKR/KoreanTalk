@@ -8,4 +8,6 @@ export const ALL_PHRASES = SITUATIONS.flatMap((s) =>
 
 export const findPhrase = (id: string) => ALL_PHRASES.find((p) => p.id === id)
 export const findWord = (id: string) => WORDS.find((w) => w.id === id)
-export const categoryName = (id: string) => (id === 'all' ? 'すべて' : CATEGORIES.find((c) => c.id === id)?.ja ?? id)
+import { LEVEL_JA, levelOfCat } from './vocabLevels'
+export const categoryName = (id: string) =>
+  id === 'all' ? 'すべて' : levelOfCat(id) ? LEVEL_JA[levelOfCat(id)] : CATEGORIES.find((c) => c.id === id)?.ja ?? id

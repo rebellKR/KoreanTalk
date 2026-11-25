@@ -15,7 +15,14 @@ Mac 터미널에서 `koreantalk` 폴더로 이동한 뒤 순서대로 실행합�
 python3 scripts/prepare_wordlist.py      # → data-src/wordlist.tsv
 ```
 
-## 2. 사전 API에서 받기 (처음 한 번, 약 20~40분)
+## 2-A. 사전 전체 파일에서 한 번에 찾기 (추천, 약 10초)
+API 대신 한국어기초사전 전체 XML(약 400MB)을 받아서 찾습니다.
+```bash
+git clone --depth 1 https://github.com/changwoo/krdict-converted ../krdict-xml
+python3 scripts/xml_to_cache.py ../krdict-xml/upstream   # → data-src/krdict_cache.jsonl
+```
+
+## 2-B. 사전 API에서 받기 (느림, 서버가 자주 끊김)
 ```bash
 python3 scripts/fetch_krdict.py --limit 20   # 먼저 20개만 시험
 python3 scripts/fetch_krdict.py              # 전체 (끊기면 다시 실행 → 이어서 받음)
