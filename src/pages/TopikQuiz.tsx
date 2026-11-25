@@ -25,6 +25,17 @@ function ScoreRing({ percent }: { percent: number }) {
   )
 }
 
+// 문제 문장 표시: <...> 부분은 밑줄로, "밑줄 친 부분…:" 머리말은 숨김
+function QuestionText({ text }: { text: string }) {
+  const body = text.replace(/^밑줄 친 부분과 의미가 비슷한 것:\s*/, '')
+  return (
+    <p className="mt-4 font-ko text-[19px] leading-snug font-bold">
+      {body.split(/<(.+?)>/).map((part, i) =>
+        i % 2 ? <u key={i} className="decoration-primary decoration-2 underline-offset-4">{part}</u> : part)}
+    </p>
+  )
+}
+
 export default function TopikQuiz() {
   const navigate = useNavigate()
   const [params] = useSearchParams()
@@ -140,8 +151,12 @@ export default function TopikQuiz() {
             {q.passage && (
               <p className="mt-3 rounded-card bg-background p-4 font-ko text-[15px] leading-[1.8] whitespace-pre-line dark:bg-border/40">{q.passage}</p>
             )}
-            <p className="mt-4 font-ko text-[19px] leading-snug font-bold">{q.question}</p>
-            {!q.passage && <p className="mt-1 text-[12px] text-text-secondary">（ ）に入る最も適切なものを選んでください。</p>}
+            <QuestionText text={q.question} />
+            {!q.passage && (
+              <p className="mt-1 text-[12px] text-text-secondary">
+                {q.question.includes('밑줄') ? '下線部と意味が最も近いものを選んでください。' : '（ ）に入る最も適切なものを選んでください。'}
+              </p>
+            )}
 
             {/* 보기 4개 */}
             <ul className="mt-5 space-y-2.5">

@@ -44,15 +44,17 @@ def get_xml(url, params, retries=3):
     q = urllib.parse.urlencode(params)
     for i in range(retries):
         try:
-            with urllib.request.urlopen(f'{url}?{q}', timeout=20) as r:
+            with urllib.request.urlopen(f'{url}?{q}', timeout=10) as r:
                 root = ET.fromstring(r.read())
             if root.tag == 'error':
                 raise RuntimeError(f"API 오류 {root.findtext('error_code')}: {root.findtext('message')}")
             return root
         except RuntimeError:
             raise
-        except Exception:
-            time.sleep(1.5 * (i + 1))
+        except Exception as e:
+            reason = getattr(e, 'reason', '') or getattr(e, 'code', '') or e
+            print(f'   ⚠️ 응답 지연/오류 → 재시도 {i + 1}/{retries} ({type(e).__name__}: {reason})', flush=True)
+            time.sleep(2 * (i + 1))
     raise RuntimeError('네트워크 오류 (3번 실패)')
 
 
@@ -90,6 +92,7 @@ def fetch_examples(key, target_code):
 
 
 def fetch_one(key, row):
+    time.sleep(0.15)  # 서버에 부담 주지 않게 잠깐 쉬기
     word, pos, grade = row['word'], row['pos'], row['grade']
     root = get_xml(SEARCH_URL, {
         'key': key, 'q': word, 'part': 'word', 'translated': 'y', 'trans_lang': JAPANESE,
@@ -118,7 +121,7 @@ def pick(items, pos, gloss=''):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--limit', type=int, default=0, help='시험용: 앞에서부터 N개만')
-    ap.add_argument('--workers', type=int, default=4, help='동시에 보낼 요청 수 (서버 부담 주의, 최대 6 권장)')
+    ap.add_argument('--workers', type=int, default=1, help='동시에 보낼 요청 수 (기본 1. 서버가 느려지면 1로)')
     args = ap.parse_args()
 
     key = load_key()
@@ -160,7 +163,7 @@ def main():
                     print(f'\n❌ {e}\n   (인증키가 맞는지, 하루 한도를 넘지 않았는지 확인하세요)')
                     ex.shutdown(cancel_futures=True)
                     break
-            if n % 50 == 0 or n == len(todo):
+            if n % 10 == 0 or n == len(todo):  # 10개마다 진행 상황 표시
                 el = time.time() - start
                 eta = el / n * (len(todo) - n)
                 print(f'  {n}/{len(todo)}  성공 {ok}  실패 {fail}  남은 시간 약 {eta / 60:.0f}분', flush=True)

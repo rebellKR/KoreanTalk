@@ -1,8 +1,6 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Celebrations from './components/Celebrations'
-import Games from './pages/Games'
-import SpeedGame from './pages/SpeedGame'
-import PairGame from './pages/PairGame'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Conversation from './pages/Conversation'
@@ -12,14 +10,20 @@ import MyPage from './pages/MyPage'
 import Settings from './pages/Settings'
 import Study from './pages/Study'
 import Lesson from './pages/Lesson'
-import Hangul from './pages/Hangul'
-import Grammar from './pages/Grammar'
-import Topik from './pages/Topik'
-import TopikQuiz from './pages/TopikQuiz'
+
+// 데이터가 큰 화면은 처음 열 때 불러옴 (앱 시작 속도 ↑)
+const Hangul = lazy(() => import('./pages/Hangul'))
+const Grammar = lazy(() => import('./pages/Grammar'))
+const Topik = lazy(() => import('./pages/Topik'))
+const TopikQuiz = lazy(() => import('./pages/TopikQuiz'))
+const Games = lazy(() => import('./pages/Games'))
+const SpeedGame = lazy(() => import('./pages/SpeedGame'))
+const PairGame = lazy(() => import('./pages/PairGame'))
 
 export default function App() {
   return (
     <>
+    <Suspense fallback={null}>
     <Routes>
       {/* Layout 안에 각 탭 화면이 들어감 (하단 탭바는 항상 표시) */}
       <Route element={<Layout />}>
@@ -41,6 +45,7 @@ export default function App() {
       <Route path="/games/speed" element={<SpeedGame />} />
       <Route path="/games/pair" element={<PairGame />} />
     </Routes>
+    </Suspense>
     {/* 레벨업·배지 축하 (모든 화면 공통) */}
     <Celebrations />
     </>
