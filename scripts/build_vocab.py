@@ -50,7 +50,7 @@ def reading_ja(trans_word):
 
 def main():
     if not os.path.exists(CACHE):
-        sys.exit('❌ data-src/krdict_cache.jsonl 이 없습니다. 먼저 fetch_krdict.py 를 실행하세요.')
+        sys.exit('❌ data-src/krdict_cache.jsonl 이 없습니다. 먼저 xml_to_cache.py 를 실행하세요.')
     words, missing, seen = {1: [], 2: [], 3: []}, 0, set()
     with open(CACHE, encoding='utf-8') as f:
         for line in f:

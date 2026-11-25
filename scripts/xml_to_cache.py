@@ -5,7 +5,7 @@ API를 한 단어씩 부르지 않고, 사전 전체 파일에서 한 번에 찾
 
 사용법: python3 scripts/xml_to_cache.py <XML 폴더>
   XML 폴더 = github.com/changwoo/krdict-converted 의 upstream/ (0.xml ~ 10.xml)
-결과 형식은 fetch_krdict.py 와 같아서 그대로 build_vocab.py 를 실행하면 됩니다.
+다음 단계로 build_vocab.py 를 실행하면 앱용 JSON 이 만들어집니다.
 """
 import glob
 import io
@@ -31,7 +31,7 @@ def norm(w):
 
 
 def parse_entry(e):
-    """LexicalEntry 하나 → fetch_krdict.py 의 item 과 같은 모양"""
+    """LexicalEntry 하나 → build_vocab.py 가 읽는 모양"""
     f = feats(e)
     lemma = e.find('Lemma')
     word = feats(lemma).get('writtenForm', '') if lemma is not None else ''
